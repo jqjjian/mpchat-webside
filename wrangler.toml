@@ -1,0 +1,8 @@
+name = "mpchat-webside"
+compatibility_date = "2024-01-15"
+
+[env.production]
+name = "mpchat-webside"
+
+[env.preview]
+name = "mpchat-webside-preview"

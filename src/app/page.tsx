@@ -132,11 +132,11 @@ export default function Home() {
                                     visibleSections.has('hero') ? 'animate-slide-right' : ''
                                 }`}
                             >
-                                <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px]">
-                                    <div className="opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
+                                <div className="w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] xl:w-[750px] xl:h-[750px]">
+                                    <div className="opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards] pt-30">
                                         <Image
-                                            width={800}
-                                            height={312}
+                                            width={1000}
+                                            height={390}
                                             src="/card.webp"
                                             alt="Payment Card"
                                             className="w-full h-auto object-contain animate-[cardFloat_4s_linear_infinite]"
@@ -274,7 +274,7 @@ export default function Home() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                         {/* For Your Personal Life */}
                         <div
                             className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-1 ${
@@ -393,7 +393,7 @@ export default function Home() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {/* Secure Chat */}
                         <div className="feature-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200 h-[460px]">
                             <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left">Secure Chat</h3>
