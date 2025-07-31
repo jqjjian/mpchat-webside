@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #E8F5E8, #E8F5E8, #F7F7F2);
+            min-height: 100vh;
+        }
+        .header-test {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%-40px)] max-w-[1700px] h-16 rounded-[35px] flex items-center header-test">
+        <div class="flex justify-between items-center w-full h-full px-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                <span class="text-2xl font-bold text-gray-800">MPChat</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#" class="text-gray-600 hover:text-green-500 font-medium">Home</a>
+                <a href="#" class="text-gray-600 hover:text-green-500 font-medium">MP Card</a>
+                <a href="#" class="text-gray-600 hover:text-green-500 font-medium">Developers</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pt-32 px-8">
+        <h1 class="text-6xl font-bold text-gray-900 text-center">Header Transparency Test</h1>
+        <p class="text-xl text-gray-600 text-center mt-8">Testing header blending with background</p>
+    </div>
+</body>
+</html>
