@@ -118,7 +118,7 @@ export default function Footer() {
 
                     {/* Footer Bottom */}
                     <div
-                        className={`flex flex-col md:flex-row justify-between items-center gap-4 border-t-1 border-t-1-gray-200 py-5 animate-on-scroll animate-delay-2 ${
+                        className={`flex flex-col md:flex-row justify-between items-center gap-4 border-t-1 border-t-[#BCD4C2] py-5 animate-on-scroll animate-delay-2 ${
                             visibleSections.has('footer') ? 'animate-slide-up' : ''
                         }`}
                     >

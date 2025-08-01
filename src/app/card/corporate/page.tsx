@@ -32,7 +32,7 @@ export default function CardPage() {
 
     return (
         <>
-            <style jsx>{`
+            {/* <style jsx>{`
                 @keyframes float {
                     0%,
                     100% {
@@ -92,20 +92,29 @@ export default function CardPage() {
                     opacity: 0;
                     transform: translateX(100px);
                 }
-            `}</style>
+            `}</style> */}
             {/* <Layout> */}
             {/* Hero Section */}
-            <section className="relative min-h-[900px] overflow-hidden" data-section="hero">
+            <section className="relative min-h-[1250px] overflow-hidden" data-section="hero">
                 {/* Base gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#E8F5E8] via-[#E8F5E8] to-[#F7F7F2]"></div>
 
-                {/* Background image with natural blending */}
+                {/* Small screen background (< 1920px) */}
                 <div
-                    className="absolute inset-0 bg-[url('/card/Group_1597889257.webp')] bg-cover bg-center bg-no-repeat opacity-80"
+                    className="min-h-[1250px] w-full absolute inset-0 bg-[url('/card/Group_1597889257.png')] bg-no-repeat opacity-80 min-[1920px]:hidden"
                     style={{
-                        backgroundBlendMode: 'soft-light',
+                        backgroundPosition: 'center top',
+                        backgroundAttachment: 'scroll'
+                    }}
+                ></div>
+
+                {/* Large screen background (1920px+) */}
+                <div
+                    className="min-h-[1250px] w-full absolute inset-0 bg-[url('/card/Group_1597889257.png')] bg-no-repeat opacity-80 hidden min-[1920px]:block"
+                    style={{
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center top'
+                        backgroundPosition: 'center center',
+                        backgroundAttachment: 'scroll'
                     }}
                 ></div>
 
@@ -113,64 +122,63 @@ export default function CardPage() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F7F7F2] opacity-60"></div>
 
                 {/* Content Container */}
-                <div className="relative z-10 flex items-center justify-center h-full px-8 pt-20">
+                <div className="relative z-10 flex items-center justify-center min-h-[900px] px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20">
                     <div className="container w-full max-w-[1700px] mx-auto">
-                        <div className="flex flex-col items-center text-center pt-21 ">
+                        <div className="flex flex-col items-center text-center py-8">
                             {/* Navigation Pills */}
                             <div
-                                className={`w-full flex mb-20 animate-on-scroll gap-8 justify-center  mx-auto ${
+                                className={`w-full flex mb-6 lg:mb-8 xl:mb-12 animate-on-scroll gap-4 lg:gap-6 xl:gap-8 justify-center mx-auto ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
                                 <Link href="/card/personal" className="flex-1">
-                                    <div className="relative flex items-center gap-3 px-8 py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg  border border-white">
+                                    <div className="relative flex items-center gap-2 lg:gap-3 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg  border border-white">
                                         {/* <div className="w-6 h-6 bg-gray-200 rounded-lg flex items-center justify-center">
                                         <div className="w-3 h-3 bg-gray-600 rounded-sm"></div>
                                     </div> */}
 
-                                        <div className="flex items-center gap-3 flex-1">
+                                        <div className="flex items-center gap-2 lg:gap-3 flex-1">
                                             <Image
-                                                height={47}
-                                                width={76}
+                                                height={35}
+                                                width={57}
                                                 src="/card/card_m.png"
                                                 alt="Corporate"
+                                                className="lg:h-[40px] lg:w-[65px] xl:h-[47px] xl:w-[76px]"
                                             ></Image>
-                                            <span className="relative z-10 text-[20px]">Personal</span>
+                                            <span className="relative z-10 text-[16px] lg:text-[18px] xl:text-[20px]">
+                                                Personal
+                                            </span>
                                         </div>
-                                        <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
+                                        <Image src="/card/j2.png" alt="arrow" width={15} height={18}></Image>
                                     </div>
                                 </Link>
                                 <Link href="/card/corporate" className="flex-1">
                                     <div
-                                        className="flex-1 relative flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg "
+                                        className="flex-1 relative flex items-center gap-2 lg:gap-3 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg "
                                         style={{
                                             background: 'linear-gradient(135deg, #06C55B 0%, #04A84F 100%)'
                                         }}
                                     >
-                                        <div className="flex items-center gap-3 flex-1">
-                                            <Image height={47} width={76} src="/card/card_m.png" alt="Personal"></Image>
-                                            <span className="relative z-10 text-[20px]">Corporate</span>
+                                        <div className="flex items-center gap-2 lg:gap-3 flex-1">
+                                            <Image
+                                                height={35}
+                                                width={57}
+                                                src="/card/card_m.png"
+                                                alt="Personal"
+                                                className="lg:h-[40px] lg:w-[65px] xl:h-[47px] xl:w-[76px]"
+                                            ></Image>
+                                            <span className="relative z-10 text-[16px] lg:text-[18px] xl:text-[20px]">
+                                                Corporate
+                                            </span>
                                         </div>
-                                        <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
+                                        <Image src="/card/j1.png" alt="arrow" width={15} height={18}></Image>
                                     </div>
                                 </Link>
                             </div>
 
                             {/* Main Title */}
                             <h1
-                                className={`pt-[100px] text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6 animate-on-scroll animate-delay-1 ${
+                                className={`pt-[20px] lg:pt-[40px] xl:pt-[60px] text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-gray-900 leading-tight mb-3 lg:mb-4 xl:mb-6 animate-on-scroll animate-delay-1 ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
@@ -181,7 +189,7 @@ export default function CardPage() {
 
                             {/* Subtitle */}
                             <p
-                                className={`text-lg lg:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-16 animate-on-scroll animate-delay-2 ${
+                                className={`text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-6 lg:mb-8 xl:mb-12 animate-on-scroll animate-delay-2 ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
@@ -191,54 +199,54 @@ export default function CardPage() {
 
                             {/* Card Visual */}
                             <div
-                                className={`relative w-full max-w-3xl mx-auto mb-20 animate-on-scroll animate-delay-3 ${
+                                className={`relative w-full max-w-2xl lg:max-w-3xl mx-auto mb-6 lg:mb-8 xl:mb-12 animate-on-scroll animate-delay-3 ${
                                     visibleSections.has('hero') ? 'animate-fade-scale' : ''
                                 }`}
                             >
-                                <div className="relative flex items-center  justify-center pt-[100px]">
+                                <div className="relative flex items-center justify-center pt-[20px] lg:pt-[40px] xl:pt-[160px]">
                                     <div className="relative float-animation ">
                                         <Image
                                             src="/card/Group_1597889250.png"
                                             alt="MPCard"
-                                            width={500}
-                                            height={350}
-                                            className="object-contain drop-shadow-2xl"
+                                            width={400}
+                                            height={280}
+                                            className="object-contain drop-shadow-2xl lg:w-[450px] lg:h-[315px] xl:w-[500px] xl:h-[350px]"
                                         />
                                     </div>
-                                    <div className="absolute top-[250px] left-0 animate-[floatRandomB1_6s_ease-in-out_infinite]">
+                                    <div className="absolute top-[180px] lg:top-[220px] xl:top-[250px] left-0 animate-[floatRandomB1_6s_ease-in-out_infinite]">
                                         <Image
                                             src="/card/b1.png"
                                             alt="MPCard"
-                                            width={87}
-                                            height={87}
-                                            className="object-contain drop-shadow-2xl"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain drop-shadow-2xl lg:w-[75px] lg:h-[75px] xl:w-[87px] xl:h-[87px]"
                                         />
                                     </div>
-                                    <div className="absolute top-10 right-[200px] animate-[floatRandomB3_7s_ease-in-out_infinite_0.5s]">
+                                    <div className="absolute top-6 lg:top-8 xl:top-10 right-[120px] lg:right-[160px] xl:right-[200px] animate-[floatRandomB3_7s_ease-in-out_infinite_0.5s]">
                                         <Image
                                             src="/card/b3.png"
                                             alt="MPCard"
-                                            width={116}
-                                            height={99}
-                                            className="object-contain drop-shadow-2xl"
+                                            width={80}
+                                            height={68}
+                                            className="object-contain drop-shadow-2xl lg:w-[98px] lg:h-[84px] xl:w-[116px] xl:h-[99px]"
                                         />
                                     </div>
-                                    <div className="absolute bottom-0 left-[140px] animate-[floatRandomB2_8s_ease-in-out_infinite_1s]">
+                                    <div className="absolute bottom-0 left-[80px] lg:left-[110px] xl:left-[140px] animate-[floatRandomB2_8s_ease-in-out_infinite_1s]">
                                         <Image
                                             src="/card/b2.png"
                                             alt="MPCard"
-                                            width={99}
-                                            height={99}
-                                            className="object-contain drop-shadow-2xl"
+                                            width={70}
+                                            height={70}
+                                            className="object-contain drop-shadow-2xl lg:w-[85px] lg:h-[85px] xl:w-[99px] xl:h-[99px]"
                                         />
                                     </div>
-                                    <div className="absolute top-40 right-0 animate-[floatRandomB4_5.5s_ease-in-out_infinite_1.5s]">
+                                    <div className="absolute top-28 lg:top-32 xl:top-40 right-0 animate-[floatRandomB4_5.5s_ease-in-out_infinite_1.5s]">
                                         <Image
                                             src="/card/b4.png"
                                             alt="MPCard"
-                                            width={100}
-                                            height={100}
-                                            className="object-contain drop-shadow-2xl"
+                                            width={70}
+                                            height={70}
+                                            className="object-contain drop-shadow-2xl lg:w-[85px] lg:h-[85px] xl:w-[100px] xl:h-[100px]"
                                         />
                                     </div>
                                 </div>

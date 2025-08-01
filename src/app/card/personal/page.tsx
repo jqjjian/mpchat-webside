@@ -95,17 +95,26 @@ export default function CardPage() {
             `}</style>
             {/* <Layout> */}
             {/* Hero Section */}
-            <section className="relative min-h-[900px] overflow-hidden" data-section="hero">
+            <section className="relative min-h-[1250px] overflow-hidden" data-section="hero">
                 {/* Base gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#E8F5E8] via-[#E8F5E8] to-[#F7F7F2]"></div>
 
-                {/* Background image with natural blending */}
+                {/* Small screen background (< 1920px) */}
                 <div
-                    className="absolute inset-0 bg-[url('/card/Group_1597889257.webp')] bg-cover bg-center bg-no-repeat opacity-80"
+                    className="min-h-[1250px] w-full absolute inset-0 bg-[url('/card/Group_1597889257.png')] bg-no-repeat opacity-80 min-[1920px]:hidden"
                     style={{
-                        backgroundBlendMode: 'soft-light',
+                        backgroundPosition: 'center top',
+                        backgroundAttachment: 'scroll'
+                    }}
+                ></div>
+
+                {/* Large screen background (1920px+) */}
+                <div
+                    className="min-h-[min-h-[1250px] w-full absolute inset-0 bg-[url('/card/Group_1597889257.png')] bg-no-repeat opacity-80 hidden min-[1920px]:block"
+                    style={{
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center top'
+                        backgroundPosition: 'center center',
+                        backgroundAttachment: 'scroll'
                     }}
                 ></div>
 
@@ -113,64 +122,77 @@ export default function CardPage() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F7F7F2] opacity-60"></div>
 
                 {/* Content Container */}
-                <div className="relative z-10 flex items-center justify-center h-full px-8 pt-20">
+                <div className="relative z-10 flex items-center justify-center min-h-[900px] px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20">
                     <div className="container w-full max-w-[1700px] mx-auto">
-                        <div className="flex flex-col items-center text-center pt-21 ">
+                        <div className="flex flex-col items-center text-center py-8">
                             {/* Navigation Pills */}
                             <div
-                                className={`w-full flex mb-20 animate-on-scroll gap-8 justify-center  mx-auto ${
+                                className={`w-full flex mb-6 lg:mb-8 xl:mb-12 animate-on-scroll gap-4 lg:gap-6 xl:gap-8 justify-center mx-auto ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
                                 <Link href="/card/personal" className="relative flex-1">
                                     <div
-                                        className="flex-1 relative flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg "
+                                        className="flex-1 relative flex items-center gap-2 lg:gap-3 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg "
                                         style={{
                                             background: 'linear-gradient(135deg, #06C55B 0%, #04A84F 100%)'
                                         }}
                                     >
-                                        <div className="flex items-center gap-3 flex-1">
-                                            <Image height={47} width={76} src="/card/card_m.png" alt="Personal"></Image>
-                                            <span className="relative z-10 text-[20px]">Personal</span>
+                                        <div className="flex items-center gap-2 lg:gap-3 flex-1">
+                                            <Image
+                                                height={35}
+                                                width={57}
+                                                src="/card/card_m.png"
+                                                alt="Personal"
+                                                className="lg:h-[40px] lg:w-[65px] xl:h-[47px] xl:w-[76px]"
+                                            ></Image>
+                                            <span className="relative z-10 text-[16px] lg:text-[18px] xl:text-[20px]">
+                                                Personal
+                                            </span>
                                         </div>
-                                        <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <Image src="/card/j1.png" alt="arrow" width={15} height={18}></Image>
+                                        {/* <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path
                                                 fillRule="evenodd"
                                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
                                             />
-                                        </svg>
+                                        </svg> */}
                                     </div>
                                 </Link>
                                 <Link href="/card/corporate" className="flex-1">
-                                    <div className="relative flex items-center gap-3 px-8 py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg  border border-white">
+                                    <div className="relative flex items-center gap-2 lg:gap-3 px-4 lg:px-6 xl:px-8 py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg  border border-white">
                                         {/* <div className="w-6 h-6 bg-gray-200 rounded-lg flex items-center justify-center">
                                         <div className="w-3 h-3 bg-gray-600 rounded-sm"></div>
                                     </div> */}
 
-                                        <div className="flex items-center gap-3 flex-1">
+                                        <div className="flex items-center gap-2 lg:gap-3 flex-1">
                                             <Image
-                                                height={47}
-                                                width={76}
+                                                height={35}
+                                                width={57}
                                                 src="/card/card_m.png"
                                                 alt="Corporate"
+                                                className="lg:h-[40px] lg:w-[65px] xl:h-[47px] xl:w-[76px]"
                                             ></Image>
-                                            <span className="relative z-10 text-[20px]">Corporate</span>
+                                            <span className="relative z-10 text-[16px] lg:text-[18px] xl:text-[20px]">
+                                                Corporate
+                                            </span>
                                         </div>
-                                        <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <Image src="/card/j2.png" alt="arrow" width={15} height={18}></Image>
+                                        {/* <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path
                                                 fillRule="evenodd"
                                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                                 clipRule="evenodd"
                                             />
-                                        </svg>
+                                        </svg> */}
                                     </div>
                                 </Link>
                             </div>
 
                             {/* Main Title */}
                             <h1
-                                className={`pt-[100px] text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6 animate-on-scroll animate-delay-1 ${
+                                className={`pt-[20px] lg:pt-[40px] xl:pt-[60px] text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-gray-900 leading-tight mb-3 lg:mb-4 xl:mb-6 animate-on-scroll animate-delay-1 ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
@@ -181,7 +203,7 @@ export default function CardPage() {
 
                             {/* Subtitle */}
                             <p
-                                className={`text-lg lg:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-16 animate-on-scroll animate-delay-2 ${
+                                className={`text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-6 lg:mb-8 xl:mb-12 animate-on-scroll animate-delay-2 ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
@@ -190,7 +212,7 @@ export default function CardPage() {
 
                             {/* Card Visual */}
                             <div
-                                className={`relative w-full max-w-3xl mx-auto mb-20 animate-on-scroll animate-delay-3 ${
+                                className={`relative w-full max-w-2xl lg:max-w-3xl mx-auto mb-6 lg:mb-8 xl:mb-12 animate-on-scroll animate-delay-3 ${
                                     visibleSections.has('hero') ? 'animate-fade-scale' : ''
                                 }`}
                             >
@@ -199,9 +221,9 @@ export default function CardPage() {
                                         <Image
                                             src="/card/card.png"
                                             alt="MPCard"
-                                            width={800}
-                                            height={650}
-                                            className="object-contain drop-shadow-2xl"
+                                            width={600}
+                                            height={488}
+                                            className="object-contain drop-shadow-2xl lg:w-[700px] lg:h-[569px] xl:w-[800px] xl:h-[650px]"
                                         />
                                     </div>
                                 </div>
@@ -221,7 +243,7 @@ export default function CardPage() {
                         <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">Why MPChat Card</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 pt-[120px]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12  pt-[120px]">
                         {/* For Online Shoppers */}
                         <div
                             className={`text-center animate-on-scroll animate-delay-1 ${
@@ -229,7 +251,7 @@ export default function CardPage() {
                             }`}
                         >
                             <div className="flex justify-center mb-8">
-                                <div className="flex items-center justify-center">
+                                <div className="flex items-center justify-center h-[88px]">
                                     <Image
                                         src="/card/pic1.png"
                                         alt="For Online Shoppers"
@@ -239,10 +261,10 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-6 pt-[60px] pb-[30px]">
+                            <h3 className="text-[32px] font-bold text-gray-900 pt-[40px] pb-[30px]">
                                 For Online Shoppers
                             </h3>
-                            <p className="text-gray-600 text-base leading-relaxed">
+                            <p className="text-gray-600 text-[20px] leading-relaxed">
                                 Shop online with confidence using our secure virtual cards designed for e-commerce.
                             </p>
                         </div>
@@ -254,7 +276,7 @@ export default function CardPage() {
                             }`}
                         >
                             <div className="flex justify-center mb-8">
-                                <div className="flex items-center justify-center">
+                                <div className="flex items-center justify-center h-[88px]">
                                     <Image
                                         src="/card/pic2.png"
                                         alt="For Subscription Lovers"
@@ -264,10 +286,10 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-6  pt-[60px] pb-[30px]">
+                            <h3 className="text-[32px] font-bold text-gray-900 pt-[40px] pb-[30px]">
                                 For Subscription Lovers
                             </h3>
-                            <p className="text-gray-600 text-base leading-relaxed">
+                            <p className="text-gray-600 text-[20px] leading-relaxed">
                                 Manage all your subscriptions with dedicated cards and spending controls.
                             </p>
                         </div>
@@ -279,7 +301,7 @@ export default function CardPage() {
                             }`}
                         >
                             <div className="flex justify-center mb-8">
-                                <div className=" flex items-center justify-center">
+                                <div className=" flex items-center justify-center h-[88px]">
                                     <Image
                                         src="/card/pic3.png"
                                         alt="For Digital Marketers"
@@ -289,10 +311,10 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-6  pt-[60px] pb-[30px]">
+                            <h3 className="text-[32px] font-bold text-gray-900 pt-[40px] pb-[30px]">
                                 For Digital Marketers
                             </h3>
-                            <p className="text-gray-600 text-base leading-relaxed">
+                            <p className="text-gray-600 text-[20px] leading-relaxed">
                                 Scale your ad campaigns with flexible spending limits and real-time controls.
                             </p>
                         </div>
@@ -322,7 +344,7 @@ export default function CardPage() {
                             style={{
                                 backgroundImage: 'url(/card/pic4.png)',
                                 backgroundSize: 'cover',
-                                backgroundPosition: 'center',
+                                backgroundPosition: 'center top',
                                 backgroundRepeat: 'no-repeat'
                             }}
                         >
@@ -344,7 +366,7 @@ export default function CardPage() {
                             style={{
                                 backgroundImage: 'url(/card/pic5.png)',
                                 backgroundSize: 'cover',
-                                backgroundPosition: 'center',
+                                backgroundPosition: 'center top',
                                 backgroundRepeat: 'no-repeat'
                             }}
                         >
@@ -365,7 +387,7 @@ export default function CardPage() {
                             style={{
                                 backgroundImage: 'url(/card/pic6.png)',
                                 backgroundSize: 'cover',
-                                backgroundPosition: 'center',
+                                backgroundPosition: 'center top',
                                 backgroundRepeat: 'no-repeat'
                             }}
                         >
@@ -386,7 +408,7 @@ export default function CardPage() {
                             style={{
                                 backgroundImage: 'url(/card/pic7.png)',
                                 backgroundSize: 'cover',
-                                backgroundPosition: 'center',
+                                backgroundPosition: 'center top',
                                 backgroundRepeat: 'no-repeat'
                             }}
                         >

@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Header from './Header'
-import Footer from './Footer'
+// import Footer from './Footer'
+import Image from 'next/image'
 
 interface LayoutProps {
     children: React.ReactNode
@@ -181,17 +182,17 @@ export default function Layout({ children }: LayoutProps) {
                 /* 返回顶部按钮样式 */
                 .back-to-top {
                     position: fixed;
-                    bottom: 30px;
+                    bottom: 400px;
                     right: 30px;
-                    width: 50px;
-                    height: 50px;
-                    background: #06c55b;
-                    border: none;
-                    border-radius: 50%;
+                    width: 80px;
+                    height: 80px;
+                    // background: #06c55b;
+                    // border: none;
+                    // border-radius: 50%;
                     color: white;
                     font-size: 20px;
                     cursor: pointer;
-                    box-shadow: 0 4px 12px rgba(6, 197, 91, 0.3);
+                    // box-shadow: 0 4px 12px rgba(6, 197, 91, 0.3);
                     transition: all 0.3s ease;
                     z-index: 1000;
                     display: flex;
@@ -200,9 +201,9 @@ export default function Layout({ children }: LayoutProps) {
                 }
 
                 .back-to-top:hover {
-                    background: #05b052;
+                    // background: #05b052;
                     transform: translateY(-2px);
-                    box-shadow: 0 6px 20px rgba(6, 197, 91, 0.4);
+                    // box-shadow: 0 6px 20px rgba(6, 197, 91, 0.4);
                 }
 
                 .back-to-top.show {
@@ -239,7 +240,7 @@ export default function Layout({ children }: LayoutProps) {
                 aria-label="返回顶部"
                 title="返回顶部"
             >
-                ↑
+                <Image src="/to_top.png" alt="返回顶部" width={80} height={800} />
             </button>
 
             {/* <Footer /> */}

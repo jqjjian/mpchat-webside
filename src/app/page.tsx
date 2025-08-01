@@ -109,7 +109,7 @@ export default function Home() {
                                     cards, offering secure and efficient payment solutions for individuals and
                                     businesses worldwide.
                                 </p>
-                                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-10 ">
+                                <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-10 ">
                                     <button
                                         className={`text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 ${
                                             visibleSections.has('hero') ? 'animate-slide-up' : ''
@@ -312,10 +312,10 @@ export default function Home() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                            <h3 className="text-[40px] font-bold text-gray-900 mb-4 text-left">
                                 For Your Personal Life
                             </h3>
-                            <p className="text-gray-600 leading-relaxed text-center">
+                            <p className="text-gray-600 leading-relaxed text-left text-[20px] pb-12">
                                 Tired of payment failures on international sites?
                                 <br />
                                 Need a secure way to pay for subscriptions?
@@ -359,10 +359,10 @@ export default function Home() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                            <h3 className="text-[40px] font-bold text-gray-900 mb-4 text-left">
                                 For Your Global Business
                             </h3>
-                            <p className="text-gray-600 leading-relaxed text-center">
+                            <p className="text-gray-600 leading-relaxed text-left text-[20px]">
                                 Struggling with high fees for global ad spend?
                                 <br />
                                 Looking for an efficient way to manage team expenses?
