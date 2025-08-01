@@ -14,7 +14,13 @@ set -e
 PROJECT_NAME="mpchat-webside"
 BUILD_DIR="out"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+# 如果脚本在项目根目录，则PROJECT_ROOT就是当前目录
+# 如果脚本在scripts目录下，则PROJECT_ROOT是上级目录
+if [[ "$SCRIPT_DIR" == *"/scripts" ]]; then
+    PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+else
+    PROJECT_ROOT="$SCRIPT_DIR"
+fi
 
 # 颜色输出
 RED='\033[0;31m'
@@ -112,7 +118,16 @@ cd "$PROJECT_ROOT"
 
 print_header
 print_message "开始部署到 $ENVIRONMENT 环境..."
+print_message "脚本路径: $SCRIPT_DIR"
 print_message "项目路径: $PROJECT_ROOT"
+
+# 验证项目路径是否正确
+if [[ ! -f "$PROJECT_ROOT/package.json" ]]; then
+    print_error "在项目路径中找不到 package.json 文件"
+    print_error "请确认脚本在正确的项目目录中运行"
+    print_error "当前检查路径: $PROJECT_ROOT/package.json"
+    exit 1
+fi
 
 # 检查必要的工具
 check_dependencies() {
@@ -151,10 +166,22 @@ install_dependencies() {
 
     print_step "安装项目依赖..."
     if [ -f "package-lock.json" ]; then
-        npm ci
+        # 检查 package.json 和 package-lock.json 是否同步
+        if ! npm ci --dry-run >/dev/null 2>&1; then
+            print_message "检测到 package.json 和 package-lock.json 不同步，正在更新锁文件..."
+            npm install
+        else
+            npm ci
+        fi
     else
         npm install
     fi
+
+    if [[ $? -ne 0 ]]; then
+        print_error "依赖安装失败"
+        exit 1
+    fi
+
     print_success "依赖安装完成"
 }
 

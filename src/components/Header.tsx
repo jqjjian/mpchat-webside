@@ -55,14 +55,12 @@ export default function Header() {
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
                         )}
                     </Link>
-                    <a href="#developers" className="relative pb-2 transition-colors">
-                        {/* 隐藏的粗体文字用于占位 */}
+                    {/* <a href="#developers" className="relative pb-2 transition-colors">
                         <span className="font-bold text-transparent select-none">Developers</span>
-                        {/* 实际显示的文字 */}
                         <span className="absolute inset-0 text-gray-600 hover:text-[#06C55B] font-medium transition-colors">
                             Developers
                         </span>
-                    </a>
+                    </a> */}
                 </div>
 
                 {/* Mobile Menu Button */}

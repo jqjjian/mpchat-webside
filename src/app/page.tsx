@@ -78,7 +78,7 @@ export default function Home() {
 
                 {/* Background image with natural blending */}
                 <div
-                    className="absolute inset-0 bg-[url('/top_bg.webp')] bg-cover bg-center bg-no-repeat opacity-80"
+                    className="absolute inset-0 bg-[url('/home_bg.png')] bg-cover bg-center bg-no-repeat opacity-80"
                     style={{
                         backgroundBlendMode: 'soft-light',
                         backgroundSize: 'cover',
@@ -436,9 +436,9 @@ export default function Home() {
                         </div>
 
                         {/* Global Payments */}
-                        <div className="flex flex-col justify-between box-border pt-4 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-[460px]">
+                        <div className="overflow-hidden flex flex-col justify-between box-border pt-4 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-[460px]">
                             <div>
-                                <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left px-10">
+                                <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left px-8">
                                     Global Payments
                                 </h3>
                                 <p className="text-gray-600 text-[18px] mb-4 text-left px-8">

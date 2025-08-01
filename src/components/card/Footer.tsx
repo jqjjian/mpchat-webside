@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 export default function Footer() {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
+    const [showContactModal, setShowContactModal] = useState(false)
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -26,6 +27,49 @@ export default function Footer() {
 
         return () => observer.disconnect()
     }, [])
+
+    const handleContactClick = () => {
+        setShowContactModal(true)
+    }
+
+    const closeContactModal = () => {
+        setShowContactModal(false)
+    }
+
+    const contactMethods = [
+        {
+            type: 'email',
+            label: 'Email Support',
+            value: 'support@mpchats.com',
+            icon: '📧',
+            action: () => window.open('mailto:contact@mpchats.com', '_blank')
+        },
+        {
+            type: 'telegram',
+            label: 'Telegram',
+            value: '@MPChatSupport',
+            icon: '📱',
+            action: () => window.open('https://t.me/MPChatSupport', '_blank')
+        },
+        {
+            type: 'wechat',
+            label: 'WeChat Support',
+            value: 'MPChat_Service',
+            icon: '💬',
+            action: () => {
+                // Copy WeChat ID to clipboard
+                navigator.clipboard.writeText('MPChat_Service')
+                alert('WeChat ID copied to clipboard: MPChat_Service')
+            }
+        },
+        {
+            type: 'phone',
+            label: 'Support Hotline',
+            value: '+1-800-MPCHAT',
+            icon: '📞',
+            action: () => window.open('tel:+18006724284', '_blank')
+        }
+    ]
 
     return (
         <footer className="relative min-h-[500px] overflow-hidden" data-section="footer">
@@ -61,7 +105,10 @@ export default function Footer() {
                             visibleSections.has('footer') ? 'animate-slide-up' : ''
                         }`}
                     >
-                        <button className="hover:cursor-pointer text-[22px]min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                        <button
+                            onClick={handleContactClick}
+                            className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                        >
                             Contact Us
                         </button>
                         {/* <button className="px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
@@ -119,6 +166,55 @@ export default function Footer() {
                 </div>
             </div>
 
+            {/* Contact Modal */}
+            {showContactModal && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 modal-backdrop"
+                    onClick={closeContactModal}
+                >
+                    <div
+                        className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative animate-modal-in"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Close Button */}
+                        <button
+                            onClick={closeContactModal}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                        >
+                            ×
+                        </button>
+
+                        {/* Modal Title */}
+                        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Contact Us</h3>
+                        <p className="text-gray-600 text-center mb-8">
+                            {`Choose your preferred contact method, and we'll get back to you soon`}
+                        </p>
+
+                        {/* Contact Methods List */}
+                        <div className="space-y-4">
+                            {contactMethods.map(method => (
+                                <button
+                                    key={method.type}
+                                    onClick={method.action}
+                                    className="w-full flex items-center p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-200 hover:scale-105"
+                                >
+                                    <span className="text-2xl mr-4">{method.icon}</span>
+                                    <div className="text-left">
+                                        <div className="font-semibold text-gray-900">{method.label}</div>
+                                        <div className="text-sm text-gray-600">{method.value}</div>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Bottom Notice */}
+                        <div className="mt-6 text-center text-sm text-gray-500">
+                            Business Hours: Monday - Friday 9:00-18:00 (UTC+8)
+                        </div>
+                    </div>
+                </div>
+            )}
+
             <style jsx global>{`
                 /* 动画样式 */
                 @keyframes slideInUp {
@@ -149,6 +245,27 @@ export default function Footer() {
                 }
                 .animate-delay-2 {
                     animation-delay: 0.2s;
+                }
+
+                /* 弹窗动画 */
+                @keyframes modalIn {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.9) translateY(-20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: scale(1) translateY(0);
+                    }
+                }
+
+                .animate-modal-in {
+                    animation: modalIn 0.3s ease-out forwards;
+                }
+
+                /* 弹窗背景点击关闭 */
+                .modal-backdrop {
+                    backdrop-filter: blur(4px);
                 }
             `}</style>
         </footer>

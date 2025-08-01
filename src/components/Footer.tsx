@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-
+import Link from 'next/link'
 export default function Footer() {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -61,12 +61,16 @@ export default function Footer() {
                             visibleSections.has('footer') ? 'animate-slide-up' : ''
                         }`}
                     >
-                        <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
-                            For Personal
-                        </button>
-                        <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
-                            For Business
-                        </button>
+                        <Link href="/card/personal">
+                            <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                                For Personal
+                            </button>
+                        </Link>
+                        <Link href="/card/corporate">
+                            <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                                For Business
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Footer Bottom */}

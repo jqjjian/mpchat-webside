@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -8,6 +9,24 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+    const [showBackToTop, setShowBackToTop] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // 当滚动超过300px时显示按钮
+            setShowBackToTop(window.scrollY > 300)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
     return (
         <div className="min-h-screen bg-[#F7F7F2]">
             <style jsx global>{`
@@ -158,11 +177,70 @@ export default function Layout({ children }: LayoutProps) {
                 .animate-float-medium {
                     animation: float-medium 4s ease-in-out infinite;
                 }
+
+                /* 返回顶部按钮样式 */
+                .back-to-top {
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    width: 50px;
+                    height: 50px;
+                    background: #06c55b;
+                    border: none;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 20px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 12px rgba(6, 197, 91, 0.3);
+                    transition: all 0.3s ease;
+                    z-index: 1000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .back-to-top:hover {
+                    background: #05b052;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(6, 197, 91, 0.4);
+                }
+
+                .back-to-top.show {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+
+                .back-to-top.hide {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(20px);
+                }
+
+                @media (max-width: 768px) {
+                    .back-to-top {
+                        bottom: 20px;
+                        right: 20px;
+                        width: 45px;
+                        height: 45px;
+                        font-size: 18px;
+                    }
+                }
             `}</style>
 
             <Header />
 
             <main>{children}</main>
+
+            {/* 返回顶部按钮 */}
+            <button
+                className={`back-to-top ${showBackToTop ? 'show' : 'hide'}`}
+                onClick={scrollToTop}
+                aria-label="返回顶部"
+                title="返回顶部"
+            >
+                ↑
+            </button>
 
             {/* <Footer /> */}
         </div>
