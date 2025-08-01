@@ -70,10 +70,16 @@
   font-display: swap;
 }
 
-* {
-  margin: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: 'Redotpay', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
+/* 只对特定元素重置 margin，不影响 Tailwind 的 space-* 类 */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, dl, dd {
+  margin: 0;
 }
 
 body {

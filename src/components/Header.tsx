@@ -44,14 +44,14 @@ export default function Header() {
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
                         )}
                     </Link>
-                    <Link href="/card" className="relative pb-2 transition-colors">
+                    <Link href="/card/personal" className="relative pb-2 transition-colors">
                         {/* 隐藏的粗体文字用于占位 */}
                         <span className="font-bold text-transparent select-none">MP Card</span>
                         {/* 实际显示的文字 */}
                         <span className={`absolute inset-0 ${getTextClassName('/card')} transition-colors`}>
                             MP Card
                         </span>
-                        {isActive('/card') && (
+                        {(isActive('/card/personal') || isActive('/card/corporate')) && (
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
                         )}
                     </Link>

@@ -1,0 +1,514 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+// import Layout from '../../components/Layout'
+
+export default function CardPage() {
+    const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.getAttribute('data-section')
+                        if (sectionId) {
+                            setVisibleSections(prev => new Set([...prev, sectionId]))
+                        }
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: '50px' }
+        )
+
+        // 观察所有需要动画的元素
+        const sections = document.querySelectorAll('[data-section]')
+        sections.forEach(section => observer.observe(section))
+
+        return () => observer.disconnect()
+    }, [])
+
+    return (
+        <>
+            <style jsx>{`
+                @keyframes float {
+                    0%,
+                    100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-15px);
+                    }
+                }
+                .float-animation {
+                    animation: float 4s ease-in-out infinite;
+                    animation-delay: 0.5s;
+                }
+
+                @keyframes stackedEntry {
+                    0% {
+                        transform: translateX(100px);
+                        opacity: 0;
+                        z-index: 1;
+                    }
+                    60% {
+                        transform: translateX(0);
+                        opacity: 1;
+                        z-index: 1;
+                    }
+                    100% {
+                        transform: translateX(0);
+                        opacity: 1;
+                        z-index: auto;
+                    }
+                }
+
+                .stacked-entry-1 {
+                    animation: stackedEntry 2s ease-out forwards;
+                    animation-delay: 0s;
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+
+                .stacked-entry-2 {
+                    animation: stackedEntry 2s ease-out forwards;
+                    animation-delay: 0.2s;
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+
+                .stacked-entry-3 {
+                    animation: stackedEntry 2s ease-out forwards;
+                    animation-delay: 0.4s;
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+
+                .stacked-entry-4 {
+                    animation: stackedEntry 2s ease-out forwards;
+                    animation-delay: 0.6s;
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+            `}</style>
+            {/* <Layout> */}
+            {/* Hero Section */}
+            <section className="relative min-h-[900px] overflow-hidden" data-section="hero">
+                {/* Base gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#E8F5E8] via-[#E8F5E8] to-[#F7F7F2]"></div>
+
+                {/* Background image with natural blending */}
+                <div
+                    className="absolute inset-0 bg-[url('/card/Group_1597889257.webp')] bg-cover bg-center bg-no-repeat opacity-80"
+                    style={{
+                        backgroundBlendMode: 'soft-light',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center top'
+                    }}
+                ></div>
+
+                {/* Gradient overlay for seamless transition */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F7F7F2] opacity-60"></div>
+
+                {/* Content Container */}
+                <div className="relative z-10 flex items-center justify-center h-full px-8 pt-20">
+                    <div className="container w-full max-w-[1700px] mx-auto">
+                        <div className="flex flex-col items-center text-center pt-21 ">
+                            {/* Navigation Pills */}
+                            <div
+                                className={`w-full flex mb-20 animate-on-scroll gap-8 justify-center  mx-auto ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
+                            >
+                                <Link href="/card/personal" className="flex-1">
+                                    <div className="relative flex items-center gap-3 px-8 py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg  border border-white">
+                                        {/* <div className="w-6 h-6 bg-gray-200 rounded-lg flex items-center justify-center">
+                                        <div className="w-3 h-3 bg-gray-600 rounded-sm"></div>
+                                    </div> */}
+
+                                        <div className="flex items-center gap-3 flex-1">
+                                            <Image
+                                                height={47}
+                                                width={76}
+                                                src="/card/card_m.png"
+                                                alt="Corporate"
+                                            ></Image>
+                                            <span className="relative z-10 text-[20px]">Personal</span>
+                                        </div>
+                                        <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                </Link>
+                                <Link href="/card/corporate" className="flex-1">
+                                    <div
+                                        className="flex-1 relative flex items-center gap-3 px-8 py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg "
+                                        style={{
+                                            background: 'linear-gradient(135deg, #06C55B 0%, #04A84F 100%)'
+                                        }}
+                                    >
+                                        <div className="flex items-center gap-3 flex-1">
+                                            <Image height={47} width={76} src="/card/card_m.png" alt="Personal"></Image>
+                                            <span className="relative z-10 text-[20px]">Corporate</span>
+                                        </div>
+                                        <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                </Link>
+                            </div>
+
+                            {/* Main Title */}
+                            <h1
+                                className={`pt-[100px] text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-6 animate-on-scroll animate-delay-1 ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
+                            >
+                                The All-in-One Financial
+                                <br />
+                                Platform for Modern Teams.
+                            </h1>
+
+                            {/* Subtitle */}
+                            <p
+                                className={`text-lg lg:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-16 animate-on-scroll animate-delay-2 ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
+                            >
+                                Issue unlimited virtual cards, manage team spending, and streamline your global
+                                payments.
+                            </p>
+
+                            {/* Card Visual */}
+                            <div
+                                className={`relative w-full max-w-3xl mx-auto mb-20 animate-on-scroll animate-delay-3 ${
+                                    visibleSections.has('hero') ? 'animate-fade-scale' : ''
+                                }`}
+                            >
+                                <div className="relative flex items-center justify-center pt-[100px]">
+                                    <div className="relative ">
+                                        <Image
+                                            src="/card/Group_1597889250.png"
+                                            alt="MPCard"
+                                            width={800}
+                                            height={650}
+                                            className="object-contain drop-shadow-2xl"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* Who We Serve Section */}
+            <section className="py-20 bg-[#F7F7F2]" data-section="who-we-serve">
+                <div className="container mx-auto px-8 max-w-[1700px]">
+                    <div
+                        className={`text-center mb-16 animate-on-scroll ${
+                            visibleSections.has('who-we-serve') ? 'animate-slide-up' : ''
+                        }`}
+                    >
+                        <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">Who We Serve</h2>
+                        <p className="text-[40px]  text-gray-500 pt-[40px] pb-25">
+                            Built for the New Generation of Global Business
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        {/* E-commerce Sellers */}
+                        <div
+                            className={`text-center bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-1' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="flex items-center justify-center pb-6">
+                                    <Image
+                                        src="/card/pic8.png"
+                                        alt="Instant Issuing"
+                                        width={74}
+                                        height={74}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-[28px] font-[500] text-gray-900 mb-4 pb-4">E-commerce Sellers</h3>
+                            {/* <p className="text-gray-600 text-base leading-relaxed">
+                                Get your virtual card instantly and start spending right away. No waiting, no delays.
+                            </p> */}
+                        </div>
+
+                        {/* Marketing Agencies */}
+                        <div
+                            className={`bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-2' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="flex items-center justify-center pb-6">
+                                    <Image
+                                        src="/card/pic9.png"
+                                        alt="Spending Controls"
+                                        width={74}
+                                        height={74}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-[28px] font-[500] text-gray-900 mb-4 pb-4 text-center">
+                                Marketing Agencies
+                            </h3>
+                            {/* <p className="text-gray-600 text-base text-left leading-relaxed">
+                                Set custom spending limits, merchant restrictions, and transaction controls for each
+                                card.
+                            </p> */}
+                        </div>
+
+                        {/* SaaS Companies */}
+                        <div
+                            className={`bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-3' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="flex items-center justify-center pb-6">
+                                    <Image
+                                        src="/card/pic10.png"
+                                        alt="Multi-Card Management"
+                                        width={74}
+                                        height={74}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-[28px] font-[500] text-gray-900 mb-4 text-center pb-4">
+                                SaaS Companies
+                            </h3>
+                            {/* <p className="text-gray-600 text-base text-left leading-relaxed">
+                                Create and manage multiple virtual cards for different purposes from one dashboard.
+                            </p> */}
+                        </div>
+
+                        {/* Global Freelancers */}
+                        <div
+                            className={`bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-4' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="flex items-center justify-center pb-6">
+                                    <Image
+                                        src="/card/pic11.png"
+                                        alt="Top-Tier Security"
+                                        width={74}
+                                        height={74}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <h3 className="text-[28px] font-[500] text-gray-900 mb-4 text-center pb-4">
+                                Global Freelancers
+                            </h3>
+                            {/* <p className="text-gray-600 text-base text-left leading-relaxed">
+                                Bank-level encryption and fraud protection keep your transactions secure at all times.
+                            </p> */}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Solutions Section */}
+            <section className="py-20 " data-section="solutions">
+                <div className="container mx-auto px-8 max-w-[1700px]">
+                    <div
+                        className={`text-center mb-16 animate-on-scroll ${
+                            visibleSections.has('solutions') ? 'animate-slide-up' : ''
+                        }`}
+                    >
+                        <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">Solutions</h2>
+                    </div>
+
+                    <div className="pt-16 space-y-5">
+                        {/* Smart Expense Management */}
+                        <div
+                            className={`bg-white rounded-[40px] px-10 shadow-lg animate-on-scroll ${
+                                visibleSections.has('solutions') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <div className="flex flex-col lg:flex-row items-center gap-16">
+                                <div className="flex-1 lg:pr-8 ">
+                                    <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10">
+                                        Smart Expense Management
+                                    </h3>
+                                    <div className="space-y-4 text-lg text-gray-600 leading-relaxed mt-8">
+                                        <p>Issue Cards To Employees With Pre-Set Budgets.</p>
+                                        <p>Track Every Expense In Real-Time And Eliminate</p>
+                                        <p>Reimbursement Hassles</p>
+                                    </div>
+                                </div>
+                                <div className="flex-1 flex justify-center lg:justify-end">
+                                    <div className="relative">
+                                        <Image
+                                            src="/card/Group_1597889251.png"
+                                            alt="Smart Expense Management"
+                                            width={430}
+                                            height={360}
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Streamlined Ad Spend Management */}
+                        <div
+                            className={`bg-white rounded-[40px] px-10 shadow-lg animate-on-scroll ${
+                                visibleSections.has('solutions') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <div className="flex flex-col lg:flex-row items-center gap-16">
+                                <div className="flex-1 lg:pr-8">
+                                    <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10">
+                                        Streamlined Ad Spend Management
+                                    </h3>
+                                    <div className="space-y-4 text-lg text-gray-600 leading-relaxed mt-8">
+                                        <p>Create Unlimited Unique Virtual Cards For Your Ad</p>
+                                        <p>Campaigns On Facebook, Google, And TikTok.</p>
+                                        <p>Drastically Reduce Account Suspensions Caused By</p>
+                                        <p>Payment Issues And Simplify Budget Tracking.</p>
+                                    </div>
+                                </div>
+                                <div className="flex-1 flex justify-center lg:justify-end">
+                                    <div className="relative">
+                                        <Image
+                                            src="/card/Group_1597889252.png"
+                                            alt="Streamlined Ad Spend Management"
+                                            width={430}
+                                            height={360}
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Team Collaboration & Risk Control Section */}
+            <section className="py-20 bg-[#F7F7F2]" data-section="team-collaboration">
+                <div className="container mx-auto px-8 max-w-[1700px]">
+                    <div
+                        className={`text-center mb-16 animate-on-scroll ${
+                            visibleSections.has('team-collaboration') ? 'animate-slide-up' : ''
+                        }`}
+                    >
+                        <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">
+                            Team Collaboration & Risk Control
+                        </h2>
+                        <p className="text-[40px] text-gray-500 pt-[40px] pb-25">
+                            Collaboration and Security, Under Your Control
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
+                        {/* Bulk Card Issuing */}
+                        <div
+                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-1' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-green-500 rounded"></div>
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Bulk Card Issuing</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Issue multiple virtual cards instantly for your entire team with customizable spending
+                                limits and controls.
+                            </p>
+                        </div>
+
+                        {/* Team Collaboration */}
+                        <div
+                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-2' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Team Collaboration</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Enable seamless collaboration with shared budgets, approval workflows, and real-time
+                                expense tracking.
+                            </p>
+                        </div>
+
+                        {/* Spending Controls */}
+                        <div
+                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-3' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-yellow-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Spending Controls</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Set granular spending limits, merchant restrictions, and transaction controls for
+                                enhanced security.
+                            </p>
+                        </div>
+
+                        {/* Real-time Alerts */}
+                        <div
+                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-4' : ''
+                            }`}
+                        >
+                            <div className="flex justify-center mb-6">
+                                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-red-500 rounded-full"></div>
+                                </div>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Real-time Alerts</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Get instant notifications for all transactions, suspicious activities, and budget
+                                threshold alerts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-b from-[#E8F5E8] to-[#F7F7F2]" data-section="cta">
+                <div className="container mx-auto px-8 max-w-[1700px] text-center">
+                    <div className={`animate-on-scroll ${visibleSections.has('cta') ? 'animate-slide-up' : ''}`}>
+                        <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">
+                            Seamless Chat, Borderless Pay.
+                        </h2>
+                        <button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-full text-lg font-semibold transition-colors duration-300">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+}
