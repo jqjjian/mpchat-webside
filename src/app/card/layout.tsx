@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Layout from '@/components/Layout'
-
+import Footer from '@/components/card/Footer'
 export default function CardLayout({ children }: { children: React.ReactNode }) {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -92,7 +92,10 @@ export default function CardLayout({ children }: { children: React.ReactNode }) 
                     transform: translateX(100px);
                 }
             `}</style>
-            <Layout>{children}</Layout>
+            <Layout>
+                {children}
+                <Footer />
+            </Layout>
         </>
     )
 }

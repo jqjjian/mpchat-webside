@@ -420,7 +420,7 @@ export default function CardPage() {
                                 visibleSections.has('features-deep-dive') ? 'stacked-entry-1' : ''
                             }`}
                         >
-                            <div className="flex justify-start mb-6">
+                            <div className="flex justify-start mb-2">
                                 <div className="flex items-center justify-center pb-6">
                                     <Image
                                         src="/card/pic8.png"
@@ -431,8 +431,12 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-[32px] font-bold text-gray-900 mb-4 text-left pb-4">Instant Issuing</h3>
-                            <p className="text-gray-600 text-base text-left leading-relaxed">
+                            <h3 className="text-[32px] font-bold text-gray-900 mb-4 text-left pb-4">
+                                Instant
+                                <br />
+                                Issuing
+                            </h3>
+                            <p className="text-gray-600 text-[18px] text-left leading-relaxed">
                                 Get your virtual card instantly and start spending right away. No waiting, no delays.
                             </p>
                         </div>
@@ -444,7 +448,7 @@ export default function CardPage() {
                             }`}
                         >
                             <div className="flex justify-start mb-6">
-                                <div className="flex items-center justify-center pb-6">
+                                <div className="flex items-center justify-center pb-2">
                                     <Image
                                         src="/card/pic9.png"
                                         alt="Spending Controls"
@@ -457,7 +461,7 @@ export default function CardPage() {
                             <h3 className="text-[32px] font-bold text-gray-900 mb-4 text-left pb-4">
                                 Spending Controls
                             </h3>
-                            <p className="text-gray-600 text-base text-left leading-relaxed">
+                            <p className="text-gray-600 text-[18px] text-left leading-relaxed">
                                 Set custom spending limits, merchant restrictions, and transaction controls for each
                                 card.
                             </p>
@@ -470,7 +474,7 @@ export default function CardPage() {
                             }`}
                         >
                             <div className="flex justify-start mb-6">
-                                <div className="flex items-center justify-center pb-6">
+                                <div className="flex items-center justify-center pb-2">
                                     <Image
                                         src="/card/pic10.png"
                                         alt="Multi-Card Management"
@@ -483,7 +487,7 @@ export default function CardPage() {
                             <h3 className="text-[32px] font-bold text-gray-900 mb-4 text-left pb-4">
                                 Multi-Card Management
                             </h3>
-                            <p className="text-gray-600 text-base text-left leading-relaxed">
+                            <p className="text-gray-600 text-[18px] text-left leading-relaxed">
                                 Create and manage multiple virtual cards for different purposes from one dashboard.
                             </p>
                         </div>
@@ -495,7 +499,7 @@ export default function CardPage() {
                             }`}
                         >
                             <div className="flex justify-start mb-6">
-                                <div className="flex items-center justify-center pb-6">
+                                <div className="flex items-center justify-center pb-2">
                                     <Image
                                         src="/card/pic11.png"
                                         alt="Top-Tier Security"
@@ -505,10 +509,10 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-[32px] font-bold text-gray-900 mb-4 text-left pb-4">
+                            <h3 className="text-[32px] font-bold text-gray-900 mb-4 text-left pb-4 pr-3">
                                 Top-Tier Security
                             </h3>
-                            <p className="text-gray-600 text-base text-left leading-relaxed">
+                            <p className="text-gray-600 text-[18px] text-left leading-relaxed">
                                 Bank-level encryption and fraud protection keep your transactions secure at all times.
                             </p>
                         </div>

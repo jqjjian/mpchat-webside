@@ -53,6 +53,79 @@
     }
 }
 
+/* Random direction floating animations for b1-b4 images */
+@keyframes floatRandomB1 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+        transform: translate(15px, -20px) rotate(5deg);
+    }
+    50% {
+        transform: translate(-10px, -35px) rotate(-3deg);
+    }
+    75% {
+        transform: translate(20px, -15px) rotate(7deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes floatRandomB2 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+        transform: translate(-18px, 25px) rotate(-4deg);
+    }
+    50% {
+        transform: translate(12px, 40px) rotate(6deg);
+    }
+    75% {
+        transform: translate(-8px, 18px) rotate(-2deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes floatRandomB3 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+        transform: translate(22px, 15px) rotate(8deg);
+    }
+    50% {
+        transform: translate(-15px, 30px) rotate(-5deg);
+    }
+    75% {
+        transform: translate(10px, -12px) rotate(3deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes floatRandomB4 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    25% {
+        transform: translate(-12px, -18px) rotate(-6deg);
+    }
+    50% {
+        transform: translate(25px, -8px) rotate(4deg);
+    }
+    75% {
+        transform: translate(-20px, 22px) rotate(-8deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
 /* Custom Fonts */
 @font-face {
   font-family: 'Redotpay';

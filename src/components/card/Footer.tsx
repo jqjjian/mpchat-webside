@@ -57,16 +57,16 @@ export default function Footer() {
                     </h2>
 
                     <div
-                        className={`flex flex-col sm:flex-row gap-10 justify-center mb-32 animate-on-scroll animate-delay-1 ${
+                        className={`flex flex-col sm:flex-row gap-4 justify-center mb-32 animate-on-scroll animate-delay-1 ${
                             visibleSections.has('footer') ? 'animate-slide-up' : ''
                         }`}
                     >
-                        <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
-                            For Personal
+                        <button className="hover:cursor-pointer text-[22px]min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                            Contact Us
                         </button>
-                        <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                        {/* <button className="px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
                             For Business
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Footer Bottom */}

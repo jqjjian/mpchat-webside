@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
-import Layout from '../components/Layout'
+import Layout from '@/components/Layout'
+import Footer from '@/components/Footer'
 
 export default function Home() {
     const featureMatrixRef = useRef<HTMLDivElement>(null)
@@ -153,12 +154,12 @@ export default function Home() {
             <section className="pb-20 bg-[#F7F7F2]" data-section="chat-features">
                 <div className="container mx-auto px-8">
                     <div
-                        className={`text-center mb-16 py-20 animate-on-scroll ${
+                        className={`text-center mb-8 pb-20 animate-on-scroll ${
                             visibleSections.has('chat-features') ? 'animate-slide-up' : ''
                         }`}
                     >
                         <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-4">Chat</h2>
-                        <p className="text-2xl lg:text-[40px] text-gray-600 pt-16">
+                        <p className="text-2xl lg:text-[40px] text-gray-600 pt-10">
                             Your Conversations, Absolutely Private.
                         </p>
                     </div>
@@ -388,17 +389,21 @@ export default function Home() {
                             visibleSections.has('feature-matrix') ? 'animate-slide-up' : ''
                         }`}
                     >
-                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 pt-[200px] pb-[100px]">
-                            Feature Matrix
-                        </h2>
+                        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 pb-[100px]">Feature Matrix</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {/* Secure Chat */}
-                        <div className="feature-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200 h-[460px]">
-                            <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left">Secure Chat</h3>
-                            <p className="text-gray-600 text-[18px] mb-4 text-left">100% private conversations.</p>
-                            <div className="flex justify-center mb-6">
+                        <div className="flex flex-col justify-between box-border pt-4 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300  h-[460px]">
+                            <div>
+                                <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left px-8">Secure Chat</h3>
+                                <p className="text-gray-600 text-[18px] mb-4 text-left px-8">
+                                    100% private
+                                    <br />
+                                    conversations.
+                                </p>
+                            </div>
+                            <div className="flex justify-center ">
                                 <Image
                                     src="/pic7.webp"
                                     alt="Secure Chat"
@@ -410,12 +415,16 @@ export default function Home() {
                         </div>
 
                         {/* Virtual Cards */}
-                        <div className="feature-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200  h-[460px]">
-                            <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left">Virtual Cards</h3>
-                            <p className="text-gray-600 text-[18px] mb-4 text-left">
-                                Instantly create cards for any purpose.
-                            </p>
-                            <div className="flex justify-center mb-6">
+                        <div className="flex flex-col justify-between box-border pt-4  bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300   h-[460px]">
+                            <div>
+                                <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left px-8">
+                                    Virtual Cards
+                                </h3>
+                                <p className="text-gray-600 text-[18px] mb-4 text-left px-8">
+                                    Instantly create cards for any purpose.
+                                </p>
+                            </div>
+                            <div className="flex justify-center">
                                 <Image
                                     src="/pic8.webp"
                                     alt="Virtual Cards"
@@ -427,12 +436,16 @@ export default function Home() {
                         </div>
 
                         {/* Global Payments */}
-                        <div className="feature-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200 h-[460px]">
-                            <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left">Global Payments</h3>
-                            <p className="text-gray-600 text-[18px] mb-4 text-left">
-                                Pay for ads, e-commerce, and subscriptions globally.
-                            </p>
-                            <div className="flex justify-center mb-6">
+                        <div className="flex flex-col justify-between box-border pt-4 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-[460px]">
+                            <div>
+                                <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left px-10">
+                                    Global Payments
+                                </h3>
+                                <p className="text-gray-600 text-[18px] mb-4 text-left px-8">
+                                    Pay for ads, e-commerce, and subscriptions globally.
+                                </p>
+                            </div>
+                            <div className="flex justify-center">
                                 <Image
                                     src="/pic9.webp"
                                     alt="Global Payments"
@@ -444,12 +457,16 @@ export default function Home() {
                         </div>
 
                         {/* Business Solutions */}
-                        <div className="feature-card bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200 h-[460px]">
-                            <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left">Business Solutions</h3>
-                            <p className="text-gray-600 text-[18px] mb-4 text-left">
-                                Streamline your cross-border business funds.
-                            </p>
-                            <div className="flex justify-center mb-6">
+                        <div className="flex flex-col justify-between box-border pt-4 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300  h-[460px]">
+                            <div>
+                                <h3 className="text-[32px] font-bold text-gray-900 mb-3 text-left px-8">
+                                    Business Solutions
+                                </h3>
+                                <p className="text-gray-600 text-[18px] mb-4 text-left px-8">
+                                    Streamline your cross-border business funds.
+                                </p>
+                            </div>
+                            <div className="flex justify-center">
                                 <Image
                                     src="/pic10.webp"
                                     alt="Business Solutions"
@@ -462,6 +479,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </Layout>
     )
 }

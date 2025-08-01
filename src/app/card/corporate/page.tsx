@@ -195,13 +195,49 @@ export default function CardPage() {
                                     visibleSections.has('hero') ? 'animate-fade-scale' : ''
                                 }`}
                             >
-                                <div className="relative flex items-center justify-center pt-[100px]">
-                                    <div className="relative ">
+                                <div className="relative flex items-center  justify-center pt-[100px]">
+                                    <div className="relative float-animation ">
                                         <Image
                                             src="/card/Group_1597889250.png"
                                             alt="MPCard"
-                                            width={800}
-                                            height={650}
+                                            width={500}
+                                            height={350}
+                                            className="object-contain drop-shadow-2xl"
+                                        />
+                                    </div>
+                                    <div className="absolute top-[250px] left-0 animate-[floatRandomB1_6s_ease-in-out_infinite]">
+                                        <Image
+                                            src="/card/b1.png"
+                                            alt="MPCard"
+                                            width={87}
+                                            height={87}
+                                            className="object-contain drop-shadow-2xl"
+                                        />
+                                    </div>
+                                    <div className="absolute top-10 right-[200px] animate-[floatRandomB3_7s_ease-in-out_infinite_0.5s]">
+                                        <Image
+                                            src="/card/b3.png"
+                                            alt="MPCard"
+                                            width={116}
+                                            height={99}
+                                            className="object-contain drop-shadow-2xl"
+                                        />
+                                    </div>
+                                    <div className="absolute bottom-0 left-[140px] animate-[floatRandomB2_8s_ease-in-out_infinite_1s]">
+                                        <Image
+                                            src="/card/b2.png"
+                                            alt="MPCard"
+                                            width={99}
+                                            height={99}
+                                            className="object-contain drop-shadow-2xl"
+                                        />
+                                    </div>
+                                    <div className="absolute top-40 right-0 animate-[floatRandomB4_5.5s_ease-in-out_infinite_1.5s]">
+                                        <Image
+                                            src="/card/b4.png"
+                                            alt="MPCard"
+                                            width={100}
+                                            height={100}
                                             className="object-contain drop-shadow-2xl"
                                         />
                                     </div>
@@ -234,7 +270,7 @@ export default function CardPage() {
                             <div className="flex justify-center mb-6">
                                 <div className="flex items-center justify-center pb-6">
                                     <Image
-                                        src="/card/pic8.png"
+                                        src="/card/w-1.png"
                                         alt="Instant Issuing"
                                         width={74}
                                         height={74}
@@ -257,7 +293,7 @@ export default function CardPage() {
                             <div className="flex justify-center mb-6">
                                 <div className="flex items-center justify-center pb-6">
                                     <Image
-                                        src="/card/pic9.png"
+                                        src="/card/w-2.png"
                                         alt="Spending Controls"
                                         width={74}
                                         height={74}
@@ -283,7 +319,7 @@ export default function CardPage() {
                             <div className="flex justify-center mb-6">
                                 <div className="flex items-center justify-center pb-6">
                                     <Image
-                                        src="/card/pic10.png"
+                                        src="/card/w-3.png"
                                         alt="Multi-Card Management"
                                         width={74}
                                         height={74}
@@ -292,7 +328,9 @@ export default function CardPage() {
                                 </div>
                             </div>
                             <h3 className="text-[28px] font-[500] text-gray-900 mb-4 text-center pb-4">
-                                SaaS Companies
+                                SaaS
+                                <br />
+                                Companies
                             </h3>
                             {/* <p className="text-gray-600 text-base text-left leading-relaxed">
                                 Create and manage multiple virtual cards for different purposes from one dashboard.
@@ -308,7 +346,7 @@ export default function CardPage() {
                             <div className="flex justify-center mb-6">
                                 <div className="flex items-center justify-center pb-6">
                                     <Image
-                                        src="/card/pic11.png"
+                                        src="/card/w-4.png"
                                         alt="Top-Tier Security"
                                         width={74}
                                         height={74}
@@ -341,7 +379,7 @@ export default function CardPage() {
                     <div className="pt-16 space-y-5">
                         {/* Smart Expense Management */}
                         <div
-                            className={`bg-white rounded-[40px] px-10 shadow-lg animate-on-scroll ${
+                            className={`bg-white rounded-[40px] px-12 shadow-lg animate-on-scroll transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${
                                 visibleSections.has('solutions') ? 'animate-slide-up' : ''
                             }`}
                         >
@@ -350,13 +388,13 @@ export default function CardPage() {
                                     <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10">
                                         Smart Expense Management
                                     </h3>
-                                    <div className="space-y-4 text-lg text-gray-600 leading-relaxed mt-8">
+                                    <div className="space-y-4 text-xl text-gray-600 leading-relaxed mt-8">
                                         <p>Issue Cards To Employees With Pre-Set Budgets.</p>
                                         <p>Track Every Expense In Real-Time And Eliminate</p>
                                         <p>Reimbursement Hassles</p>
                                     </div>
                                 </div>
-                                <div className="flex-1 flex justify-center lg:justify-end">
+                                <div className="flex justify-center lg:justify-end">
                                     <div className="relative">
                                         <Image
                                             src="/card/Group_1597889251.png"
@@ -372,7 +410,7 @@ export default function CardPage() {
 
                         {/* Streamlined Ad Spend Management */}
                         <div
-                            className={`bg-white rounded-[40px] px-10 shadow-lg animate-on-scroll ${
+                            className={`bg-white rounded-[40px] px-12 shadow-lg animate-on-scroll transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${
                                 visibleSections.has('solutions') ? 'animate-slide-up' : ''
                             }`}
                         >
@@ -381,14 +419,14 @@ export default function CardPage() {
                                     <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-10">
                                         Streamlined Ad Spend Management
                                     </h3>
-                                    <div className="space-y-4 text-lg text-gray-600 leading-relaxed mt-8">
+                                    <div className="space-y-4 text-xl text-gray-600 leading-relaxed mt-8">
                                         <p>Create Unlimited Unique Virtual Cards For Your Ad</p>
                                         <p>Campaigns On Facebook, Google, And TikTok.</p>
                                         <p>Drastically Reduce Account Suspensions Caused By</p>
                                         <p>Payment Issues And Simplify Budget Tracking.</p>
                                     </div>
                                 </div>
-                                <div className="flex-1 flex justify-center lg:justify-end">
+                                <div className=" flex justify-center lg:justify-end">
                                     <div className="relative">
                                         <Image
                                             src="/card/Group_1597889252.png"
@@ -416,88 +454,104 @@ export default function CardPage() {
                         <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">
                             Team Collaboration & Risk Control
                         </h2>
-                        <p className="text-[40px] text-gray-500 pt-[40px] pb-25">
+                        <p className="text-[40px] text-gray-500 pt-[40px] pb-10">
                             Collaboration and Security, Under Your Control
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {/* Bulk Card Issuing */}
                         <div
-                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                            className={`text-left bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
                                 visibleSections.has('team-collaboration') ? 'stacked-entry-1' : ''
                             }`}
                         >
-                            <div className="flex justify-center mb-6">
-                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-green-500 rounded"></div>
-                                </div>
+                            <div className="flex justify-start mb-6">
+                                <Image
+                                    src="/card/Mask group-1.png"
+                                    alt="Bulk Card Issuing"
+                                    width={100}
+                                    height={100}
+                                    className="object-contain"
+                                />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Bulk Card Issuing</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Issue multiple virtual cards instantly for your entire team with customizable spending
-                                limits and controls.
+                            <h3 className="text-[32px] font-bold text-gray-900 mb-4">Bulk Card Issuing</h3>
+                            <p className="text-gray-600 text-[18px] leading-relaxed">
+                                Create dedicated virtual cards in bulk for each advertising account or marketing
+                                campaign to minimize risk and simplify tracking.
                             </p>
                         </div>
 
                         {/* Team Collaboration */}
                         <div
-                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                            className={`text-left bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
                                 visibleSections.has('team-collaboration') ? 'stacked-entry-2' : ''
                             }`}
                         >
-                            <div className="flex justify-center mb-6">
-                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
-                                </div>
+                            <div className="flex justify-start mb-6">
+                                <Image
+                                    src="/card/Mask group-2.png"
+                                    alt="Team Collaboration"
+                                    width={100}
+                                    height={100}
+                                    className="object-contain"
+                                />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Team Collaboration</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Enable seamless collaboration with shared budgets, approval workflows, and real-time
-                                expense tracking.
+                            <h3 className="text-[32px] font-bold text-gray-900 mb-4">Team Collaboration</h3>
+                            <p className="text-gray-600 text-[18px] leading-relaxed">
+                                Assign cards with specific budgets to team members and monitor all expenses from a
+                                unified backend.
                             </p>
                         </div>
 
                         {/* Spending Controls */}
                         <div
-                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                            className={`text-left bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
                                 visibleSections.has('team-collaboration') ? 'stacked-entry-3' : ''
                             }`}
                         >
-                            <div className="flex justify-center mb-6">
-                                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-yellow-500 rounded-full"></div>
-                                </div>
+                            <div className="flex justify-start mb-6">
+                                <Image
+                                    src="/card/Mask group-3.png"
+                                    alt="Spending Controls"
+                                    width={100}
+                                    height={100}
+                                    className="object-contain"
+                                />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Spending Controls</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Set granular spending limits, merchant restrictions, and transaction controls for
-                                enhanced security.
+                            <h3 className="text-[32px] font-bold text-gray-900 mb-4">Spending Controls</h3>
+                            <p className="text-gray-600 text-[18px] leading-relaxed">
+                                Set independent monthly or single transaction limits for each card, and freeze/unfreeze
+                                cards with one click.
                             </p>
                         </div>
 
                         {/* Real-time Alerts */}
                         <div
-                            className={`text-center bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                            className={`text-left bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
                                 visibleSections.has('team-collaboration') ? 'stacked-entry-4' : ''
                             }`}
                         >
-                            <div className="flex justify-center mb-6">
-                                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                                    <div className="w-8 h-8 bg-red-500 rounded-full"></div>
-                                </div>
+                            <div className="flex justify-start mb-6">
+                                <Image
+                                    src="/card/Mask group-4.png"
+                                    alt="Real-time Alerts"
+                                    width={100}
+                                    height={100}
+                                    className="object-contain"
+                                />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Real-time Alerts</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                                Get instant notifications for all transactions, suspicious activities, and budget
-                                threshold alerts.
+                            <h3 className="text-[32px] font-bold text-gray-900 mb-4 pr-3">Real-time Alerts</h3>
+                            <p className="text-gray-600 text-[18px] leading-relaxed">
+                                Real-time notifications for all transactions, enabling you to grasp the dynamics of your
+                                funds in the first place.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-b from-[#E8F5E8] to-[#F7F7F2]" data-section="cta">
+            {/* <section className="py-20 bg-gradient-to-b from-[#E8F5E8] to-[#F7F7F2]" data-section="cta">
                 <div className="container mx-auto px-8 max-w-[1700px] text-center">
                     <div className={`animate-on-scroll ${visibleSections.has('cta') ? 'animate-slide-up' : ''}`}>
                         <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">
@@ -508,7 +562,7 @@ export default function CardPage() {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }
