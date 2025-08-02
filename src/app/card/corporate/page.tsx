@@ -128,7 +128,7 @@ export default function CardPage() {
                 {/* Content Container */}
                 <div className="relative z-10 flex items-center justify-center min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] 2xl:min-h-[1100px] px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-12 xl:pt-16 2xl:pt-20">
                     <div className="container w-full max-w-[1700px] mx-auto">
-                        <div className="flex flex-col items-center text-center py-4 lg:py-6 xl:py-8">
+                        <div className="flex flex-col flex-start items-center text-center py-4 lg:py-6 xl:py-8">
                             {/* Navigation Pills */}
                             <div
                                 className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-3 sm:gap-4 lg:gap-6 xl:gap-8 justify-center mx-auto ${

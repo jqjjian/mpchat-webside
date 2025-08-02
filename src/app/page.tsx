@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import Layout from '@/components/Layout'
 import Footer from '@/components/Footer'
-
+import Link from 'next/link'
 export default function Home() {
     const featureMatrixRef = useRef<HTMLDivElement>(null)
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
@@ -110,20 +110,24 @@ export default function Home() {
                                     businesses worldwide.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-10 ">
-                                    <button
-                                        className={`text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 ${
-                                            visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                        }`}
-                                    >
-                                        For Personal
-                                    </button>
-                                    <button
-                                        className={`text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 ${
-                                            visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                        }`}
-                                    >
-                                        For Business
-                                    </button>
+                                    <Link href="/card/personal">
+                                        <button
+                                            className={`text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 ${
+                                                visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                            }`}
+                                        >
+                                            For Personal
+                                        </button>
+                                    </Link>
+                                    <Link href="/card/corporate">
+                                        <button
+                                            className={`text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 ${
+                                                visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                            }`}
+                                        >
+                                            For Business
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 

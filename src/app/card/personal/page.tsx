@@ -127,8 +127,8 @@ export default function CardPage() {
 
                 {/* Content Container */}
                 <div className="relative z-10 flex items-center justify-center min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] 2xl:min-h-[1100px] px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-12 xl:pt-16 2xl:pt-20">
-                    <div className="container w-full max-w-[1700px] mx-auto">
-                        <div className="flex flex-col items-center text-center py-4 lg:py-6 xl:py-8">
+                    <div className="container w-full max-w-[1700px] mx-auto pt-[80px] ">
+                        <div className="flex flex-col flex-start items-center text-center py-4 lg:py-6 xl:py-8">
                             {/* Navigation Pills */}
                             <div
                                 className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-3 sm:gap-4 lg:gap-6 xl:gap-8 justify-center mx-auto ${
@@ -155,21 +155,10 @@ export default function CardPage() {
                                             </span>
                                         </div>
                                         <Image src="/card/j1.png" alt="arrow" width={15} height={18}></Image>
-                                        {/* <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg> */}
                                     </div>
                                 </Link>
                                 <Link href="/card/corporate" className="flex-1">
                                     <div className="relative flex items-center gap-2 lg:gap-3 px-3 sm:px-4 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg  border border-white">
-                                        {/* <div className="w-6 h-6 bg-gray-200 rounded-lg flex items-center justify-center">
-                                        <div className="w-3 h-3 bg-gray-600 rounded-sm"></div>
-                                    </div> */}
-
                                         <div className="flex items-center gap-2 lg:gap-3 flex-1">
                                             <Image
                                                 height={35}
@@ -183,13 +172,6 @@ export default function CardPage() {
                                             </span>
                                         </div>
                                         <Image src="/card/j2.png" alt="arrow" width={15} height={18}></Image>
-                                        {/* <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg> */}
                                     </div>
                                 </Link>
                             </div>
