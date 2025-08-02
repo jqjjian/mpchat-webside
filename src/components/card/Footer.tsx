@@ -43,32 +43,32 @@ export default function Footer() {
             value: 'support@mpchats.com',
             icon: '📧',
             action: () => window.open('mailto:contact@mpchats.com', '_blank')
-        },
-        {
-            type: 'telegram',
-            label: 'Telegram',
-            value: '@MPChatSupport',
-            icon: '📱',
-            action: () => window.open('https://t.me/MPChatSupport', '_blank')
-        },
-        {
-            type: 'wechat',
-            label: 'WeChat Support',
-            value: 'MPChat_Service',
-            icon: '💬',
-            action: () => {
-                // Copy WeChat ID to clipboard
-                navigator.clipboard.writeText('MPChat_Service')
-                alert('WeChat ID copied to clipboard: MPChat_Service')
-            }
-        },
-        {
-            type: 'phone',
-            label: 'Support Hotline',
-            value: '+1-800-MPCHAT',
-            icon: '📞',
-            action: () => window.open('tel:+18006724284', '_blank')
         }
+        // {
+        //     type: 'telegram',
+        //     label: 'Telegram',
+        //     value: '@MPChatSupport',
+        //     icon: '📱',
+        //     action: () => window.open('https://t.me/MPChatSupport', '_blank')
+        // },
+        // {
+        //     type: 'wechat',
+        //     label: 'WeChat Support',
+        //     value: 'MPChat_Service',
+        //     icon: '💬',
+        //     action: () => {
+        //         // Copy WeChat ID to clipboard
+        //         navigator.clipboard.writeText('MPChat_Service')
+        //         alert('WeChat ID copied to clipboard: MPChat_Service')
+        //     }
+        // },
+        // {
+        //     type: 'phone',
+        //     label: 'Support Hotline',
+        //     value: '+1-800-MPCHAT',
+        //     icon: '📞',
+        //     action: () => window.open('tel:+18006724284', '_blank')
+        // }
     ]
 
     return (
@@ -169,7 +169,7 @@ export default function Footer() {
             {/* Contact Modal */}
             {showContactModal && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 modal-backdrop"
+                    className="fixed inset-0 bg-[rgba(0,0,0,.5)]  flex items-center justify-center z-50 p-4 modal-backdrop"
                     onClick={closeContactModal}
                 >
                     <div
@@ -186,7 +186,7 @@ export default function Footer() {
 
                         {/* Modal Title */}
                         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Contact Us</h3>
-                        <p className="text-gray-600 text-center mb-8">
+                        <p className="text-gray-600 text-center mb-8 py-5">
                             {`Choose your preferred contact method, and we'll get back to you soon`}
                         </p>
 
@@ -195,7 +195,6 @@ export default function Footer() {
                             {contactMethods.map(method => (
                                 <button
                                     key={method.type}
-                                    onClick={method.action}
                                     className="w-full flex items-center p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-200 hover:scale-105"
                                 >
                                     <span className="text-2xl mr-4">{method.icon}</span>
@@ -208,9 +207,9 @@ export default function Footer() {
                         </div>
 
                         {/* Bottom Notice */}
-                        <div className="mt-6 text-center text-sm text-gray-500">
-                            Business Hours: Monday - Friday 9:00-18:00 (UTC+8)
-                        </div>
+                        {/* <div className="mt-6 text-center text-sm text-gray-500">
+                            Business Hours: Monday - Friday 9:00-18:00 (UTC+7)
+                        </div> */}
                     </div>
                 </div>
             )}

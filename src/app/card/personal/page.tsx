@@ -96,7 +96,7 @@ export default function CardPage() {
             {/* <Layout> */}
             {/* Hero Section */}
             <section
-                className="relative min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] 2xl:min-h-[1100px] overflow-hidden"
+                className="relative min-h-[900px] 2xl:min-h-[1250px] min-[2780px]:h-[1500px]  overflow-hidden"
                 data-section="hero"
             >
                 {/* Base gradient background */}
@@ -106,8 +106,7 @@ export default function CardPage() {
                 <div
                     className="absolute inset-0 bg-[url('/card/Group_1597889257.png')] bg-no-repeat opacity-80 min-[1920px]:hidden"
                     style={{
-                        backgroundSize: 'contain',
-                        backgroundPosition: 'center top',
+                        backgroundPosition: 'center 0',
                         backgroundAttachment: 'scroll'
                     }}
                 ></div>
@@ -126,13 +125,14 @@ export default function CardPage() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F7F7F2] opacity-60"></div>
 
                 {/* Content Container */}
-                <div className="relative z-10 flex items-center justify-center min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] 2xl:min-h-[1100px] px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-12 xl:pt-16 2xl:pt-20">
-                    <div className="container w-full max-w-[1700px] mx-auto pt-[80px] ">
-                        <div className="flex flex-col flex-start items-center text-center py-4 lg:py-6 xl:py-8">
+                <div className="relative z-10 flex  justify-center min-h-[700px] lg:min-h-[800px] xl:min-h-[900px] 2xl:min-h-[1100px] px-4 sm:px-6 lg:px-8 pt-30 ">
+                    <div className="container w-full max-w-[1700px] mx-auto ">
+                        <div className="flex flex-col flex-start items-center text-center">
                             {/* Navigation Pills */}
                             <div
-                                className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-3 sm:gap-4 lg:gap-6 xl:gap-8 justify-center mx-auto ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-3 sm:gap-4 lg:gap-6 xl:gap-8 justify-center mx-auto ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 <Link href="/card/personal" className="relative flex-1">
                                     <div
@@ -177,8 +177,9 @@ export default function CardPage() {
 
                             {/* Main Title */}
                             <h1
-                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 The Card For A Borderless
                                 <br />
@@ -187,18 +188,20 @@ export default function CardPage() {
 
                             {/* Subtitle */}
                             <p
-                                className={`text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-2 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-2 ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 One card for all your global online payments. Secure, simple, and instantly available.
                             </p>
 
                             {/* Card Visual */}
                             <div
-                                className={`relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-3 ${visibleSections.has('hero') ? 'animate-fade-scale' : ''
-                                    }`}
+                                className={`lg:w-[550px] lg:h-[447px] xl:w-[650px] xl:h-[528px] 2xl:w-[750px] 2xl:h-[610px] relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-3 ${
+                                    visibleSections.has('hero') ? 'animate-fade-scale' : ''
+                                }`}
                             >
-                                <div className="relative flex items-center justify-center">
+                                <div className="relative flex items-center justify-center ">
                                     <div className="relative float-animation">
                                         <Image
                                             src="/card/card.png"
@@ -218,8 +221,9 @@ export default function CardPage() {
             <section className="py-20 bg-[#F7F7F2]" data-section="why-mpchat">
                 <div className="container mx-auto px-8 max-w-[1700px]">
                     <div
-                        className={`text-center mb-16 animate-on-scroll ${visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-16 animate-on-scroll ${
+                            visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
+                        }`}
                     >
                         <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">Why MPChat Card</h2>
                     </div>
@@ -227,8 +231,9 @@ export default function CardPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12  pt-[120px]">
                         {/* For Online Shoppers */}
                         <div
-                            className={`text-center animate-on-scroll animate-delay-1 ${visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`text-center animate-on-scroll animate-delay-1 ${
+                                visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-8">
                                 <div className="flex items-center justify-center h-[88px]">
@@ -251,8 +256,9 @@ export default function CardPage() {
 
                         {/* For Subscription Lovers */}
                         <div
-                            className={`text-center animate-on-scroll animate-delay-2 ${visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`text-center animate-on-scroll animate-delay-2 ${
+                                visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-8">
                                 <div className="flex items-center justify-center h-[88px]">
@@ -275,8 +281,9 @@ export default function CardPage() {
 
                         {/* For Digital Marketers */}
                         <div
-                            className={`text-center animate-on-scroll animate-delay-3 ${visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`text-center animate-on-scroll animate-delay-3 ${
+                                visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-8">
                                 <div className=" flex items-center justify-center h-[88px]">
@@ -304,8 +311,9 @@ export default function CardPage() {
             <section className="py-20 " data-section="designed-for-need">
                 <div className="container mx-auto px-8 max-w-[1700px]">
                     <div
-                        className={`text-center mb-16 animate-on-scroll ${visibleSections.has('designed-for-need') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-16 animate-on-scroll ${
+                            visibleSections.has('designed-for-need') ? 'animate-slide-up' : ''
+                        }`}
                     >
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
                             Designed for Your Every Need
@@ -315,8 +323,9 @@ export default function CardPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-25">
                         {/* Online Shopping */}
                         <div
-                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-1 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${visibleSections.has('designed-for-need') ? 'animate-slide-left' : ''
-                                }`}
+                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-1 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-left' : ''
+                            }`}
                             style={{
                                 backgroundImage: 'url(/card/pic4.png)',
                                 backgroundSize: 'cover',
@@ -336,8 +345,9 @@ export default function CardPage() {
 
                         {/* Subscriptions */}
                         <div
-                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-2 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${visibleSections.has('designed-for-need') ? 'animate-slide-right' : ''
-                                }`}
+                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-2 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-right' : ''
+                            }`}
                             style={{
                                 backgroundImage: 'url(/card/pic5.png)',
                                 backgroundSize: 'cover',
@@ -356,8 +366,9 @@ export default function CardPage() {
 
                         {/* Ad Payments */}
                         <div
-                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-3 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${visibleSections.has('designed-for-need') ? 'animate-slide-left' : ''
-                                }`}
+                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-3 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-left' : ''
+                            }`}
                             style={{
                                 backgroundImage: 'url(/card/pic6.png)',
                                 backgroundSize: 'cover',
@@ -376,8 +387,9 @@ export default function CardPage() {
 
                         {/* Travel */}
                         <div
-                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-4 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${visibleSections.has('designed-for-need') ? 'animate-slide-right' : ''
-                                }`}
+                            className={`relative rounded-3xl p-8 overflow-hidden animate-on-scroll animate-delay-4 min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-right' : ''
+                            }`}
                             style={{
                                 backgroundImage: 'url(/card/pic7.png)',
                                 backgroundSize: 'cover',
@@ -401,8 +413,9 @@ export default function CardPage() {
             <section className="py-20 bg-[#F7F7F2]" data-section="features-deep-dive">
                 <div className="container mx-auto px-8 max-w-[1700px]">
                     <div
-                        className={`text-center mb-16 animate-on-scroll ${visibleSections.has('features-deep-dive') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-16 animate-on-scroll ${
+                            visibleSections.has('features-deep-dive') ? 'animate-slide-up' : ''
+                        }`}
                     >
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 pb-28">Features Deep Dive</h2>
                     </div>
@@ -410,8 +423,9 @@ export default function CardPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {/* Instant Issuing */}
                         <div
-                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('features-deep-dive') ? 'stacked-entry-1' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('features-deep-dive') ? 'stacked-entry-1' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-2">
                                 <div className="flex items-center justify-center pb-6">
@@ -436,8 +450,9 @@ export default function CardPage() {
 
                         {/* Spending Controls */}
                         <div
-                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('features-deep-dive') ? 'stacked-entry-2' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('features-deep-dive') ? 'stacked-entry-2' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-6">
                                 <div className="flex items-center justify-center pb-2">
@@ -461,8 +476,9 @@ export default function CardPage() {
 
                         {/* Multi-Card Management */}
                         <div
-                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('features-deep-dive') ? 'stacked-entry-3' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('features-deep-dive') ? 'stacked-entry-3' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-6">
                                 <div className="flex items-center justify-center pb-2">
@@ -485,8 +501,9 @@ export default function CardPage() {
 
                         {/* Top-Tier Security */}
                         <div
-                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('features-deep-dive') ? 'stacked-entry-4' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('features-deep-dive') ? 'stacked-entry-4' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-6">
                                 <div className="flex items-center justify-center pb-2">
