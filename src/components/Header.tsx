@@ -3,9 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 export default function Header() {
     const pathname = usePathname()
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isCardDropdownOpen, setIsCardDropdownOpen] = useState(false)
 
     const isActive = (path: string) => {
         // 标准化路径，移除尾部斜杠进行比较（除了根路径）
@@ -22,7 +25,23 @@ export default function Header() {
 
     const getTextClassName = (path: string) => {
         const active = isActive(path)
-        return active ? 'text-[#06C55B] font-bold' : 'text-gray-600 hover:text-[#06C55B] font-medium'
+        return active ? 'text-[#06C55B] font-redotpaybold font-bold' : 'text-gray-600 hover:text-[#06C55B] font-medium'
+    }
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen)
+    }
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false)
+    }
+
+    const toggleCardDropdown = () => {
+        setIsCardDropdownOpen(!isCardDropdownOpen)
+    }
+
+    const closeCardDropdown = () => {
+        setIsCardDropdownOpen(false)
     }
 
     return (
@@ -44,17 +63,62 @@ export default function Header() {
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
                         )}
                     </Link>
-                    <Link href="/card/personal" className="relative pb-2 transition-colors">
-                        {/* 隐藏的粗体文字用于占位 */}
-                        <span className="font-bold text-transparent select-none">MP Card</span>
-                        {/* 实际显示的文字 */}
-                        <span className={`absolute inset-0 ${getTextClassName('/card')} transition-colors`}>
-                            MP Card
-                        </span>
-                        {(isActive('/card/personal') || isActive('/card/corporate')) && (
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
+
+                    {/* MP Card Dropdown */}
+                    <div className="relative pr-10">
+                        <button
+                            className={`relative pb-2 transition-colors flex items-center gap-1 ${getTextClassName('/card')}`}
+                            onClick={toggleCardDropdown}
+                            onMouseEnter={() => setIsCardDropdownOpen(true)}
+                            onMouseLeave={() => setIsCardDropdownOpen(false)}
+                        >
+                            {/* 隐藏的粗体文字用于占位 */}
+                            <span className="font-bold text-transparent select-none">MP Card</span>
+                            {/* 实际显示的文字 */}
+                            <span className={`absolute inset-0 ${getTextClassName('/card')} transition-colors`}>
+                                MP Card
+                            </span>
+                            {/* 下拉箭头 */}
+                            <svg
+                                className={`absolute -right-4 w-4 h-4 ml-4 mt-2 transition-transform ${isCardDropdownOpen ? 'rotate-180' : ''}`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                            {(isActive('/card/personal') || isActive('/card/corporate')) && (
+                                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
+                            )}
+                        </button>
+
+                        {/* Dropdown Menu */}
+                        {isCardDropdownOpen && (
+                            <div
+                                className="absolute top-full left-0 mt-2 bg-white/95 backdrop-blur-md rounded-[15px] border border-white/20 shadow-lg overflow-hidden min-w-[140px]"
+                                onMouseEnter={() => setIsCardDropdownOpen(true)}
+                                onMouseLeave={() => setIsCardDropdownOpen(false)}
+                            >
+                                <div className="py-2">
+                                    <Link
+                                        href="/card/personal"
+                                        className={`block px-4 py-2 text-sm transition-colors hover:bg-gray-50 ${getTextClassName('/card/personal')}`}
+                                        onClick={closeCardDropdown}
+                                    >
+                                        Personal
+                                    </Link>
+                                    <Link
+                                        href="/card/corporate"
+                                        className={`block px-4 py-2 text-sm transition-colors hover:bg-gray-50 ${getTextClassName('/card/corporate')}`}
+                                        onClick={closeCardDropdown}
+                                    >
+                                        Corporate
+                                    </Link>
+                                </div>
+                            </div>
                         )}
-                    </Link>
+                    </div>
+
                     {/* <a href="#developers" className="relative pb-2 transition-colors">
                         <span className="font-bold text-transparent select-none">Developers</span>
                         <span className="absolute inset-0 text-gray-600 hover:text-[#06C55B] font-medium transition-colors">
@@ -65,18 +129,78 @@ export default function Header() {
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden pr-8">
-                    <button className="text-gray-600">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg>
+                    <button
+                        className="text-gray-600 hover:text-[#06C55B] transition-colors"
+                        onClick={toggleMobileMenu}
+                    >
+                        {isMobileMenuOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        ) : (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        )}
                     </button>
                 </div>
             </nav>
+
+            {/* Mobile Menu Overlay */}
+            {isMobileMenuOpen && (
+                <div className="md:hidden absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-md rounded-[20px] border border-white/20 shadow-lg overflow-hidden">
+                    <div className="py-4 px-6 space-y-4">
+                        <Link
+                            href="/"
+                            className={`block py-3 px-4 rounded-lg transition-colors ${getTextClassName('/')}`}
+                            onClick={closeMobileMenu}
+                        >
+                            Home
+                        </Link>
+
+                        {/* Mobile MP Card Menu */}
+                        <div className="space-y-2">
+                            <div className={`py-3 px-4 rounded-lg transition-colors ${getTextClassName('/card')}`}>
+                                MP Card
+                            </div>
+                            <div className="ml-4 space-y-2">
+                                <Link
+                                    href="/card/personal"
+                                    className={`block py-2 px-4 rounded-lg transition-colors text-sm ${getTextClassName('/card/personal')}`}
+                                    onClick={closeMobileMenu}
+                                >
+                                    Personal
+                                </Link>
+                                <Link
+                                    href="/card/corporate"
+                                    className={`block py-2 px-4 rounded-lg transition-colors text-sm ${getTextClassName('/card/corporate')}`}
+                                    onClick={closeMobileMenu}
+                                >
+                                    Corporate
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* <a 
+                            href="#developers" 
+                            className="block py-3 px-4 rounded-lg text-gray-600 hover:text-[#06C55B] hover:bg-gray-50 transition-colors"
+                            onClick={closeMobileMenu}
+                        >
+                            Developers
+                        </a> */}
+                    </div>
+                </div>
+            )}
         </header>
     )
 }
