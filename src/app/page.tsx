@@ -73,7 +73,7 @@ export default function Home() {
             `}</style>
             {/* Hero Section */}
             <section
-                className="relative min-h-[900px] h-[70vh]  2xl:min-h-[1250px] min-[2780px]:h-[1500px] overflow-hidden"
+                className="relative min-h-[900px] sm:min-h-[70vh] pb-20  2xl:min-h-[1250px] min-[2780px]:h-[1500px] "
                 data-section="hero"
             >
                 {/* Base gradient background */}
@@ -102,7 +102,7 @@ export default function Home() {
                                 className={`flex flex-col justify-center space-y-6 text-center animate-on-scroll w-full mt-30 lg:mt-0 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
                                     }`}
                             >
-                                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight sm:mt-8 font-redotpaybold">
+                                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight sm:mt-30 font-redotpaybold">
                                     Seamless Chat,
                                     <br />
                                     Borderless Pay.
@@ -156,7 +156,7 @@ export default function Home() {
                         </div>
 
                         {/* 桌面端布局：水平排列 */}
-                        <div className="hidden lg:flex flex-row gap-12 h-full">
+                        <div className="hidden lg:flex flex-row gap-12 h-full pt-66 min-[2780px]:pt-0 ">
                             {/* Left Content - Text (占2/3宽度) */}
                             <div
                                 className={`flex-1 flex flex-col justify-center space-y-8 text-left animate-on-scroll ${visibleSections.has('hero') ? 'animate-slide-up' : ''
