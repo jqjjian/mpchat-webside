@@ -197,7 +197,7 @@ export default function CardPage() {
                                 className={`lg:w-[550px] lg:h-[447px] xl:w-[650px] xl:h-[528px] 2xl:w-[750px] 2xl:h-[610px] relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-3 ${visibleSections.has('hero') ? 'animate-fade-scale' : ''
                                     }`}
                             >
-                                <div className="relative flex items-center justify-center">
+                                <div className="relative pt-30 sm:pt-0 flex items-center justify-center">
                                     <div className="relative float-animation">
                                         <Image
                                             src="/card/card.png"

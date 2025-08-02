@@ -199,7 +199,7 @@ export default function CardPage() {
                                     }`}
                             >
                                 <div className="relative flex items-center justify-center pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px]">
-                                    <div className="relative float-animation">
+                                    <div className="relative float-animation pt-30 xs:pt-0">
                                         <Image
                                             src="/card/Group_1597889250.png"
                                             alt="MPCard"
@@ -208,7 +208,7 @@ export default function CardPage() {
                                             className="object-contain drop-shadow-2xl w-[250px] h-[175px] sm:w-[300px] sm:h-[210px] lg:w-[400px] lg:h-[280px] xl:w-[450px] xl:h-[315px] 2xl:w-[500px] 2xl:h-[350px]"
                                         />
                                     </div>
-                                    <div className="absolute top-[80px] sm:top-[100px] lg:top-[160px] xl:top-[180px] 2xl:top-[220px] left-0 animate-[floatRandomB1_6s_ease-in-out_infinite]">
+                                    <div className="absolute top-[80px]  xl:top-[180px] 2xl:top-[120px] left-30 animate-[floatRandomB1_6s_ease-in-out_infinite]">
                                         <Image
                                             src="/card/b1.png"
                                             alt="MPCard"
@@ -217,7 +217,7 @@ export default function CardPage() {
                                             className="object-contain drop-shadow-2xl w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] lg:w-[60px] lg:h-[60px] xl:w-[70px] xl:h-[70px] 2xl:w-[87px] 2xl:h-[87px]"
                                         />
                                     </div>
-                                    <div className="absolute top-2 sm:top-4 lg:top-6 xl:top-8 2xl:top-10 right-[60px] sm:right-[80px] lg:right-[120px] xl:right-[140px] 2xl:right-[180px] animate-[floatRandomB3_7s_ease-in-out_infinite_0.5s]">
+                                    <div className="absolute top-20 sm:top-20 lg:top-6 xl:top-8 2xl:top-20 right-[160px] sm:right-[180px] lg:right-[120px] xl:right-[140px] 2xl:right-[180px] animate-[floatRandomB3_7s_ease-in-out_infinite_0.5s]">
                                         <Image
                                             src="/card/b3.png"
                                             alt="MPCard"
@@ -226,7 +226,7 @@ export default function CardPage() {
                                             className="object-contain drop-shadow-2xl w-[40px] h-[34px] sm:w-[50px] sm:h-[42px] lg:w-[80px] lg:h-[68px] xl:w-[90px] xl:h-[77px] 2xl:w-[116px] 2xl:h-[99px]"
                                         />
                                     </div>
-                                    <div className="absolute bottom-0 left-[40px] sm:left-[50px] lg:left-[80px] xl:left-[100px] 2xl:left-[130px] animate-[floatRandomB2_8s_ease-in-out_infinite_1s]">
+                                    <div className="absolute bottom-0 left-[120px] sm:left-[150px] lg:left-[80px] xl:left-[100px] 2xl:left-[130px] animate-[floatRandomB2_8s_ease-in-out_infinite_1s]">
                                         <Image
                                             src="/card/b2.png"
                                             alt="MPCard"
@@ -235,7 +235,7 @@ export default function CardPage() {
                                             className="object-contain drop-shadow-2xl w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] 2xl:w-[99px] 2xl:h-[99px]"
                                         />
                                     </div>
-                                    <div className="absolute top-12 sm:top-16 lg:top-28 xl:top-30 2xl:top-36 right-0 animate-[floatRandomB4_5.5s_ease-in-out_infinite_1.5s]">
+                                    <div className="absolute top-[220px] sm:top-66 lg:top-[280px] xl:top-80 2xl:top-96 right-[120px] sm:right-[80px] lg:right-[80px] animate-[floatRandomB4_5.5s_ease-in-out_infinite_1.5s]">
                                         <Image
                                             src="/card/b4.png"
                                             alt="MPCard"
