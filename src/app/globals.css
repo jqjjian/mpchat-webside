@@ -143,6 +143,11 @@
   font-display: swap;
 }
 
+/* 粗体字体类 */
+.font-redotpaybold {
+  font-family: 'RedotpayBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
 *,
 *::before,
 *::after {
@@ -223,7 +228,6 @@ body {
 
 .feature-card {
     background: white;
-    padding: 32px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid #f3f4f6;

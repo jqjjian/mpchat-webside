@@ -84,7 +84,7 @@ export default function Header() {
                     <div className="w-10 h-10 relative">
                         <Image src="/Logo.svg" alt="MPChat Logo" fill className="object-contain" />
                     </div>
-                    <span className="text-2xl font-bold text-gray-800 md:text-xl">MPChat</span>
+                    <span className="text-2xl font-bold text-gray-800 md:text-xl font-redotpaybold">MPChat</span>
                 </div>
                 <div className="hidden md:flex items-center gap-10 flex-shrink-0 pr-12">
                     <Link href="/" className="relative pb-2 transition-colors">

@@ -134,7 +134,7 @@ export default function CardPage() {
                                     }`}
                             >
                                 <Link href="/card/personal" className="flex-1">
-                                    <div className="relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg border border-white">
+                                    <div className="relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg border border-white font-redotpaybold">
                                         <div className="flex items-center gap-1 sm:gap-2 lg:gap-3 flex-1">
                                             <Image
                                                 height={35}
@@ -152,7 +152,7 @@ export default function CardPage() {
                                 </Link>
                                 <Link href="/card/corporate" className="flex-1">
                                     <div
-                                        className="flex-1 relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg"
+                                        className="flex-1 relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg font-redotpaybold"
                                         style={{
                                             background: 'linear-gradient(135deg, #06C55B 0%, #04A84F 100%)'
                                         }}
@@ -176,7 +176,7 @@ export default function CardPage() {
 
                             {/* Main Title */}
                             <h1
-                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
                                     }`}
                             >
                                 The All-in-One Financial
@@ -257,7 +257,7 @@ export default function CardPage() {
                         className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('who-we-serve') ? 'animate-slide-up' : ''
                             }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8">Who We Serve</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">Who We Serve</h2>
                         <p className="text-xl sm:text-2xl lg:text-[40px] text-gray-500 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-25">
                             Built for the New Generation of Global Business
                         </p>
@@ -279,7 +279,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 pb-2 lg:pb-4">E-commerce Sellers</h3>
+                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 pb-2 lg:pb-4 font-redotpaybold">E-commerce Sellers</h3>
                         </div>
 
                         {/* Marketing Agencies */}
@@ -298,7 +298,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 text-center pb-2 lg:pb-4">
+                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 text-center pb-2 lg:pb-4 font-redotpaybold">
                                 Marketing Agencies
                             </h3>
                         </div>
@@ -319,7 +319,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 text-center pb-2 lg:pb-4">
+                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 text-center pb-2 lg:pb-4 font-redotpaybold">
                                 SaaS
                                 <br />
                                 Companies
@@ -342,7 +342,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 text-center pb-2 lg:pb-4">
+                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 text-center pb-2 lg:pb-4 font-redotpaybold">
                                 Global Freelancers
                             </h3>
                         </div>
@@ -357,7 +357,7 @@ export default function CardPage() {
                         className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('solutions') ? 'animate-slide-up' : ''
                             }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8">Solutions</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">Solutions</h2>
                     </div>
 
                     <div className="pt-8 lg:pt-16 space-y-4 lg:space-y-5">
@@ -368,7 +368,7 @@ export default function CardPage() {
                         >
                             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                                 <div className="flex-1 lg:pr-8">
-                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 lg:mb-10">
+                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 lg:mb-10 font-redotpaybold">
                                         Smart Expense Management
                                     </h3>
                                     <div className="space-y-3 lg:space-y-4 text-base lg:text-xl text-gray-600 leading-relaxed mt-6 lg:mt-8">
@@ -398,7 +398,7 @@ export default function CardPage() {
                         >
                             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                                 <div className="flex-1 lg:pr-8">
-                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 lg:mb-10">
+                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-6 lg:mb-10 font-redotpaybold">
                                         Streamlined Ad Spend Management
                                     </h3>
                                     <div className="space-y-3 lg:space-y-4 text-base lg:text-xl text-gray-600 leading-relaxed mt-6 lg:mt-8">
@@ -432,7 +432,7 @@ export default function CardPage() {
                         className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('team-collaboration') ? 'animate-slide-up' : ''
                             }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8">
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
                             Team Collaboration & Risk Control
                         </h2>
                         <p className="text-xl sm:text-2xl lg:text-[40px] text-gray-500 pt-[20px] lg:pt-[40px] pb-6 lg:pb-10">
@@ -455,7 +455,7 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4">Bulk Card Issuing</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">Bulk Card Issuing</h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Create dedicated virtual cards in bulk for each advertising account or marketing
                                 campaign to minimize risk and simplify tracking.
@@ -476,7 +476,7 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4">Team Collaboration</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">Team Collaboration</h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Assign cards with specific budgets to team members and monitor all expenses from a
                                 unified backend.
@@ -497,7 +497,7 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4">Spending Controls</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">Spending Controls</h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Set independent monthly or single transaction limits for each card, and freeze/unfreeze
                                 cards with one click.
@@ -518,7 +518,7 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 pr-3">Real-time Alerts</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 pr-3 font-redotpaybold">Real-time Alerts</h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Real-time notifications for all transactions, enabling you to grasp the dynamics of your
                                 funds in the first place.
@@ -531,10 +531,10 @@ export default function CardPage() {
             {/* <section className="py-20 bg-gradient-to-b from-[#E8F5E8] to-[#F7F7F2]" data-section="cta">
                 <div className="container mx-auto px-8 max-w-[1700px] text-center">
                     <div className={`animate-on-scroll ${visibleSections.has('cta') ? 'animate-slide-up' : ''}`}>
-                        <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8">
+                        <h2 className="text-4xl lg:text-[64px] font-bold text-gray-900 mb-8 font-redotpaybold">
                             Seamless Chat, Borderless Pay.
                         </h2>
-                        <button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-full text-lg font-semibold transition-colors duration-300">
+                        <button className="bg-green-500 hover:bg-green-600 text-white px-12 py-4 rounded-full text-lg font-semibold transition-colors duration-300 font-redotpaybold">
                             Contact Us
                         </button>
                     </div>

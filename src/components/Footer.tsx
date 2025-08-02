@@ -49,25 +49,23 @@ export default function Footer() {
             <div className="relative z-10 flex items-center justify-center min-h-[500px] px-8">
                 <div className="w-full max-w-[1700px] mx-auto text-center">
                     <h2
-                        className={`text-4xl lg:text-5xl font-bold text-gray-900 mb-12 pt-[200px] pb-[100px] animate-on-scroll ${
-                            visibleSections.has('footer') ? 'animate-slide-up' : ''
-                        }`}
+                        className={`text-4xl lg:text-5xl font-bold text-gray-900 mb-12 pt-[200px] pb-[100px] animate-on-scroll font-redotpaybold ${visibleSections.has('footer') ? 'animate-slide-up' : ''
+                            }`}
                     >
                         Seamless Chat, Borderless Pay.
                     </h2>
 
                     <div
-                        className={`flex flex-col sm:flex-row gap-10 justify-center mb-32 animate-on-scroll animate-delay-1 ${
-                            visibleSections.has('footer') ? 'animate-slide-up' : ''
-                        }`}
+                        className={`flex flex-col sm:flex-row gap-10 justify-center mb-32 animate-on-scroll animate-delay-1 ${visibleSections.has('footer') ? 'animate-slide-up' : ''
+                            }`}
                     >
                         <Link href="/card/personal">
-                            <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                            <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 font-redotpaybold">
                                 For Personal
                             </button>
                         </Link>
                         <Link href="/card/corporate">
-                            <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+                            <button className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 font-redotpaybold">
                                 For Business
                             </button>
                         </Link>
@@ -75,12 +73,11 @@ export default function Footer() {
 
                     {/* Footer Bottom */}
                     <div
-                        className={`flex flex-col md:flex-row justify-between items-center gap-4 border-t-1 border-t-[#BCD4C2] py-5 animate-on-scroll animate-delay-2 ${
-                            visibleSections.has('footer') ? 'animate-slide-up' : ''
-                        }`}
+                        className={`flex flex-col md:flex-row justify-between items-center gap-4 border-t-1 border-t-[#BCD4C2] py-5 animate-on-scroll animate-delay-2 ${visibleSections.has('footer') ? 'animate-slide-up' : ''
+                            }`}
                     >
                         <div className="flex flex-col items-center md:items-start">
-                            <span className="text-xl font-bold text-gray-800 mb-1">MPCard</span>
+                            <span className="text-xl font-bold text-gray-800 mb-1 font-redotpaybold">MPCard</span>
                             <span className="text-sm text-gray-500">© 2025 MPCard - All Rights Reserved</span>
                         </div>
 

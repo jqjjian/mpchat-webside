@@ -135,7 +135,7 @@ export default function CardPage() {
                             >
                                 <Link href="/card/personal" className="relative flex-1">
                                     <div
-                                        className="flex-1 relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg"
+                                        className="flex-1 relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg font-redotpaybold"
                                         style={{
                                             background: 'linear-gradient(135deg, #06C55B 0%, #04A84F 100%)'
                                         }}
@@ -156,7 +156,7 @@ export default function CardPage() {
                                     </div>
                                 </Link>
                                 <Link href="/card/corporate" className="flex-1">
-                                    <div className="relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg border border-white">
+                                    <div className="relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg border border-white font-redotpaybold">
                                         <div className="flex items-center gap-1 sm:gap-2 lg:gap-3 flex-1">
                                             <Image
                                                 height={35}
@@ -176,7 +176,7 @@ export default function CardPage() {
 
                             {/* Main Title */}
                             <h1
-                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
                                     }`}
                             >
                                 The Card For A Borderless
@@ -220,7 +220,7 @@ export default function CardPage() {
                         className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('why-mpchat') ? 'animate-slide-up' : ''
                             }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8">Why MPChat Card</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">Why MPChat Card</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pt-8 lg:pt-[120px]">
@@ -240,7 +240,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-[30px]">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-[30px] font-redotpaybold">
                                 For Online Shoppers
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[20px] leading-relaxed px-4 lg:px-0">
@@ -264,7 +264,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-[30px]">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-[30px] font-redotpaybold">
                                 For Subscription Lovers
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[20px] leading-relaxed px-4 lg:px-0">
@@ -288,7 +288,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-[30px]">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-[30px] font-redotpaybold">
                                 For Digital Marketers
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[20px] leading-relaxed px-4 lg:px-0">
@@ -306,7 +306,7 @@ export default function CardPage() {
                         className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('designed-for-need') ? 'animate-slide-up' : ''
                             }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-8">
+                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
                             Designed for Your Every Need
                         </h2>
                     </div>
@@ -324,7 +324,7 @@ export default function CardPage() {
                             }}
                         >
                             <div className="relative z-10 w-full pb-6 lg:pb-10">
-                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center">Online Shopping</h3>
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">Online Shopping</h3>
                                 <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
                                     Shop safely on any website with our virtual cards that protect your real account
                                     details.
@@ -344,7 +344,7 @@ export default function CardPage() {
                             }}
                         >
                             <div className="relative z-10 w-full pb-6 lg:pb-10">
-                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center">Subscriptions</h3>
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">Subscriptions</h3>
                                 <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
                                     Control your recurring payments with dedicated cards for each subscription service.
                                 </p>
@@ -363,7 +363,7 @@ export default function CardPage() {
                             }}
                         >
                             <div className="relative z-10 w-full pb-6 lg:pb-10">
-                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center">Ad Payments</h3>
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">Ad Payments</h3>
                                 <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
                                     Streamline your advertising spend with cards designed for marketing campaigns.
                                 </p>
@@ -382,7 +382,7 @@ export default function CardPage() {
                             }}
                         >
                             <div className="relative z-10 w-full pb-6 lg:pb-10">
-                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center">Travel</h3>
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">Travel</h3>
                                 <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
                                     Travel with confidence using cards optimized for international transactions.
                                 </p>
@@ -399,7 +399,7 @@ export default function CardPage() {
                         className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('features-deep-dive') ? 'animate-slide-up' : ''
                             }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 pb-8 lg:pb-28">Features Deep Dive</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 pb-8 lg:pb-28 font-redotpaybold">Features Deep Dive</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
@@ -419,7 +419,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4 font-redotpaybold">
                                 Instant
                                 <br />
                                 Issuing
@@ -445,7 +445,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4 font-redotpaybold">
                                 Spending Controls
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] text-left leading-relaxed">
@@ -470,7 +470,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4 font-redotpaybold">
                                 Multi-Card Management
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] text-left leading-relaxed">
@@ -494,7 +494,7 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4 pr-3">
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 text-left pb-2 lg:pb-4 pr-3 font-redotpaybold">
                                 Top-Tier Security
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] text-left leading-relaxed">
@@ -504,7 +504,6 @@ export default function CardPage() {
                     </div>
                 </div>
             </section>
-            {/* </Layout> */}
         </>
     )
 }

@@ -93,21 +93,19 @@ export default function Footer() {
             <div className="relative z-10 flex items-center justify-center min-h-[500px] px-8">
                 <div className="w-full max-w-[1700px] mx-auto text-center">
                     <h2
-                        className={`text-4xl lg:text-5xl font-bold text-gray-900 mb-12 pt-[200px] pb-[100px] animate-on-scroll ${
-                            visibleSections.has('footer') ? 'animate-slide-up' : ''
-                        }`}
+                        className={`text-4xl lg:text-5xl font-bold text-gray-900 mb-12 pt-[200px] pb-[100px] animate-on-scroll font-redotpaybold ${visibleSections.has('footer') ? 'animate-slide-up' : ''
+                            }`}
                     >
                         Seamless Chat, Borderless Pay.
                     </h2>
 
                     <div
-                        className={`flex flex-col sm:flex-row gap-4 justify-center mb-32 animate-on-scroll animate-delay-1 ${
-                            visibleSections.has('footer') ? 'animate-slide-up' : ''
-                        }`}
+                        className={`flex flex-col sm:flex-row gap-4 justify-center mb-32 animate-on-scroll animate-delay-1 ${visibleSections.has('footer') ? 'animate-slide-up' : ''
+                            }`}
                     >
                         <button
                             onClick={handleContactClick}
-                            className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                            className="hover:cursor-pointer text-[22px] min-w-[260px] px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 font-redotpaybold"
                         >
                             Contact Us
                         </button>
@@ -118,12 +116,11 @@ export default function Footer() {
 
                     {/* Footer Bottom */}
                     <div
-                        className={`flex flex-col md:flex-row justify-between items-center gap-4 border-t-1 border-t-[#BCD4C2] py-5 animate-on-scroll animate-delay-2 ${
-                            visibleSections.has('footer') ? 'animate-slide-up' : ''
-                        }`}
+                        className={`flex flex-col md:flex-row justify-between items-center gap-4 border-t-1 border-t-[#BCD4C2] py-5 animate-on-scroll animate-delay-2 ${visibleSections.has('footer') ? 'animate-slide-up' : ''
+                            }`}
                     >
                         <div className="flex flex-col items-center md:items-start">
-                            <span className="text-xl font-bold text-gray-800 mb-1">MPCard</span>
+                            <span className="text-xl font-bold text-gray-800 mb-1 font-redotpaybold">MPCard</span>
                             <span className="text-sm text-gray-500">© 2025 MPCard - All Rights Reserved</span>
                         </div>
 
@@ -179,13 +176,13 @@ export default function Footer() {
                         {/* Close Button */}
                         <button
                             onClick={closeContactModal}
-                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold font-redotpaybold"
                         >
                             ×
                         </button>
 
                         {/* Modal Title */}
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Contact Us</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center font-redotpaybold">Contact Us</h3>
                         <p className="text-gray-600 text-center mb-8 py-5">
                             {`Choose your preferred contact method, and we'll get back to you soon`}
                         </p>
@@ -199,7 +196,7 @@ export default function Footer() {
                                 >
                                     <span className="text-2xl mr-4">{method.icon}</span>
                                     <div className="text-left">
-                                        <div className="font-semibold text-gray-900">{method.label}</div>
+                                        <div className="font-semibold text-gray-900 font-redotpaybold">{method.label}</div>
                                         <div className="text-sm text-gray-600">{method.value}</div>
                                     </div>
                                 </button>
