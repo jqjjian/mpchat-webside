@@ -112,7 +112,7 @@ export default function Header() {
                                         className={`block px-4 py-2 text-sm transition-colors hover:bg-gray-50 ${getTextClassName('/card/corporate')}`}
                                         onClick={closeCardDropdown}
                                     >
-                                        Corporate
+                                        Business
                                     </Link>
                                 </div>
                             </div>
