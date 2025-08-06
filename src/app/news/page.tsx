@@ -34,11 +34,11 @@ export default function NewsPage() {
         },
         {
             id: 4,
-            title: 'MPChat Officially Launches in Singapore, Redefining Business Payments',
+            title: 'Beyond Encryption: How MPChat Protects Your Financial Communications',
             date: '2025-06-22',
             excerpt:
-                'MPChat launches in Singapore with its revolutionary "chat-to-pay" platform that merges secure messaging with corporate card management.',
-            image: '/news_images/news4-1.png'
+                "Learn about MPChat's multi-layered security approach that protects both your confidential messages and financial transactions.",
+            image: '/news_images/news6-1.png'
         },
         {
             id: 5,
@@ -48,13 +48,14 @@ export default function NewsPage() {
                 'Discover how virtual cards eliminate ad account suspensions and provide granular budget control for marketing campaigns across platforms.',
             image: '/news_images/news5-1.png'
         },
+
         {
             id: 6,
-            title: 'Beyond Encryption: How MPChat Protects Your Financial Communications',
-            date: '2025-04-18',
+            title: 'MPChat Officially Launches in Singapore, Redefining Business Payments',
+            date: '04-18',
             excerpt:
-                'Learn about MPChat\'s multi-layered security approach that protects both your confidential messages and financial transactions.',
-            image: '/news_images/news6-1.png'
+                'MPChat launches in Singapore with its revolutionary "chat-to-pay" platform that merges secure messaging with corporate card management.',
+            image: '/news_images/news4-1.png'
         }
     ]
 
