@@ -6,49 +6,55 @@ import Header from '@/components/Header'
 import Footer from '@/components/card/Footer'
 
 export default function NewsPage() {
-    // Sample news data
+    // Updated news data
     const newsItems = [
         {
             id: 1,
-            title: "MPChat Launches New Security Protocol",
-            date: "August 1, 2025",
-            excerpt: "We've implemented end-to-end encryption v3.0, providing even stronger security for all communications.",
-            image: "/news1.webp"
+            title: 'Five Innovative B2B Uses of Virtual Cards in 2025',
+            date: '2025-08-06',
+            excerpt:
+                'Explore five cutting-edge B2B applications of virtual cards transforming industries from travel and insurance to logistics and digital marketing.',
+            image: '/news_images/news1-1.png'
         },
         {
             id: 2,
-            title: "Global Expansion: Now Available in 50+ Countries",
-            date: "July 15, 2025",
-            excerpt: "MPChat is now accessible worldwide with localized support for 12 languages.",
-            image: "/news2.webp"
+            title: 'Best Credit Card Processing Solutions for Small Businesses in 2025',
+            date: '2025-07-28',
+            excerpt:
+                'Discover essential features to look for in payment processors and how MPChat empowers small businesses with cost-effective solutions.',
+            image: '/news_images/news2-1.png'
         },
         {
             id: 3,
-            title: "New Business Card Features Released",
-            date: "June 30, 2025",
-            excerpt: "Enhanced spending controls and team management capabilities for corporate users.",
-            image: "/news3.webp"
+            title: 'More Savings, More Compliance: Corporate Virtual Cards for Travel Strategy',
+            date: '2025-07-15',
+            excerpt:
+                'Learn how corporate virtual cards streamline business travel expenses while enhancing security and compliance for finance teams.',
+            image: '/news_images/news3-1.png'
         },
         {
             id: 4,
-            title: "MPChat Partners with Major E-commerce Platforms",
-            date: "June 10, 2025",
-            excerpt: "Seamless integration with leading online retailers for frictionless payments.",
-            image: "/news4.webp"
+            title: 'MPChat Officially Launches in Singapore, Redefining Business Payments',
+            date: '2025-06-22',
+            excerpt:
+                'MPChat launches in Singapore with its revolutionary "chat-to-pay" platform that merges secure messaging with corporate card management.',
+            image: '/news_images/news4-1.png'
         },
         {
             id: 5,
-            title: "Mobile App Reaches 1 Million Downloads",
-            date: "May 22, 2025",
-            excerpt: "Celebrating our growing community of privacy-focused users worldwide.",
-            image: "/news5.webp"
+            title: 'Why Virtual Cards are the Key to Managing Ad Spend for Modern Marketing Teams',
+            date: '2025-05-30',
+            excerpt:
+                'Discover how virtual cards eliminate ad account suspensions and provide granular budget control for marketing campaigns across platforms.',
+            image: '/news_images/news5-1.png'
         },
         {
             id: 6,
-            title: "New API Features for Developers",
-            date: "April 18, 2025",
-            excerpt: "Expanded developer tools and documentation for building on the MPChat platform.",
-            image: "/news6.webp"
+            title: 'Beyond Encryption: How MPChat Protects Your Financial Communications',
+            date: '2025-04-18',
+            excerpt:
+                'Learn about MPChat\'s multi-layered security approach that protects both your confidential messages and financial transactions.',
+            image: '/news_images/news6-1.png'
         }
     ]
 
@@ -56,83 +62,66 @@ export default function NewsPage() {
         <div className="min-h-screen bg-[#F7F7F2] flex flex-col">
             <Header />
             <div className="pt-24 flex-grow">
-            <div className="container mx-auto px-8 py-16 max-w-[1200px]">
-                {/* Header Section */}
-                <section className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-redotpaybold">
-                        Latest News
-                    </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Stay up to date with the latest announcements, product updates, and company news from MPChat.
-                    </p>
-                </section>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 max-w-7xl">
+                    {/* Header Section */}
+                    <section className="text-center mb-16 flex flex-col items-center">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 pb-6 font-redotpaybold leading-tight">
+                            Latest News
+                        </h1>
+                        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            Stay up to date with the latest announcements, product updates, and company news from
+                            MPChat.
+                        </p>
+                    </section>
 
-                {/* News Grid */}
-                <section className="mb-16">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {newsItems.map((item) => (
-                            <div key={item.id} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div className="relative h-48">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.title}
-                                        fill
-                                        className="object-cover"
-                                    />
+                    {/* News Grid */}
+                    <section className="mb-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {newsItems.map(item => (
+                                <div
+                                    key={item.id}
+                                    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
+                                >
+                                    {/* Date */}
+                                    <div className="px-6 pt-6">
+                                        <div className="text-sm text-gray-500 font-medium">{item.date}</div>
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="px-6 pt-4 text-xl md:text-2xl font-bold text-gray-900 font-redotpaybold leading-tight">
+                                        {item.title}
+                                    </h3>
+
+                                    {/* Excerpt */}
+                                    <p className="px-6 py-4 text-gray-600 flex-grow leading-relaxed">{item.excerpt}</p>
+
+                                    {/* Read More Link */}
+                                    <div className="px-6 pb-6 mt-auto">
+                                        <Link
+                                            href={`/news/detail/${item.id}`}
+                                            className="inline-flex items-center text-[#06C55B] font-semibold hover:text-[#05B052] transition-colors duration-200 group"
+                                        >
+                                            Read More
+                                            <svg
+                                                className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M9 5l7 7-7 7"
+                                                />
+                                            </svg>
+                                        </Link>
+                                    </div>
                                 </div>
-                                <div className="p-6">
-                                    <div className="text-sm text-gray-500 mb-2">{item.date}</div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 font-redotpaybold">{item.title}</h3>
-                                    <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                                    <button className="text-[#06C55B] font-semibold hover:underline">
-                                        Read More
-                                    </button>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Newsletter Signup */}
-                <section className="bg-white rounded-3xl p-8 md:p-12 shadow-lg text-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4 font-redotpaybold">Stay Informed</h2>
-                    <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                        Subscribe to our newsletter to receive updates directly in your inbox.
-                    </p>
-                    <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-                        <input
-                            type="email"
-                            placeholder="Your email address"
-                            className="flex-1 px-6 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#06C55B] focus:border-transparent"
-                        />
-                        <button className="px-8 py-3 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] transition-colors whitespace-nowrap">
-                            Subscribe
-                        </button>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="text-center py-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-redotpaybold">
-                        Experience MPChat Today
-                    </h2>
-                    <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Join thousands of users who trust MPChat for secure communication and payments.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/card/personal">
-                            <button className="text-nowrap text-lg sm:text-xl px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 font-redotpaybold">
-                                Get Personal Card
-                            </button>
-                        </Link>
-                        <Link href="/card/corporate">
-                            <button className="text-nowrap text-lg sm:text-xl px-8 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 font-redotpaybold">
-                                Get Business Card
-                            </button>
-                        </Link>
-                    </div>
-                </section>
-            </div>
+                            ))}
+                        </div>
+                    </section>
+                </div>
             </div>
             <Footer />
         </div>

@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-
+import Image from 'next/image'
 export default function Footer() {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
     const [showContactModal, setShowContactModal] = useState(false)
@@ -122,8 +122,10 @@ export default function Footer() {
                             visibleSections.has('footer') ? 'animate-slide-up' : ''
                         }`}
                     >
-                        <div className="flex flex-col items-center items-start">
-                            <span className="text-xl font-bold text-gray-800 mb-1 font-redotpaybold">MPCard</span>
+                        <div className="flex flex-col items-start">
+                            <div className="w-10 h-10 relative">
+                                <Image src="/Logo.svg" alt="MPChat Logo" fill className="object-contain" />
+                            </div>
                             <span className="text-sm text-gray-500">© 2025 MPCard - All Rights Reserved</span>
                         </div>
 

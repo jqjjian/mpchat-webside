@@ -164,7 +164,7 @@ export default function AboutPage() {
                     </section>
 
                     {/* Five Innovative B2B Uses of Virtual Cards in 2025 */}
-                    <section className="mb-16">
+                    {/* <section className="mb-16">
                         <h2 className="text-3xl font-bold text-gray-900 text-center pb-12 font-redotpaybold">
                             Five Innovative B2B Uses of Virtual Cards in 2025
                         </h2>
@@ -316,10 +316,10 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* Best Credit Card Processing Solutions for Small Businesses in 2025 */}
-                    <section className="mb-16">
+                    {/* <section className="mb-16">
                         <h2 className="text-3xl font-bold text-gray-900 text-center pb-12 font-redotpaybold">
                             Best Credit Card Processing Solutions for Small Businesses in 2025: Recommendations
                         </h2>
@@ -590,7 +590,7 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* CTA Section */}
                     {/* <section className="text-center py-16">

@@ -79,6 +79,16 @@ export default function Header() {
                         )}
                     </Link>
 
+                    <Link href="/news" className="relative pb-2 transition-colors">
+                        {/* 隐藏的粗体文字用于占位 */}
+                        <span className="font-bold text-transparent select-none">Blog</span>
+                        {/* 实际显示的文字 */}
+                        <span className={`absolute inset-0 ${getTextClassName('/news')} transition-colors`}>Blog</span>
+                        {isActive('/news') && (
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
+                        )}
+                    </Link>
+
                     <Link href="/about" className="relative pb-2 transition-colors">
                         {/* 隐藏的粗体文字用于占位 */}
                         <span className="font-bold text-transparent select-none">About Us</span>
@@ -89,16 +99,6 @@ export default function Header() {
                             About Us
                         </span>
                         {isActive('/about') && (
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
-                        )}
-                    </Link>
-
-                    <Link href="/news" className="relative pb-2 transition-colors">
-                        {/* 隐藏的粗体文字用于占位 */}
-                        <span className="font-bold text-transparent select-none">News</span>
-                        {/* 实际显示的文字 */}
-                        <span className={`absolute inset-0 ${getTextClassName('/news')} transition-colors`}>News</span>
-                        {isActive('/news') && (
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
                         )}
                     </Link>
@@ -163,19 +163,18 @@ export default function Header() {
                         </Link>
 
                         <Link
+                            href="/news"
+                            className={`block py-3 px-4 rounded-lg transition-colors ${getTextClassName('/news')}`}
+                            onClick={closeMobileMenu}
+                        >
+                            Blog
+                        </Link>
+                        <Link
                             href="/about"
                             className={`block py-3 px-4 rounded-lg transition-colors ${getTextClassName('/about')}`}
                             onClick={closeMobileMenu}
                         >
                             About Us
-                        </Link>
-
-                        <Link
-                            href="/news"
-                            className={`block py-3 px-4 rounded-lg transition-colors ${getTextClassName('/news')}`}
-                            onClick={closeMobileMenu}
-                        >
-                            News
                         </Link>
                     </div>
                 </div>

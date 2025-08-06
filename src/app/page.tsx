@@ -508,7 +508,7 @@ export default function Home() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 pb-10">
                         {/* Secure Chat */}
                         <div className="feature-card pt-4 flex flex-col justify-between box-border bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 h-[400px] lg:h-[460px]">
                             <div>

@@ -29,7 +29,7 @@ export default function CardPage() {
         // sections.forEach(section => observer.observe(section))
 
         // return () => observer.disconnect()
-    }, [])
+    }, [router])
 
     return null
 }

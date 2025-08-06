@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 export default function Footer() {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -80,7 +81,9 @@ export default function Footer() {
                         }`}
                     >
                         <div className="flex flex-col items-start">
-                            <span className="text-xl font-bold text-gray-800 mb-1 font-redotpaybold">MPChat</span>
+                            <div className="w-10 h-10 relative">
+                                <Image src="/Logo.svg" alt="MPChat Logo" fill className="object-contain" />
+                            </div>
                             <span className="text-sm text-gray-500">© 2025 MPChat - All Rights Reserved</span>
                         </div>
 
