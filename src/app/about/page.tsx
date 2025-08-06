@@ -32,16 +32,16 @@ export default function AboutPage() {
                                     communication and payments are effortlessly integrated.
                                 </p>
                             </div>
-                            <div className="flex-1 flex justify-center">
-                                {/* <div className="relative w-full max-w-md h-64 md:h-80">
+                            {/* <div className="flex-1 flex justify-center">
+                                <div className="relative w-full max-w-md h-64 md:h-80">
                                 <Image
                                     src="/about_mission.webp"
                                     alt="Our Vision"
                                     fill
                                     className="object-contain"
                                 />
-                            </div> */}
                             </div>
+                            </div> */}
                         </div>
                     </section>
 
