@@ -1,0 +1,72 @@
+MPChat Card Program Terms
+MPChat Card Program Terms
+Last Updated: 2025-06-04
+
+1. Definitions
+•	MPChat Card: A virtual or physical payment card issued by our partner financial institution and provided by MPChat. It is accessible digitally with a unique 16-digit card number, expiration date (MM/YY), and CVV code, operating on the [Visa/Mastercard] network.
+•	Cardholder: An individual (18+ years old) or a registered legal entity that has successfully applied for, completed identity verification for, and activated an MPChat Card.
+•	MPChat Account: The electronic stored-value account provided by MPChat where the Cardholder holds USD funds used for Card transactions.
+•	Funding Source: A verified and linked bank account, credit/debit card, or other approved method used to load funds into the MPChat Account.
+•	Issuer: The licensed financial institution that issues the MPChat Card.
+•	Card Network: The payment network (e.g., Visa, Mastercard) through which Card transactions are processed.
+•	Card Network Rules: The official rules, regulations, and operating guidelines issued by the Card Network.
+•	Chargeback: A reversal of a Card transaction initiated by the Cardholder, where funds are disputed and may be returned to the Cardholder’s MPChat Account.
+2. Scope of Terms
+These Terms govern the application, issuance, use, and management of the MPChat Card. By applying for or using the MPChat Card, the Cardholder agrees to these Terms, our Privacy Policy, and all applicable Card Network Rules and Singaporean laws, including the Payment Services Act 2019.
+
+3. Application & Activation
+3.1 Eligibility To be eligible for an MPChat Card, you must:
+•	Be at least 18 years of age (for individuals) or be a duly registered legal entity.
+•	Successfully complete our Customer Due Diligence (CDD) and identity verification (KYC/KYB) process.
+•	Maintain an MPChat account in good standing.
+3.2 Approval Process All applications are subject to approval by us and our Issuer partners. We reserve the right, in our sole discretion, to refuse any application or change eligibility criteria at any time. Additional documentation may be requested to complete the review.
+3.3 Card Activation The MPChat Card is activated upon the Cardholder’s acceptance of these Terms within the MPChat application. A minimum initial load of [Amount, e.g., $10 USD] from an approved Funding Source is required to begin using the Card.
+
+4. Card Usage Rules
+4.1 Permitted Use The MPChat Card is designed for legitimate personal and business transactions, including:
+•	Online Purchases: Making payments at e-commerce merchants worldwide that accept the Card Network.
+•	Recurring Subscriptions: Paying for services like software, streaming, and memberships.
+•	Business Expenses: Managing corporate expenses, such as paying for online advertising, software, and supplier invoices.
+4.2 Prohibited Use The MPChat Card must not be used for any illegal or high-risk activities, including but not limited to:
+•	Any activity that violates any law or regulation in Singapore or the jurisdiction of the transaction.
+•	Transactions related to illegal goods, narcotics, weapons, or gambling.
+•	Products or services that infringe on intellectual property rights.
+•	Funding or facilitating any activity on sanctions lists (e.g., OFAC, UN).
+•	Peer-to-peer (P2P) money transfers, unless this feature is explicitly enabled for your account.
+•	Transactions in the following jurisdictions: Afghanistan, Belarus, Cuba, Iran, Iraq, North Korea, Russia, Somalia, Syria, Ukraine (Crimea, Donetsk, and Luhansk regions), Venezuela, Yemen, and Zimbabwe.
+4.3 Limits & Expiry
+•	Limits: Transaction and balance limits apply to your MPChat Card and are based on your account verification level. These limits are displayed within your MPChat app.
+•	Expiry: The Card expires on the last day of the month shown on the card (MM/YY). A replacement Card will be automatically issued if the account is in good standing. Funds from an expired Card will be transferred to the new Card.
+4.4 Security Obligations The Cardholder is responsible for the security of their Card details. You must:
+•	Never share your full card number, CVV, or PIN with anyone.
+•	Immediately report any lost, stolen, or compromised Card details via the MPChat app to freeze the Card.
+•	Report any unauthorized transactions within 60 days of the transaction date. Failure to do so may result in the loss of funds.
+4.5 Chargebacks If you wish to dispute a transaction, you must contact us at support@mpchats.com within 60 days of the transaction date. You are required to provide a written explanation and any supporting documentation. We will assist in raising the dispute with the merchant and the Card Network. The final decision on any Chargeback is determined by the Card Network Rules.
+
+5. Fees
+You agree to pay all applicable fees associated with your MPChat Card, which will be disclosed to you in the MPChat app and on our website. Fees may include, but are not limited to, card issuance fees, currency conversion fees, and ATM withdrawal fees (if applicable). All fees are non-refundable and will be deducted from your MPChat Account balance.
+
+6. Suspension & Termination
+6.1 Suspension We may suspend your MPChat Card at any time, without prior notice, if we suspect:
+•	Fraudulent or unauthorized activity.
+•	A violation of these Terms or any applicable law.
+•	Your account is subject to a regulatory order.
+6.2 Termination
+•	By You: You may terminate your MPChat Card at any time through the MPChat app.
+•	By Us: We reserve the right to terminate your Card for any reason, including prolonged inactivity or breach of these Terms.
+Upon termination, you must cease all use of the Card. Any remaining balance will be returned to you in accordance with our standard procedures, subject to the deduction of any outstanding fees.
+
+7. Liability & Disclaimers
+To the fullest extent permitted by law, MPChat disclaims all warranties, express or implied. Our liability shall be limited to the re-supply of the service or the cost of re-supplying the service. We are not liable for any indirect, consequential, or punitive damages, nor for losses arising from unforeseeable events (force majeure) or the actions of third parties.
+
+8. Indemnification
+You agree to indemnify and hold MPChat, its affiliates, and partners harmless from any claim or demand (including legal fees) arising out of your breach of these Terms, your use of the MPChat Card, or your violation of any law or third-party right.
+
+9. Privacy & Data
+We collect and process your personal data (e.g., KYC documents, transaction history) in accordance with our MPChat Privacy Policy. Your data is used for identity verification, compliance with AML/CFT regulations, fraud prevention, and service provision. All data is stored securely using industry-standard encryption.
+
+10. Amendments
+We may amend these Terms at any time by posting the revised version on our website. We will provide at least 30 days' notice for any material changes. Your continued use of the MPChat Card after the notice period constitutes your acceptance of the changes.
+
+11. Governing Law & Dispute Resolution
+These Terms shall be governed by and construed in accordance with the laws of the Republic of Singapore. Any dispute arising out of or in connection with these Terms shall be referred to and finally resolved by arbitration administered by the Singapore International Arbitration Centre (SIAC) in accordance with its prevailing rules. The seat of the arbitration shall be Singapore.

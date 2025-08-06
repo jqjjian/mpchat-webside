@@ -99,13 +99,12 @@ export default function Home() {
                         <div className="flex flex-col lg:hidden gap-8 h-full items-center">
                             {/* 标题和描述 */}
                             <div
-                                className={`flex flex-col justify-center space-y-6 text-center animate-on-scroll w-full mt-30 lg:mt-0 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`flex flex-col justify-center space-y-6 text-center animate-on-scroll w-full mt-30 lg:mt-0 ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight sm:mt-30 font-redotpaybold">
-                                    Seamless Chat,
-                                    <br />
-                                    Borderless Pay.
+                                    Where Global Teams Collaborate and Pay.
                                 </h1>
                                 <div className="w-full flex justify-center">
                                     <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto py-4 px-4">
@@ -118,8 +117,9 @@ export default function Home() {
 
                             {/* 图片 */}
                             <div
-                                className={`flex justify-center items-center animate-on-scroll animate-delay-3 w-full ${visibleSections.has('hero') ? 'animate-slide-right' : ''
-                                    }`}
+                                className={`flex justify-center items-center animate-on-scroll animate-delay-3 w-full ${
+                                    visibleSections.has('hero') ? 'animate-slide-right' : ''
+                                }`}
                             >
                                 <div className="w-[350px] h-[350px] sm:w-[400px] sm:h-[400px]">
                                     <div className="opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards] pt-8">
@@ -138,16 +138,18 @@ export default function Home() {
                             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center pt-4 w-full max-w-md mx-auto">
                                 <Link href="/card/personal" className="w-full sm:w-auto">
                                     <button
-                                        className={`text-nowrap w-full sm:w-auto text-lg sm:text-[22px] px-8 sm:px-10 py-4 sm:py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                            }`}
+                                        className={`text-nowrap w-full sm:w-auto text-lg sm:text-[22px] px-8 sm:px-10 py-4 sm:py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 font-redotpaybold ${
+                                            visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                        }`}
                                     >
                                         For Personal
                                     </button>
                                 </Link>
                                 <Link href="/card/corporate" className="w-full sm:w-auto">
                                     <button
-                                        className={`text-nowrap w-full sm:w-auto text-lg sm:text-[22px] px-8 sm:px-10 py-4 sm:py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                            }`}
+                                        className={`text-nowrap w-full sm:w-auto text-lg sm:text-[22px] px-8 sm:px-10 py-4 sm:py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 font-redotpaybold ${
+                                            visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                        }`}
                                     >
                                         For Business
                                     </button>
@@ -159,13 +161,12 @@ export default function Home() {
                         <div className="hidden lg:flex flex-row gap-12 h-full pt-66 min-[2780px]:pt-0 ">
                             {/* Left Content - Text (占2/3宽度) */}
                             <div
-                                className={`flex-1 flex flex-col justify-center space-y-8 text-left animate-on-scroll ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`flex-1 flex flex-col justify-center space-y-8 text-left animate-on-scroll ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 <h1 className="text-6xl xl:text-7xl font-bold text-gray-900 leading-tight font-redotpaybold">
-                                    Seamless Chat,
-                                    <br />
-                                    Borderless Pay.
+                                    Where Global Teams Collaborate and Pay.
                                 </h1>
                                 <p className="text-xl text-gray-600 leading-relaxed max-w-2xl py-10">
                                     MPChat integrates end-to-end encrypted messaging with powerful virtual and physical
@@ -175,16 +176,18 @@ export default function Home() {
                                 <div className="flex flex-row gap-8 justify-start pt-10">
                                     <Link href="/card/personal">
                                         <button
-                                            className={`text-nowrap text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                                }`}
+                                            className={`text-nowrap text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 font-redotpaybold ${
+                                                visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                            }`}
                                         >
                                             For Personal
                                         </button>
                                     </Link>
                                     <Link href="/card/corporate">
                                         <button
-                                            className={`text-nowrap text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                                }`}
+                                            className={`text-nowrap text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 font-redotpaybold ${
+                                                visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                            }`}
                                         >
                                             For Business
                                         </button>
@@ -194,8 +197,9 @@ export default function Home() {
 
                             {/* Right Content - Cards (占1/3宽度，与文字水平对齐) */}
                             <div
-                                className={`flex-shrink-0 flex justify-end items-center animate-on-scroll animate-delay-3 ${visibleSections.has('hero') ? 'animate-slide-right' : ''
-                                    }`}
+                                className={`flex-shrink-0 flex justify-end items-center animate-on-scroll animate-delay-3 ${
+                                    visibleSections.has('hero') ? 'animate-slide-right' : ''
+                                }`}
                             >
                                 <div className="w-[500px] h-[500px] ">
                                     <div className="opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards]">
@@ -218,20 +222,22 @@ export default function Home() {
             <section className=" bg-[#F7F7F2]" data-section="chat-features">
                 <div className="container mx-auto px-8">
                     <div
-                        className={`text-center mb-8 pb-10 lg:pb-20 animate-on-scroll ${visibleSections.has('chat-features') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-8 pb-10 lg:pb-20 animate-on-scroll ${
+                            visibleSections.has('chat-features') ? 'animate-slide-up' : ''
+                        }`}
                     >
                         <h2 className="text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 font-redotpaybold">Chat</h2>
                         <p className="text-xl lg:text-[40px] text-gray-600 pt-6 lg:pt-10 font-redotpaybold">
-                            Your Conversations, Absolutely Private.
+                            The Secure Workspace Where Decisions Happen.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-5">
                         {/* End-to-End Encryption */}
                         <div
-                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-1 ${visibleSections.has('chat-features') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-1 ${
+                                visibleSections.has('chat-features') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <Image
@@ -253,8 +259,9 @@ export default function Home() {
 
                         {/* Privacy Features */}
                         <div
-                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-2 ${visibleSections.has('chat-features') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-2 ${
+                                visibleSections.has('chat-features') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <Image
@@ -276,8 +283,9 @@ export default function Home() {
 
                         {/* Rich Media */}
                         <div
-                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-3 ${visibleSections.has('chat-features') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-3 ${
+                                visibleSections.has('chat-features') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <Image
@@ -298,8 +306,9 @@ export default function Home() {
 
                         {/* Group Chats */}
                         <div
-                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-4 ${visibleSections.has('chat-features') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`group relative bg-white rounded-3xl p-6 lg:p-8 hover:shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer animate-on-scroll animate-delay-4 ${
+                                visibleSections.has('chat-features') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <Image
@@ -322,11 +331,12 @@ export default function Home() {
             </section>
 
             {/* Problem-Solution Section */}
-            <section className=" bg-[#F7F7F2] overflow-hidden" data-section="problem-solution">
+            <section className=" bg-[#F7F7F2] overflow-hidden pb-10" data-section="problem-solution">
                 <div className="container mx-auto px-8">
                     <div
-                        className={`text-center  animate-on-scroll ${visibleSections.has('problem-solution') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center  animate-on-scroll ${
+                            visibleSections.has('problem-solution') ? 'animate-slide-up' : ''
+                        }`}
                     >
                         <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 lg:pt-[100px] py-[50px] lg:pb-[100px] font-redotpaybold">
                             Problem-Solution Section
@@ -336,8 +346,9 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                         {/* For Your Personal Life */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-1 ${visibleSections.has('problem-solution') ? 'animate-slide-left' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-1 flex flex-col h-full ${
+                                visibleSections.has('problem-solution') ? 'animate-slide-left' : ''
+                            }`}
                         >
                             <div className="relative flex justify-center mb-6 lg:mb-8">
                                 {/* Main image */}
@@ -372,17 +383,36 @@ export default function Home() {
                             <h3 className="text-2xl lg:text-[40px] font-bold text-gray-900 mb-3 lg:mb-4 text-left font-redotpaybold">
                                 For Your Personal Life
                             </h3>
-                            <p className="text-gray-600 leading-relaxed text-left text-base lg:text-[20px] pb-6 lg:pb-12">
+                            <p className="text-gray-600 leading-relaxed text-left text-base lg:text-[20px] pb-6 lg:pb-8 flex-grow">
                                 Tired of payment failures on international sites?
                                 <br />
                                 Need a secure way to pay for subscriptions?
                             </p>
+                            <Link href="/card/personal" className="mt-auto">
+                                <div className="flex items-center text-[#06C55B] font-semibold hover:text-[#05B052] transition-colors font-redotpaybold">
+                                    <span className="text-[16px] lg:text-[20px]">Learn More</span>
+                                    <svg
+                                        className="w-4 h-4 lg:w-5 lg:h-5 ml-2"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M9 5l7 7-7 7"
+                                        />
+                                    </svg>
+                                </div>
+                            </Link>
                         </div>
 
                         {/* For Your Global Business */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-2 ${visibleSections.has('problem-solution') ? 'animate-slide-right' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-2 flex flex-col h-full ${
+                                visibleSections.has('problem-solution') ? 'animate-slide-right' : ''
+                            }`}
                         >
                             <div className="relative flex justify-center mb-6 lg:mb-8">
                                 {/* Main image */}
@@ -418,11 +448,29 @@ export default function Home() {
                             <h3 className="text-2xl lg:text-[40px] font-bold text-gray-900 mb-3 lg:mb-4 text-left font-redotpaybold">
                                 For Your Global Business
                             </h3>
-                            <p className="text-gray-600 leading-relaxed text-left text-base lg:text-[20px]">
+                            <p className="text-gray-600 leading-relaxed text-left text-base lg:text-[20px] pb-6 lg:pb-8 flex-grow">
                                 Struggling with high fees for global ad spend?
                                 <br />
                                 Looking for an efficient way to manage team expenses?
                             </p>
+                            <Link href="/card/corporate" className="mt-auto">
+                                <div className="flex items-center text-[#06C55B] font-semibold hover:text-[#05B052] transition-colors font-redotpaybold">
+                                    <span className="text-[16px] lg:text-[20px]">Learn More</span>
+                                    <svg
+                                        className="w-4 h-4 lg:w-5 lg:h-5 ml-2"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M9 5l7 7-7 7"
+                                        />
+                                    </svg>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -451,10 +499,13 @@ export default function Home() {
 
                 <div className="container mx-auto px-8 relative z-10">
                     <div
-                        className={`text-center  animate-on-scroll ${visibleSections.has('feature-matrix') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center  animate-on-scroll ${
+                            visibleSections.has('feature-matrix') ? 'animate-slide-up' : ''
+                        }`}
                     >
-                        <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 py-[50px] md:pt-20 lg:pb-[100px] font-redotpaybold">Feature Matrix</h2>
+                        <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 py-[50px] md:pt-20 lg:pb-[100px] font-redotpaybold">
+                            Feature Matrix
+                        </h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
@@ -488,7 +539,7 @@ export default function Home() {
                                     Virtual Cards
                                 </h3>
                                 <p className="text-gray-600 text-sm lg:text-[18px] mb-4 text-left px-6 lg:px-8">
-                                    Instantly create cards for any purpose.
+                                    Issue virtual cards for ad spend, subscriptions, and team expenses in seconds.
                                 </p>
                             </div>
                             <div className="flex justify-center">
@@ -530,7 +581,7 @@ export default function Home() {
                                     Business Solutions
                                 </h3>
                                 <p className="text-gray-600 text-sm lg:text-[18px] mb-4 text-left px-6 lg:px-8">
-                                    Streamline your cross-border business funds.
+                                    {`The all-in-one platform to control your team's global spending.`}
                                 </p>
                             </div>
                             <div className="flex justify-center">

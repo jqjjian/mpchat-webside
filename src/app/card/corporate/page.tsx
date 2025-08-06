@@ -130,8 +130,9 @@ export default function CardPage() {
                         <div className="flex flex-col flex-start items-center text-center">
                             {/* Navigation Pills */}
                             <div
-                                className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-2 sm:gap-3 lg:gap-6 xl:gap-8 justify-center mx-auto ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-2 sm:gap-3 lg:gap-6 xl:gap-8 justify-center mx-auto ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 <Link href="/card/personal" className="flex-1">
                                     <div className="relative flex items-center gap-1 sm:gap-2 lg:gap-3 px-2 sm:px-3 lg:px-6 xl:px-8 py-2 sm:py-3 lg:py-4 text-gray-700 font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg border border-white font-redotpaybold">
@@ -147,7 +148,13 @@ export default function CardPage() {
                                                 Personal
                                             </span>
                                         </div>
-                                        <Image src="/card/j2.png" alt="arrow" width={15} height={18} className="w-3 h-3 sm:w-4 sm:h-4 lg:w-auto lg:h-auto"></Image>
+                                        <Image
+                                            src="/card/j2.png"
+                                            alt="arrow"
+                                            width={15}
+                                            height={18}
+                                            className="w-3 h-3 sm:w-4 sm:h-4 lg:w-auto lg:h-auto"
+                                        ></Image>
                                     </div>
                                 </Link>
                                 <Link href="/card/corporate" className="flex-1">
@@ -169,15 +176,22 @@ export default function CardPage() {
                                                 Business
                                             </span>
                                         </div>
-                                        <Image src="/card/j1.png" alt="arrow" width={15} height={18} className="w-3 h-3 sm:w-4 sm:h-4 lg:w-auto lg:h-auto"></Image>
+                                        <Image
+                                            src="/card/j1.png"
+                                            alt="arrow"
+                                            width={15}
+                                            height={18}
+                                            className="w-3 h-3 sm:w-4 sm:h-4 lg:w-auto lg:h-auto"
+                                        ></Image>
                                     </div>
                                 </Link>
                             </div>
 
                             {/* Main Title */}
                             <h1
-                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 font-redotpaybold ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-2 lg:mb-3 xl:mb-4 2xl:mb-6 animate-on-scroll animate-delay-1 font-redotpaybold ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 The All-in-One Financial
                                 <br />
@@ -186,8 +200,9 @@ export default function CardPage() {
 
                             {/* Subtitle */}
                             <p
-                                className={`text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 px-4 animate-on-scroll animate-delay-2 ${visibleSections.has('hero') ? 'animate-slide-up' : ''
-                                    }`}
+                                className={`text-sm sm:text-base lg:text-base xl:text-lg 2xl:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 px-4 animate-on-scroll animate-delay-2 ${
+                                    visibleSections.has('hero') ? 'animate-slide-up' : ''
+                                }`}
                             >
                                 Issue unlimited virtual cards, manage team spending, and streamline your global
                                 payments.
@@ -195,8 +210,9 @@ export default function CardPage() {
 
                             {/* Card Visual */}
                             <div
-                                className={`relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-3 ${visibleSections.has('hero') ? 'animate-fade-scale' : ''
-                                    }`}
+                                className={`relative w-full max-w-xl lg:max-w-2xl xl:max-w-3xl mx-auto mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll animate-delay-3 ${
+                                    visibleSections.has('hero') ? 'animate-fade-scale' : ''
+                                }`}
                             >
                                 <div className="relative flex items-center justify-center pt-[10px] lg:pt-[20px] xl:pt-[30px] 2xl:pt-[50px]">
                                     <div className="relative float-animation pt-30 xs:pt-0">
@@ -254,10 +270,13 @@ export default function CardPage() {
             <section className="py-12 lg:py-20 bg-[#F7F7F2]" data-section="who-we-serve">
                 <div className="container mx-auto px-8 max-w-[1700px]">
                     <div
-                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('who-we-serve') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${
+                            visibleSections.has('who-we-serve') ? 'animate-slide-up' : ''
+                        }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">Who We Serve</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
+                            Who We Serve
+                        </h2>
                         <p className="text-xl sm:text-2xl lg:text-[40px] text-gray-500 pt-[20px] lg:pt-[40px] pb-[15px] lg:pb-25">
                             Built for the New Generation of Global Business
                         </p>
@@ -265,8 +284,9 @@ export default function CardPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
                         {/* E-commerce Sellers */}
                         <div
-                            className={`text-center bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('who-we-serve') ? 'stacked-entry-1' : ''
-                                }`}
+                            className={`text-center bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-1' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <div className="flex items-center justify-center pb-4 lg:pb-6">
@@ -279,13 +299,16 @@ export default function CardPage() {
                                     />
                                 </div>
                             </div>
-                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 pb-2 lg:pb-4 font-redotpaybold">E-commerce Sellers</h3>
+                            <h3 className="text-lg sm:text-xl lg:text-[28px] font-[500] text-gray-900 mb-3 lg:mb-4 pb-2 lg:pb-4 font-redotpaybold">
+                                E-commerce Sellers
+                            </h3>
                         </div>
 
                         {/* Marketing Agencies */}
                         <div
-                            className={`bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('who-we-serve') ? 'stacked-entry-2' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-2' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <div className="flex items-center justify-center pb-4 lg:pb-6">
@@ -305,8 +328,9 @@ export default function CardPage() {
 
                         {/* SaaS Companies */}
                         <div
-                            className={`bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('who-we-serve') ? 'stacked-entry-3' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-3' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <div className="flex items-center justify-center pb-4 lg:pb-6">
@@ -328,8 +352,9 @@ export default function CardPage() {
 
                         {/* Global Freelancers */}
                         <div
-                            className={`bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('who-we-serve') ? 'stacked-entry-4' : ''
-                                }`}
+                            className={`bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('who-we-serve') ? 'stacked-entry-4' : ''
+                            }`}
                         >
                             <div className="flex justify-center mb-4 lg:mb-6">
                                 <div className="flex items-center justify-center pb-4 lg:pb-6">
@@ -354,17 +379,21 @@ export default function CardPage() {
             <section className="py-12 lg:py-20" data-section="solutions">
                 <div className="container mx-auto px-8 max-w-[1700px]">
                     <div
-                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('solutions') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${
+                            visibleSections.has('solutions') ? 'animate-slide-up' : ''
+                        }`}
                     >
-                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">Solutions</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
+                            Solutions
+                        </h2>
                     </div>
 
                     <div className="pt-8 lg:pt-16 space-y-4 lg:space-y-5">
                         {/* Smart Expense Management */}
                         <div
-                            className={`bg-white rounded-[20px] lg:rounded-[40px] px-6 lg:px-12 shadow-lg animate-on-scroll transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${visibleSections.has('solutions') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`bg-white rounded-[20px] lg:rounded-[40px] px-6 lg:px-12 shadow-lg animate-on-scroll transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${
+                                visibleSections.has('solutions') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                                 <div className="flex-1 lg:pr-8">
@@ -372,9 +401,17 @@ export default function CardPage() {
                                         Smart Expense Management
                                     </h3>
                                     <div className="space-y-3 lg:space-y-4 text-base lg:text-xl text-gray-600 leading-relaxed mt-6 lg:mt-8">
-                                        <p>Issue Cards To Employees With Pre-Set Budgets.</p>
-                                        <p>Track Every Expense In Real-Time And Eliminate</p>
-                                        <p>Reimbursement Hassles</p>
+                                        <p>
+                                            <strong>Stop Chasing Receipts. Start Controlling Budgets.</strong>
+                                        </p>
+                                        <p>
+                                            Give every employee or department a dedicated virtual card with a pre-set
+                                            spending limit.
+                                        </p>
+                                        <p>
+                                            Track every transaction in real-time from a single dashboard. Approve,
+                                            freeze, or modify cards with one click.
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="flex justify-center lg:justify-end">
@@ -393,8 +430,9 @@ export default function CardPage() {
 
                         {/* Streamlined Ad Spend Management */}
                         <div
-                            className={`bg-white rounded-[20px] lg:rounded-[40px] px-6 lg:px-12 shadow-lg animate-on-scroll transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${visibleSections.has('solutions') ? 'animate-slide-up' : ''
-                                }`}
+                            className={`bg-white rounded-[20px] lg:rounded-[40px] px-6 lg:px-12 shadow-lg animate-on-scroll transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer ${
+                                visibleSections.has('solutions') ? 'animate-slide-up' : ''
+                            }`}
                         >
                             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                                 <div className="flex-1 lg:pr-8">
@@ -402,7 +440,9 @@ export default function CardPage() {
                                         Streamlined Ad Spend Management
                                     </h3>
                                     <div className="space-y-3 lg:space-y-4 text-base lg:text-xl text-gray-600 leading-relaxed mt-6 lg:mt-8">
-                                        <p>Create Unlimited Unique Virtual Cards For Your Ad</p>
+                                        <p>
+                                            <strong>The Card That Ad Platforms Trust.</strong>{' '}
+                                        </p>
                                         <p>Campaigns On Facebook, Google, And TikTok.</p>
                                         <p>Drastically Reduce Account Suspensions Caused By</p>
                                         <p>Payment Issues And Simplify Budget Tracking.</p>
@@ -429,8 +469,9 @@ export default function CardPage() {
             <section className="py-12 lg:py-20 bg-[#F7F7F2]" data-section="team-collaboration">
                 <div className="container mx-auto px-8 max-w-[1700px]">
                     <div
-                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${visibleSections.has('team-collaboration') ? 'animate-slide-up' : ''
-                            }`}
+                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${
+                            visibleSections.has('team-collaboration') ? 'animate-slide-up' : ''
+                        }`}
                     >
                         <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
                             Team Collaboration & Risk Control
@@ -443,8 +484,9 @@ export default function CardPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
                         {/* Bulk Card Issuing */}
                         <div
-                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('team-collaboration') ? 'stacked-entry-1' : ''
-                                }`}
+                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-1' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-4 lg:mb-6">
                                 <Image
@@ -455,7 +497,9 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">Bulk Card Issuing</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">
+                                Bulk Card Issuing
+                            </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Create dedicated virtual cards in bulk for each advertising account or marketing
                                 campaign to minimize risk and simplify tracking.
@@ -464,8 +508,9 @@ export default function CardPage() {
 
                         {/* Team Collaboration */}
                         <div
-                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('team-collaboration') ? 'stacked-entry-2' : ''
-                                }`}
+                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-2' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-4 lg:mb-6">
                                 <Image
@@ -476,7 +521,9 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">Team Collaboration</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">
+                                Team Collaboration
+                            </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Assign cards with specific budgets to team members and monitor all expenses from a
                                 unified backend.
@@ -485,8 +532,9 @@ export default function CardPage() {
 
                         {/* Spending Controls */}
                         <div
-                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('team-collaboration') ? 'stacked-entry-3' : ''
-                                }`}
+                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-3' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-4 lg:mb-6">
                                 <Image
@@ -497,7 +545,9 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">Spending Controls</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">
+                                Spending Controls
+                            </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Set independent monthly or single transaction limits for each card, and freeze/unfreeze
                                 cards with one click.
@@ -506,8 +556,9 @@ export default function CardPage() {
 
                         {/* Real-time Alerts */}
                         <div
-                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${visibleSections.has('team-collaboration') ? 'stacked-entry-4' : ''
-                                }`}
+                            className={`text-left bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('team-collaboration') ? 'stacked-entry-4' : ''
+                            }`}
                         >
                             <div className="flex justify-start mb-4 lg:mb-6">
                                 <Image
@@ -518,7 +569,9 @@ export default function CardPage() {
                                     className="object-contain w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
                                 />
                             </div>
-                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 pr-3 font-redotpaybold">Real-time Alerts</h3>
+                            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 pr-3 font-redotpaybold">
+                                Real-time Alerts
+                            </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
                                 Real-time notifications for all transactions, enabling you to grasp the dynamics of your
                                 funds in the first place.
