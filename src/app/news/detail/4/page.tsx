@@ -7,34 +7,30 @@ import Footer from '@/components/card/Footer'
 export default function NewsDetailPage() {
     // Article data
     const article = {
-        id: 4,
-        title: 'MPChat Officially Launches in Singapore, Redefining Business Payments',
-        date: '2025-06-22',
+        id: 6,
+        title: 'Beyond Encryption: How MPChat Protects Your Financial Communications',
+        date: '2025-04-18',
         content: `
             <div class="flex flex-col gap-4">
-            <p>MPChat, a pioneering collaborative commerce platform, today announced its official launch in Singapore. The company is set to transform how modern businesses, particularly SMEs and global teams, manage their finances by integrating top-tier encrypted secure communication with a powerful, all-in-one corporate card and expense management solution.</p>
-            <p>In today's fast-paced digital economy, teams collaborate in real-time, but their financial workflows often remain fragmented and inefficient. Critical payment decisions are made in chat applications. Still, execution requires switching to cumbersome banking portals and expense reporting tools, leading to delays, errors, and a lack of real-time visibility over company spend.</p>
-            <p>MPChat bridges this critical gap. The platform provides a single, unified workspace where teams can discuss projects, negotiate with suppliers, and immediately execute payments using company-issued virtual cards—all within the same secure, end-to-end encrypted environment. This "chat-to-pay" model eliminates friction, empowers employees, and provides finance teams with unprecedented control.</p>
+            <p>In an era where data breaches are commonplace, end-to-end encryption has become the gold standard for secure messaging. But for businesses that use communication platforms to make critical financial decisions, encryption is just the beginning. Protecting the entire ecosystem where conversations and transactions converge requires a multi-layered security philosophy.</p>
+            <p>At MPChat, a platform that integrates secure chat with corporate card management, security is not just a feature— it's the foundation. Here's a look at the comprehensive approach MPChat takes to protect not just your messages, but your entire financial workflow.</p>
             
-            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">A Vision for Collaborative Commerce</h2>
-            <p>"We saw a fundamental disconnect in the modern business toolkit," said James, Co-Founder and CEO of MPChat. "Communication is instant, but payments are not. MPChat was built to fuse these two workflows. We believe that the future of business is collaborative commerce, where transactions are a natural extension of a conversation. By launching in Singapore, a global hub for innovation and finance, we are positioning ourselves to empower the next generation of agile, borderless companies."</p>
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. A Foundation of End-to-End Encryption</h2>
+            <p>Every message, file, and call on MPChat is secured with military-grade, end-to-end encryption. This means that from the moment you send a message to the moment it's received, it is completely indecipherable to any third party, including MPChat itself. This ensures that sensitive discussions about budgets, supplier payments, and financial strategy remain absolutely confidential.</p>
             
-            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">MPChat's Integrated Platform Features</h2>
-            <p>MPChat's integrated platform offers a suite of features designed for the needs of modern businesses:</p>
-            <ul class="list-disc pl-6 space-y-2">
-                <li><strong>Secure Collaborative Workspace:</strong> At its core, MPChat provides end-to-end encrypted messaging, file sharing, and group chats, ensuring all sensitive business communications remain strictly confidential.</li>
-                <li><strong>Smart Virtual Cards:</strong> Businesses can instantly issue an unlimited number of virtual cards for employees, specific projects, or vendors, with customizable spending limits and usage rules.</li>
-                <li><strong>Real-time Expense Management:</strong> All transactions are tracked in a centralized dashboard the moment they happen, eliminating the need for manual expense reports and tedious reimbursement processes.</li>
-                <li><strong>Streamlined Ad Spend:</strong> A dedicated solution for marketing teams allows them to issue unique virtual cards for each ad platform (e.g., Facebook, Google, TikTok), drastically reducing payment failures and the risk of ad account suspensions.</li>
-            </ul>
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Secure, Segregated Payment Infrastructure</h2>
+            <p>Financial data requires a higher level of protection. MPChat's payment infrastructure is completely segregated from its messaging systems and is built in partnership with licensed, PCI DSS Level 1 compliant financial institutions. This ensures that all card data and transaction processing meet the most stringent global security standards required by networks like Visa and Mastercard. Your financial data never co-mingles with your chat data on the same servers.</p>
             
-            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Availability</h2>
-            <p>MPChat is now available to businesses registered in Singapore. For more information or to request a demo, visit www.mpchats.com.</p>
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Granular Access Controls and User Permissions</h2>
+            <p>Security extends to user management. MPChat provides administrators with granular control over user permissions. You can define who can issue cards, who can approve expenses, and who can view transaction data. This principle of least privilege ensures that employees only have access to financial tools and information essential for their roles, significantly reducing the risk of internal fraud or error.</p>
             
-            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">About MPChat</h2>
-            <p>MPChat is a Singapore-based fintech company building the financial infrastructure for collaborative commerce. Our platform empowers global teams to communicate, manage expenses, and make payments with unparalleled security and efficiency. Our mission is to make cross-border commerce as seamless and straightforward as a conversation.</p>
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Proactive Fraud Monitoring and Real-time Alerts</h2>
+            <p>The platform employs advanced fraud detection algorithms that monitor transactions for suspicious activity in real-time. In addition to automated systems, features like instant transaction notifications and one-tap card freezing give users immediate power to act if they spot an unauthorized charge. This combination of proactive monitoring and user-centric controls creates a robust defense against financial threats.</p>
+            
+            <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Conclusion</h2>
+            <p>In conclusion, proper financial security in a collaborative environment goes far beyond simply encrypting messages. It requires a holistic approach that protects the conversation, the transaction, and the user controls that govern them. By architecting security into every layer of its platform, MPChat delivers a workspace where businesses can collaborate and transact with total confidence.</p>
             </div>
-        `
+        `,
     }
 
     return (
@@ -44,17 +40,12 @@ export default function NewsDetailPage() {
                 <div className="container mx-auto px-8 py-16 max-w-[1200px]">
                     {/* Back Button */}
                     <div className="mb-8">
-                        <Link
-                            href="/news"
+                        <Link 
+                            href="/news" 
                             className="inline-flex items-center text-[#06C55B] hover:text-[#05B052] font-semibold transition-colors"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                                />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                             </svg>
                             Back to News
                         </Link>
@@ -62,17 +53,18 @@ export default function NewsDetailPage() {
 
                     {/* Article Content */}
                     <article className="bg-white rounded-3xl overflow-hidden shadow-lg">
+                        
                         <div className="p-6 md:p-10">
                             {/* Article Meta */}
                             <div className="text-sm text-gray-500 mb-4">{article.date}</div>
-
+                            
                             {/* Article Title */}
                             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-redotpaybold">
                                 {article.title}
                             </h1>
-
+                            
                             {/* Article Content */}
-                            <div
+                            <div 
                                 className="prose max-w-none text-gray-700 text-lg"
                                 dangerouslySetInnerHTML={{ __html: article.content }}
                             />

@@ -52,7 +52,7 @@ export default function NewsPage() {
         {
             id: 6,
             title: 'MPChat Officially Launches in Singapore, Redefining Business Payments',
-            date: '04-18',
+            date: '2025-04-18',
             excerpt:
                 'MPChat launches in Singapore with its revolutionary "chat-to-pay" platform that merges secure messaging with corporate card management.',
             image: '/news_images/news4-1.png'

@@ -101,13 +101,17 @@ export default function Header() {
                         )}
                     </Link>
                 </div>
-                <div className="hidden md:flex flex-end pr-8 pt-3">
+                <div className="hidden md:flex flex-end pr-2 pt-2">
                     <Link
                         href="https://calendly.com/mpchats-support/30min"
                         className="relative pb-2 transition-colors hover:text-[#06C55B]"
                         target="_band"
                     >
-                        Demo request
+                        <button
+                            className={`cursor-pointer text-nowrap w-full sm:w-auto text-lg  px-8 sm:px-4 py-2 sm:py-2 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:shadow-lg }`}
+                        >
+                            Demo request
+                        </button>
                     </Link>
                 </div>
                 {/* Mobile Menu Button */}

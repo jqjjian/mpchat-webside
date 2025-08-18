@@ -699,143 +699,188 @@ export default function CardPage() {
                     <div className="space-y-6 lg:space-y-8">
                         {/* FAQ Item 1 */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                            className={`group bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll cursor-pointer overflow-hidden ${
                                 visibleSections.has('faq') ? 'animate-slide-up' : ''
                             }`}
                         >
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
-                                Q1: How can our business benefit from using MPChat virtual cards?
-                            </h3>
-                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
-                                <p>
-                                    <strong>A:</strong> Your business can benefit in several key ways:
-                                </p>
-                                <p>
-                                    <strong>Enhanced Financial Security:</strong>{' '}
-                                    {`By creating separate virtual cards for different vendors or projects (e.g., software subscriptions, ad campaigns, procurement), you effectively isolate risk. Even if one card's details are compromised, your company's primary bank account remains completely secure.`}
-                                </p>
-                                <p>
-                                    <strong>Granular Budget Control:</strong> You can set unique spending limits,
-                                    expiration dates, and usage rules for each card. This allows for precise control
-                                    over project budgets and prevents overspending. For example, create a dedicated card
-                                    for a Facebook ad campaign with a fixed monthly budget.
-                                </p>
-                                <p>
-                                    <strong>Simplified Expense Management:</strong> Assigning dedicated virtual cards
-                                    for employee travel or specific procurement tasks ensures a clear and transparent
-                                    transaction record. Every payment is traceable, which significantly streamlines
-                                    traditional expense reporting and reconciliation processes.
-                                </p>
-                                <p>
-                                    <strong>Improved Operational Agility:</strong> Employees can instantly request and
-                                    receive approval for virtual cards for urgent purchases or online payments,
-                                    eliminating lengthy administrative delays and boosting team productivity.
-                                </p>
+                            <div className="flex justify-between items-center">
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-redotpaybold pr-4">
+                                    Q1: How can our business benefit from using MPChat virtual cards?
+                                </h3>
+                                <div className="flex-shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="max-h-0 group-hover:max-h-[1000px] transition-all duration-500 ease-in-out overflow-hidden">
+                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4 pt-4 lg:pt-6">
+                                    <p>
+                                        <strong>A:</strong> Your business can benefit in several key ways:
+                                    </p>
+                                    <p>
+                                        <strong>Enhanced Financial Security:</strong>{' '}
+                                        {`By creating separate virtual cards for different vendors or projects (e.g., software subscriptions, ad campaigns, procurement), you effectively isolate risk. Even if one card's details are compromised, your company's primary bank account remains completely secure.`}
+                                    </p>
+                                    <p>
+                                        <strong>Granular Budget Control:</strong> You can set unique spending limits,
+                                        expiration dates, and usage rules for each card. This allows for precise control
+                                        over project budgets and prevents overspending. For example, create a dedicated card
+                                        for a Facebook ad campaign with a fixed monthly budget.
+                                    </p>
+                                    <p>
+                                        <strong>Simplified Expense Management:</strong> Assigning dedicated virtual cards
+                                        for employee travel or specific procurement tasks ensures a clear and transparent
+                                        transaction record. Every payment is traceable, which significantly streamlines
+                                        traditional expense reporting and reconciliation processes.
+                                    </p>
+                                    <p>
+                                        <strong>Improved Operational Agility:</strong> Employees can instantly request and
+                                        receive approval for virtual cards for urgent purchases or online payments,
+                                        eliminating lengthy administrative delays and boosting team productivity.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         {/* FAQ Item 2 */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-1 ${
+                            className={`group bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-1 cursor-pointer overflow-hidden ${
                                 visibleSections.has('faq') ? 'animate-slide-up' : ''
                             }`}
                         >
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
-                                Q2: What specific corporate payment scenarios can MPChat virtual cards be used for?
-                            </h3>
-                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
-                                <p>
-                                    <strong>A:</strong> Our virtual cards are designed to cover nearly all online
-                                    corporate payment scenarios, including:
-                                </p>
-                                <p>
-                                    <strong>SaaS (Software as a Service) Subscriptions:</strong> Pay for Adobe Creative
-                                    Cloud for Teams, Microsoft 365, project management tools, and various cloud
-                                    services.
-                                </p>
-                                <p>
-                                    <strong>Online Advertising:</strong> Effortlessly pay for campaigns on major
-                                    platforms like Google Ads, Facebook/Instagram Ads, and TikTok Ads.
-                                </p>
-                                <p>
-                                    <strong>Corporate Procurement:</strong> Make online purchases from e-commerce
-                                    platforms and suppliers worldwide.
-                                </p>
-                                <p>
-                                    <strong>Travel Bookings:</strong> Employees can use their assigned virtual cards to
-                                    book flights, hotels, and other travel-related expenses.
-                                </p>
+                            <div className="flex justify-between items-center">
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-redotpaybold pr-4">
+                                    Q2: What specific corporate payment scenarios can MPChat virtual cards be used for?
+                                </h3>
+                                <div className="flex-shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="max-h-0 group-hover:max-h-[1000px] transition-all duration-500 ease-in-out overflow-hidden">
+                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4 pt-4 lg:pt-6">
+                                    <p>
+                                        <strong>A:</strong> Our virtual cards are designed to cover nearly all online
+                                        corporate payment scenarios, including:
+                                    </p>
+                                    <p>
+                                        <strong>SaaS (Software as a Service) Subscriptions:</strong> Pay for Adobe Creative
+                                        Cloud for Teams, Microsoft 365, project management tools, and various cloud
+                                        services.
+                                    </p>
+                                    <p>
+                                        <strong>Online Advertising:</strong> Effortlessly pay for campaigns on major
+                                        platforms like Google Ads, Facebook/Instagram Ads, and TikTok Ads.
+                                    </p>
+                                    <p>
+                                        <strong>Corporate Procurement:</strong> Make online purchases from e-commerce
+                                        platforms and suppliers worldwide.
+                                    </p>
+                                    <p>
+                                        <strong>Travel Bookings:</strong> Employees can use their assigned virtual cards to
+                                        book flights, hotels, and other travel-related expenses.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         {/* FAQ Item 3 */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-2 ${
+                            className={`group bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-2 cursor-pointer overflow-hidden ${
                                 visibleSections.has('faq') ? 'animate-slide-up' : ''
                             }`}
                         >
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
-                                Q3: How do we fund our virtual cards?
-                            </h3>
-                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
-                                <p>
-                                    <strong>A:</strong> To ensure full compliance and clear accounting, our corporate
-                                    virtual cards support funding via Fiat currency ONLY. We offer a variety of
-                                    convenient fiat funding methods to support your global business needs, including:
-                                </p>
-                                <ul className="list-disc list-inside space-y-2 ml-4">
-                                    <li>Bank Wire Transfer</li>
-                                    <li>Credit/Debit Card Payments</li>
-                                    <li>Localized Electronic Payment Gateways (e.g., SEPA, ACH)</li>
-                                </ul>
-                                <p>
-                                    This approach ensures that every funding source is fully documented and easily
-                                    auditable for your finance department.
-                                </p>
+                            <div className="flex justify-between items-center">
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-redotpaybold pr-4">
+                                    Q3: How do we fund our virtual cards?
+                                </h3>
+                                <div className="flex-shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="max-h-0 group-hover:max-h-[1000px] transition-all duration-500 ease-in-out overflow-hidden">
+                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4 pt-4 lg:pt-6">
+                                    <p>
+                                        <strong>A:</strong> To ensure full compliance and clear accounting, our corporate
+                                        virtual cards support funding via Fiat currency ONLY. We offer a variety of
+                                        convenient fiat funding methods to support your global business needs, including:
+                                    </p>
+                                    <ul className="list-disc list-inside space-y-2 ml-4">
+                                        <li>Bank Wire Transfer</li>
+                                        <li>Credit/Debit Card Payments</li>
+                                        <li>Localized Electronic Payment Gateways (e.g., SEPA, ACH)</li>
+                                    </ul>
+                                    <p>
+                                        This approach ensures that every funding source is fully documented and easily
+                                        auditable for your finance department.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         {/* FAQ Item 4 */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-3 ${
+                            className={`group bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-3 cursor-pointer overflow-hidden ${
                                 visibleSections.has('faq') ? 'animate-slide-up' : ''
                             }`}
                         >
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
-                                Q4: What happens to a virtual card if an employee leaves the company or a project ends?
-                            </h3>
-                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
-                                <p>
-                                    <strong>A:</strong> Administrators can manage the status of all virtual cards from
-                                    the dashboard at any time. If an employee departs or a project is completed, you can
-                                    instantly freeze or delete the associated virtual card. Any remaining balance on the
-                                    card is automatically returned to your main corporate account, ensuring no funds are
-                                    lost or wasted. This flexible management prevents the risk of misuse associated with
-                                    lost or forgotten physical cards.
-                                </p>
+                            <div className="flex justify-between items-center">
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-redotpaybold pr-4">
+                                    Q4: What happens to a virtual card if an employee leaves the company or a project ends?
+                                </h3>
+                                <div className="flex-shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="max-h-0 group-hover:max-h-[1000px] transition-all duration-500 ease-in-out overflow-hidden">
+                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4 pt-4 lg:pt-6">
+                                    <p>
+                                        <strong>A:</strong> Administrators can manage the status of all virtual cards from
+                                        the dashboard at any time. If an employee departs or a project is completed, you can
+                                        instantly freeze or delete the associated virtual card. Any remaining balance on the
+                                        card is automatically returned to your main corporate account, ensuring no funds are
+                                        lost or wasted. This flexible management prevents the risk of misuse associated with
+                                        lost or forgotten physical cards.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         {/* FAQ Item 5 */}
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-4 ${
+                            className={`group bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-4 cursor-pointer overflow-hidden ${
                                 visibleSections.has('faq') ? 'animate-slide-up' : ''
                             }`}
                         >
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
-                                Q5: Are there extra transaction fees for using virtual cards?
-                            </h3>
-                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
-                                <p>
-                                    <strong>A:</strong> We are committed to a transparent and competitive fee structure.
-                                    Typically, there is a fixed service fee for card creation and maintenance. For
-                                    transactions, we offer highly competitive foreign exchange rates, especially for
-                                    cross-border payments. Compared to the complex wire transfer fees and less favorable
-                                    exchange rates from traditional banks, using our virtual cards for global
-                                    procurement and payments can often result in significant cost savings. For a
-                                    detailed breakdown of our rates, please refer to our service agreement or contact
-                                    your account manager.
-                                </p>
+                            <div className="flex justify-between items-center">
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-redotpaybold pr-4">
+                                    Q5: Are there extra transaction fees for using virtual cards?
+                                </h3>
+                                <div className="flex-shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="max-h-0 group-hover:max-h-[1000px] transition-all duration-500 ease-in-out overflow-hidden">
+                                <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4 pt-4 lg:pt-6">
+                                    <p>
+                                        <strong>A:</strong> We are committed to a transparent and competitive fee structure.
+                                        Typically, there is a fixed service fee for card creation and maintenance. For
+                                        transactions, we offer highly competitive foreign exchange rates, especially for
+                                        cross-border payments. Compared to the complex wire transfer fees and less favorable
+                                        exchange rates from traditional banks, using our virtual cards for global
+                                        procurement and payments can often result in significant cost savings. For a
+                                        detailed breakdown of our rates, please refer to our service agreement or contact
+                                        your account manager.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
