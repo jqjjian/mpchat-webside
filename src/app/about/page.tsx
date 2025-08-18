@@ -16,151 +16,141 @@ export default function AboutPage() {
                         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 pb-6 font-redotpaybold">
                             About Us
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center w-full">
-                            Seamless Chat, Borderless Pay. We are creating a borderless world where communication and
-                            payments are effortlessly integrated.
-                        </p>
                     </section>
 
                     {/* Vision Section */}
                     <section className="bg-white rounded-3xl p-8 md:p-12 mb-16 shadow-lg">
-                        <div className="flex flex-col md:flex-row items-center gap-8">
-                            <div className="flex-1">
-                                <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">Our Vision</h2>
-                                <p className="text-gray-600 text-lg">
-                                    Seamless Chat, Borderless Pay. We are creating a borderless world where
-                                    communication and payments are effortlessly integrated.
-                                </p>
-                            </div>
-                            {/* <div className="flex-1 flex justify-center">
-                                <div className="relative w-full max-w-md h-64 md:h-80">
-                                <Image
-                                    src="/about_mission.webp"
-                                    alt="Our Vision"
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                            </div> */}
-                        </div>
+                        <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">Our Vision</h2>
+                        <p className="text-gray-600 text-lg">
+                            Seamless Chat, Borderless Pay. We are dedicated to building a borderless financial and
+                            communications infrastructure for global enterprises.
+                        </p>
                     </section>
 
                     {/* Mission Section */}
                     <section className="bg-white rounded-3xl p-8 md:p-12 mb-16 shadow-lg">
                         <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">Our Mission</h2>
                         <p className="text-gray-600 text-lg">
-                            MPChat integrates end-to-end encrypted messaging with powerful virtual and physical cards,
-                            offering secure and efficient payment solutions for individuals and businesses worldwide.
+                            MPChat seamlessly integrates enterprise-grade end-to-end encrypted communication with a
+                            powerful smart virtual card payment network to provide global businesses with highly secure,
+                            efficient, and controllable financial management and payment solutions.
                         </p>
                     </section>
 
-                    {/* Who We Are Section */}
+                    {/* We Provide Integrated Financial Solutions Section */}
                     <section className="bg-white rounded-3xl p-8 md:p-12 mb-16 shadow-lg">
-                        <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">Who We Are</h2>
-                        <p className="text-gray-600 text-lg pb-4">
-                            We are a financial platform built for the new generation of global businesses and
-                            individuals. We focus on solving the critical pain points in international payments, team
-                            expense management, and secure communication for our clients, which include:
+                        <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">
+                            We Provide Integrated Financial Solutions for Global Enterprises
+                        </h2>
+                        <p className="text-gray-600 text-lg pb-6">
+                            We are a fintech platform built specifically for the new generation of global enterprises.
+                            We precisely identify and solve the core pain points that businesses encounter in
+                            cross-border payments, team expense management, marketing ad spend, SaaS subscription
+                            management, and internal secure communications. Our clients include:
                         </p>
                         <ul className="text-gray-600 text-lg list-disc pl-6 space-y-2">
-                            <li>E-commerce Sellers</li>
-                            <li>Marketing Agencies</li>
-                            <li>SaaS Companies</li>
-                            <li>Global Freelancers</li>
                             <li>
-                                And individuals who need a secure and simple way to shop online, manage subscriptions,
-                                and pay for services globally.
+                                <strong>E-commerce Businesses:</strong> Managing complex supplier payments and
+                                international marketing expenditures.
+                            </li>
+                            <li>
+                                <strong>Marketing Agencies:</strong> Efficiently managing ad budgets across multiple
+                                clients and platforms while reducing account risks.
+                            </li>
+                            <li>
+                                <strong>SaaS Companies:</strong> Simplifying global customer billing and corporate tool
+                                subscription payments.
+                            </li>
+                            <li>
+                                <strong>Globalized Business Teams:</strong> Centralizing the management of travel and
+                                daily expenses for employees worldwide.
                             </li>
                         </ul>
                     </section>
 
-                    {/* What We Do Section */}
-                    <section className="mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 text-center pb-12 font-redotpaybold">
-                            What We Do
+                    {/* Core Services Section */}
+                    <section className="bg-white rounded-3xl p-8 md:p-12 mb-16 shadow-lg">
+                        <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">
+                            Core Services: Smart Virtual Cards & Corporate Expense Management Platform
                         </h2>
-                        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
-                            <p className="text-gray-600 text-lg pb-8">
-                                We provide a comprehensive platform that combines secure communication with global
-                                payment solutions.
-                            </p>
+                        <p className="text-gray-600 text-lg pb-6">
+                            We offer a comprehensive platform that combines secure communication with global payments,
+                            centered around our smart virtual card issuance and management system.
+                        </p>
 
-                            <div className="mb-10">
-                                <h3 className="text-2xl font-bold text-gray-900 pb-4 font-redotpaybold">
-                                    1. For Personal Use:
-                                </h3>
-                                <ul className="text-gray-600 text-lg list-disc pl-6 space-y-2">
-                                    <li>
-                                        <span className="font-semibold">Secure Chat:</span> We offer end-to-end
-                                        encrypted conversations built on the MP Protocol, with privacy features like
-                                        disappearing messages, anti-screenshot, and message recall options.
-                                    </li>
-                                    <li>
-                                        <span className="font-semibold">Virtual & Physical Cards:</span>
-                                        <ul className="list-disc pl-6 pt-2 space-y-1">
-                                            <li>
-                                                Online Shopping: Shop globally with confidence, as our cards protect
-                                                your primary bank information.
-                                            </li>
-                                            <li>
-                                                Subscriptions: Create a dedicated card for each subscription like Adobe,
-                                                Spotify, and Netflix, which you can manage and cancel anytime.
-                                            </li>
-                                            <li>
-                                                Ad Payments: Effortlessly pay for Facebook, Google, and TikTok ads,
-                                                avoiding rejections.
-                                            </li>
-                                            <li>
-                                                Travel: Use your physical MPChat Card for fee-free spending abroad and
-                                                enjoy real-time exchange rates.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
+                        <h3 className="text-2xl font-bold text-gray-900 pb-4 font-redotpaybold">
+                            How Do Smart Virtual Cards Work?
+                        </h3>
+                        <p className="text-gray-600 text-lg pb-4">
+                            Our platform allows businesses to generate virtual payment cards in real-time and in bulk
+                            for their teams or specific purposes. The entire process is clear, efficient, and
+                            controllable:
+                        </p>
+                        <ol className="text-gray-600 text-lg list-decimal pl-6 space-y-3 mb-8">
+                            <li>
+                                <strong>Instant Issuance:</strong> Administrators can create single or bulk virtual
+                                cards with a single click on our platform.
+                            </li>
+                            <li>
+                                <strong>Set Precise Rules:</strong> Independently configure spending limits, valid time
+                                periods, and authorized merchant categories (e.g., software subscriptions only, ad
+                                platforms only) for each card.
+                            </li>
+                            <li>
+                                <strong>Securely Assign & Use:</strong> Securely assign cards to designated employees or
+                                link them to specific ad accounts and subscription services.
+                            </li>
+                            <li>
+                                <strong>Real-time Monitoring & Reporting:</strong> All transactions are displayed in the
+                                management dashboard in real-time, automatically generating clear spending reports and
+                                eliminating cumbersome reimbursement processes.
+                            </li>
+                        </ol>
 
-                            <div className="mb-10">
-                                <h3 className="text-2xl font-bold text-gray-900 pb-4 font-redotpaybold">
-                                    2. For Business Use:
-                                </h3>
-                                <ul className="text-gray-600 text-lg list-disc pl-6 flex flex-col gap-2">
-                                    <li>
-                                        <span className="font-semibold">Smart Expense Management:</span> Issue cards to
-                                        employees with pre-set budgets. Track every expense in real-time and eliminate
-                                        reimbursement hassles.
-                                    </li>
-                                    <li>
-                                        <span className="font-semibold">Streamlined Ad Spend Management:</span> Create
-                                        unlimited unique virtual cards for your ad campaigns on Facebook, Google, and
-                                        TikTok. Drastically reduce account suspensions caused by payment issues and
-                                        simplify budget tracking.
-                                    </li>
-                                    <li>
-                                        <span className="font-semibold">Team Collaboration & Risk Control:</span>{' '}
-                                        Features include bulk card issuing, spending controls with monthly or single
-                                        limits, and real-time alerts for all transactions to stay on top of your funds.
-                                    </li>
-                                </ul>
-                            </div>
+                        <h3 className="text-2xl font-bold text-gray-900 py-4 font-redotpaybold">
+                            The Core Advantages Our Virtual Cards Bring to Your Business
+                        </h3>
+                        <ul className="text-gray-600 text-lg list-disc pl-6 space-y-3">
+                            <li>
+                                <strong>Ultimate Expense Control:</strong>
+                                {`Prevent overspending and misuse from the
+                                source by setting independent budgets and rules for every project, employee, or ad
+                                campaign. The finance team gains absolute control over the company's cash flow.`}
+                            </li>
+                            <li>
+                                <strong>Enhanced Security & Risk Management:</strong> Each virtual card is independent,
+                                effectively isolating risks. If any suspicious activity is detected, the card can be
+                                frozen or deleted instantly, leaving the main account funds secure. This significantly
+                                reduces the risk of financial loss from compromised card information, especially in
+                                high-risk payment scenarios like ad spending.
+                            </li>
+                            <li>
+                                <strong>Streamlined Financial Processes:</strong> Track all expenditures in real-time
+                                and automatically collect spending data. Finance personnel no longer need to process
+                                stacks of invoices and reimbursement requests, dramatically improving internal
+                                operational efficiency and allowing human resources to focus on higher-value work.
+                            </li>
+                            <li>
+                                <strong>Optimized Business Expenditures:</strong> Create dedicated virtual cards in bulk
+                                for ad campaigns on platforms like Facebook, Google, and TikTok. This not only
+                                simplifies budget tracking but also effectively reduces the risk of account suspension
+                                due to payment issues. Effortlessly manage all corporate SaaS subscriptions, such as
+                                Adobe and AWS, to avoid service interruptions.
+                            </li>
+                        </ul>
+                    </section>
 
-                            <div>
-                                <h3 className="text-2xl font-bold text-gray-900 pb-4 font-redotpaybold">
-                                    3. For Developers:
-                                </h3>
-                                <ul className="text-gray-600 text-lg list-disc pl-6 flex flex-col gap-2">
-                                    <li>
-                                        <span className="font-semibold">Payment API:</span> Integrate secure payments
-                                        into your apps with our API for card issuing, transfers, balance inquiries, and
-                                        more.
-                                    </li>
-                                    <li>
-                                        <span className="font-semibold">Mini-App Ecosystem:</span> Developers can create
-                                        mini-apps within MPChat and directly call our payment services to complete their
-                                        business loop.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    {/* For Developers Section */}
+                    <section className="bg-white rounded-3xl p-8 md:p-12 mb-16 shadow-lg">
+                        <h2 className="text-3xl font-bold text-gray-900 pb-6 font-redotpaybold">
+                            For Developers: Build Your Custom Payment Capabilities
+                        </h2>
+                        <p className="text-gray-600 text-lg">
+                            We provide a powerful Payment API (for card issuance, transfers, balance inquiries, etc.),
+                            allowing your business to seamlessly integrate our secure and convenient payment
+                            capabilities into your own applications or services. This enables you to build a closed-loop
+                            business ecosystem, achieving business automation and scalable growth.
+                        </p>
                     </section>
 
                     {/* Five Innovative B2B Uses of Virtual Cards in 2025 */}

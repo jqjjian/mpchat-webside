@@ -44,7 +44,7 @@ export default function Header() {
                     </div>
                     <span className="text-2xl font-bold text-gray-800 md:text-xl font-redotpaybold">MPChat</span>
                 </div>
-                <div className="hidden md:flex items-center justify-center flex-1 gap-10">
+                <div className="hidden md:flex items-center justify-center flex-1 gap-10 pt-2">
                     <Link href="/" className="relative pb-2 transition-colors">
                         {/* 隐藏的粗体文字用于占位 */}
                         <span className="font-bold text-transparent select-none">Home</span>
@@ -55,17 +55,15 @@ export default function Header() {
                         )}
                     </Link>
 
-                    <Link href="/card/personal" className="relative pb-2 transition-colors">
-                        {/* 隐藏的粗体文字用于占位 */}
+                    {/* <Link href="/card/personal" className="relative pb-2 transition-colors">
                         <span className="font-bold text-transparent select-none">Personal</span>
-                        {/* 实际显示的文字 */}
                         <span className={`absolute inset-0 ${getTextClassName('/card/personal')} transition-colors`}>
                             Personal
                         </span>
                         {isActive('/card/personal') && (
                             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[40px] h-[2px] bg-[#06C55B]"></div>
                         )}
-                    </Link>
+                    </Link> */}
 
                     <Link href="/card/corporate" className="relative pb-2 transition-colors">
                         {/* 隐藏的粗体文字用于占位 */}
@@ -103,7 +101,15 @@ export default function Header() {
                         )}
                     </Link>
                 </div>
-
+                <div className="hidden md:flex flex-end pr-8 pt-3">
+                    <Link
+                        href="https://calendly.com/mpchats-support/30min"
+                        className="relative pb-2 transition-colors hover:text-[#06C55B]"
+                        target="_band"
+                    >
+                        Demo request
+                    </Link>
+                </div>
                 {/* Mobile Menu Button */}
                 <div className="md:hidden pr-8">
                     <button className="text-gray-600 hover:text-[#06C55B] transition-colors" onClick={toggleMobileMenu}>
@@ -142,7 +148,7 @@ export default function Header() {
                             Home
                         </Link>
 
-                        <Link
+                        {/* <Link
                             href="/card/personal"
                             className={`block py-3 px-4 rounded-lg transition-colors ${getTextClassName(
                                 '/card/personal'
@@ -150,7 +156,7 @@ export default function Header() {
                             onClick={closeMobileMenu}
                         >
                             Personal
-                        </Link>
+                        </Link> */}
 
                         <Link
                             href="/card/corporate"
@@ -175,6 +181,12 @@ export default function Header() {
                             onClick={closeMobileMenu}
                         >
                             About Us
+                        </Link>
+                        <Link
+                            href="https://calendly.com/mpchats-support/30min"
+                            className={`block py-3 px-4 rounded-lg transition-colors`}
+                        >
+                            Demo request
                         </Link>
                     </div>
                 </div>

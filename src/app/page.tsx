@@ -109,8 +109,8 @@ export default function Home() {
                                 <div className="w-full flex justify-center">
                                     <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto py-4 px-4">
                                         MPChat integrates end-to-end encrypted messaging with powerful virtual and
-                                        physical cards, offering secure and efficient payment solutions for individuals
-                                        and businesses worldwide.
+                                        physical cards, offering secure and efficient payment solutions for businesses
+                                        worldwide.
                                     </p>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ export default function Home() {
 
                             {/* 按钮 */}
                             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center pt-4 w-full max-w-md mx-auto">
-                                <Link href="/card/personal" className="w-full sm:w-auto">
+                                {/* <Link href="/card/personal" className="w-full sm:w-auto">
                                     <button
                                         className={`text-nowrap w-full sm:w-auto text-lg sm:text-[22px] px-8 sm:px-10 py-4 sm:py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 font-redotpaybold ${
                                             visibleSections.has('hero') ? 'animate-slide-up' : ''
@@ -144,7 +144,7 @@ export default function Home() {
                                     >
                                         For Personal
                                     </button>
-                                </Link>
+                                </Link> */}
                                 <Link href="/card/corporate" className="w-full sm:w-auto">
                                     <button
                                         className={`text-nowrap w-full sm:w-auto text-lg sm:text-[22px] px-8 sm:px-10 py-4 sm:py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 font-redotpaybold ${
@@ -174,7 +174,7 @@ export default function Home() {
                                     businesses worldwide.
                                 </p>
                                 <div className="flex flex-row gap-8 justify-start pt-10">
-                                    <Link href="/card/personal">
+                                    {/* <Link href="/card/personal">
                                         <button
                                             className={`text-nowrap text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-1 font-redotpaybold ${
                                                 visibleSections.has('hero') ? 'animate-slide-up' : ''
@@ -182,7 +182,7 @@ export default function Home() {
                                         >
                                             For Personal
                                         </button>
-                                    </Link>
+                                    </Link> */}
                                     <Link href="/card/corporate">
                                         <button
                                             className={`text-nowrap text-[22px] px-10 py-4 bg-[#06C55B] text-white font-semibold rounded-full hover:bg-[#05B052] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 animate-on-scroll animate-delay-2 font-redotpaybold ${
@@ -343,15 +343,14 @@ export default function Home() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                        {/* For Your Personal Life */}
+                    {/* For Your Personal Life - Commented out */}
+                    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                         <div
                             className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-1 flex flex-col h-full ${
                                 visibleSections.has('problem-solution') ? 'animate-slide-left' : ''
                             }`}
                         >
                             <div className="relative flex justify-center mb-6 lg:mb-8">
-                                {/* Main image */}
                                 <Image
                                     src="/pic5.png"
                                     alt="Personal Life"
@@ -359,8 +358,6 @@ export default function Home() {
                                     height={300}
                                     className="object-contain relative z-10 w-full max-w-[400px]"
                                 />
-
-                                {/* Floating elements */}
                                 <div className="absolute top-2 left-8 lg:left-38 animate-float-slow">
                                     <Image
                                         src="/pic5-1.png"
@@ -391,86 +388,84 @@ export default function Home() {
                             <Link href="/card/personal" className="mt-auto">
                                 <div className="flex items-center text-[#06C55B] font-semibold hover:text-[#05B052] transition-colors font-redotpaybold">
                                     <span className="text-[16px] lg:text-[20px]">Learn More</span>
-                                    <svg
-                                        className="w-4 h-4 lg:w-5 lg:h-5 ml-2"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M9 5l7 7-7 7"
-                                        />
+                                    <svg className="w-4 h-4 lg:w-5 lg:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
                                 </div>
                             </Link>
                         </div>
+                    </div> */}
 
-                        {/* For Your Global Business */}
+                    {/* For Your Global Business - Full width with left-right layout */}
+                    <div className="w-full">
                         <div
-                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-2 flex flex-col h-full ${
-                                visibleSections.has('problem-solution') ? 'animate-slide-right' : ''
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll animate-delay-1 ${
+                                visibleSections.has('problem-solution') ? 'animate-slide-up' : ''
                             }`}
                         >
-                            <div className="relative flex justify-center mb-6 lg:mb-8">
-                                {/* Main image */}
-                                <Image
-                                    src="/pic6.png"
-                                    alt="Global Business"
-                                    width={400}
-                                    height={300}
-                                    className="object-contain relative z-10 w-full max-w-[400px]"
-                                />
-
-                                {/* Floating elements */}
-
-                                <div className="absolute bottom-2 left-8 lg:left-38 animate-float-slow">
+                            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                                {/* Left side - Image */}
+                                <div className="relative flex-shrink-0 w-full lg:w-1/2 flex justify-center">
+                                    {/* Main image */}
                                     <Image
-                                        src="/pic6-2.png"
-                                        alt="Float 2"
-                                        width={60}
-                                        height={60}
-                                        className="object-contain w-12 h-12 lg:w-[60px] lg:h-[60px]"
+                                        src="/pic6.png"
+                                        alt="Global Business"
+                                        width={400}
+                                        height={300}
+                                        className="object-contain relative z-10 w-full max-w-[400px]"
                                     />
+
+                                    {/* Floating elements */}
+                                    <div className="absolute bottom-2 left-8 lg:left-12 animate-float-slow">
+                                        <Image
+                                            src="/pic6-2.png"
+                                            alt="Float 2"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain w-12 h-12 lg:w-[60px] lg:h-[60px]"
+                                        />
+                                    </div>
+                                    <div className="absolute top-4 right-8 lg:right-12 animate-float-medium">
+                                        <Image
+                                            src="/pic6-1.png"
+                                            alt="Float 1"
+                                            width={60}
+                                            height={60}
+                                            className="object-contain w-12 h-12 lg:w-[60px] lg:h-[60px]"
+                                        />
+                                    </div>
                                 </div>
-                                <div className="absolute top-4 right-8 lg:right-38 animate-float-medium">
-                                    <Image
-                                        src="/pic6-1.png"
-                                        alt="Float 1"
-                                        width={60}
-                                        height={60}
-                                        className="object-contain w-12 h-12 lg:w-[60px] lg:h-[60px]"
-                                    />
+                                
+                                {/* Right side - Text content */}
+                                <div className="flex-1 w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
+                                    <h3 className="text-2xl lg:text-[40px] font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
+                                        For Your Global Business
+                                    </h3>
+                                    <p className="text-gray-600 leading-relaxed text-base lg:text-[20px] mb-6 lg:mb-8">
+                                        Struggling with high fees for global ad spend?
+                                        <br />
+                                        Looking for an efficient way to manage team expenses?
+                                    </p>
+                                    <Link href="/card/corporate" className="w-fit mx-auto lg:mx-0">
+                                        <div className="flex items-center text-[#06C55B] font-semibold hover:text-[#05B052] transition-colors font-redotpaybold">
+                                            <span className="text-[16px] lg:text-[20px]">Learn More</span>
+                                            <svg
+                                                className="w-4 h-4 lg:w-5 lg:h-5 ml-2"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M9 5l7 7-7 7"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
-                            <h3 className="text-2xl lg:text-[40px] font-bold text-gray-900 mb-3 lg:mb-4 text-left font-redotpaybold">
-                                For Your Global Business
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed text-left text-base lg:text-[20px] pb-6 lg:pb-8 flex-grow">
-                                Struggling with high fees for global ad spend?
-                                <br />
-                                Looking for an efficient way to manage team expenses?
-                            </p>
-                            <Link href="/card/corporate" className="mt-auto">
-                                <div className="flex items-center text-[#06C55B] font-semibold hover:text-[#05B052] transition-colors font-redotpaybold">
-                                    <span className="text-[16px] lg:text-[20px]">Learn More</span>
-                                    <svg
-                                        className="w-4 h-4 lg:w-5 lg:h-5 ml-2"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M9 5l7 7-7 7"
-                                        />
-                                    </svg>
-                                </div>
-                            </Link>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 website for MPChat, a service that combines secure messaging with virtual/physical payment cards. The site is designed as a static export for deployment on Cloudflare Pages.
+This is a Next.js 15 website for MPChat, a service that combines secure messaging with virtual/physical payment cards. The site is designed as a static export for deployment on Cloudflare Pages using React 19 and TypeScript.
 
 ## Key Commands
 
@@ -12,13 +12,13 @@ This is a Next.js 15 website for MPChat, a service that combines secure messagin
 - `npm run dev` - Start development server with Turbopack
 - `npm run build` - Build the application
 - `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+- `npm run lint` - Run ESLint (uses next/core-web-vitals and next/typescript configs)
 
 ### Deployment
-- `npm run export` - Build static site for Cloudflare Pages
-- `npm run deploy` - Deploy to production on Cloudflare Pages
-- `npm run deploy:preview` - Deploy to preview environment
-- `npm run pages:dev` - Local preview of exported build
+- `npm run export` - Build static site for Cloudflare Pages (same as `npm run build`)
+- `npm run deploy` - Build and deploy to production on Cloudflare Pages
+- `npm run deploy:preview` - Build and deploy to preview environment
+- `npm run pages:dev` - Local preview of exported build using Wrangler
 
 ### Manual Deployment
 ```bash
@@ -29,53 +29,85 @@ wrangler pages deploy out
 
 ## Architecture
 
-### File Structure
-- `src/app/` - Next.js app router pages
-- `src/components/` - Shared React components
-- `src/app/card/` - Card-specific pages (personal/business)
-- `public/` - Static assets
-- `out/` - Built static files (generated during export)
+### Project Structure
+- **`src/app/`** - Next.js App Router pages (TSX files)
+  - `page.tsx` - Home page
+  - `layout.tsx` - Root layout with metadata
+  - `globals.css` - Global styles and custom animations
+  - `card/` - Card-related pages with shared layout
+  - `news/` - News pages with detail subdirectories
+  - `about/`, `privacy/`, etc. - Static content pages
+- **`src/components/`** - Reusable React components
+  - `Header.tsx` - Main navigation with mobile menu
+  - `Layout.tsx` - Page layout wrapper with back-to-top
+  - `Footer.tsx` - Site footer
+  - `card/Footer.tsx` - Card-specific footer
+- **`public/`** - Static assets (images, fonts, documents)
+- **`out/`** - Built static files (generated during export)
 
-### Key Components
-- `Header.tsx` - Navigation header with responsive menu
-- `Layout.tsx` - Main layout with back-to-top button
-- `Footer.tsx` - Site footer with contact options
-- `src/components/card/Footer.tsx` - Card-specific footer
+### Technology Stack
+- **Next.js 15** with App Router and static export
+- **React 19** with TypeScript 5
+- **Tailwind CSS 4** with PostCSS plugin
+- **Custom fonts**: Redotpay and RedotpayBold (loaded from `/fonts/`)
+- **Client-side navigation** with trailing slashes enabled
 
-### Styling
-- Tailwind CSS with custom configurations
-- Custom animations for scroll-triggered elements
-- Responsive design for mobile and desktop
-- Custom fonts (Redotpay and RedotpayBold)
+### Key Patterns
+- **Static Export**: Configured for Cloudflare Pages hosting
+- **Responsive Design**: Mobile-first with `md:` breakpoints
+- **Custom Animations**: Scroll-triggered animations in `globals.css`
+- **Image Optimization**: Disabled for static export compatibility
+- **Client Components**: Use `'use client'` directive for interactivity
 
-### Routing
+### Routing Structure
 - `/` - Home page
-- `/card/personal` - Personal card information
-- `/card/corporate` - Business card information
+- `/card/` - Card overview with shared layout
+- `/card/personal/` - Personal card information
+- `/card/corporate/` - Business card information  
+- `/news/` - News listing page
+- `/news/detail/[1-6]/` - Individual news articles
+- `/about/`, `/privacy/`, `/program-terms/`, `/user-agreement/` - Static pages
 
-## Deployment Process
+## Deployment Configuration
 
-The site is configured for Cloudflare Pages deployment:
+### Cloudflare Pages Setup
+- **Build Command**: `npm run export` (static export)
+- **Output Directory**: `out/`
+- **Environment**: Production and preview environments in `wrangler.toml`
 
-1. Build with `next build` (static export)
-2. Output to `out/` directory
-3. Deploy using Wrangler CLI or GitHub Actions
+### Static Asset Optimization
+- **Caching Headers**: Configured in `_headers` for assets and HTML
+- **Security Headers**: X-Frame-Options, Content-Type-Options, etc.
+- **SPA Fallback**: `_redirects` handles client-side routing
 
-### Environment Variables
-Copy `.env.example` to `.env.local` and configure:
-- `CLOUDFLARE_API_TOKEN` - For deployment
-- `CLOUDFLARE_ACCOUNT_ID` - For deployment
-- `NEXT_PUBLIC_SITE_URL` - Site URL
-- `NEXT_PUBLIC_API_URL` - API endpoint
+### Environment Variables (.env.local)
+```bash
+CLOUDFLARE_API_TOKEN=your_api_token_here
+CLOUDFLARE_ACCOUNT_ID=your_account_id_here
+NEXT_PUBLIC_SITE_URL=https://mpchat-webside.pages.dev
+NEXT_PUBLIC_API_URL=https://api.example.com
+```
 
-### GitHub Actions
-- Automatic deployment on push to `main` branch
-- Preview deployments for pull requests
+## Development Workflow
 
-## Configuration Files
+### Code Quality
+- **ESLint**: Flat config with Next.js and TypeScript rules
+- **TypeScript**: Strict mode enabled with Next.js types
+- **Code Style**: Follow existing patterns in components
 
-- `next.config.js` - Next.js configuration with static export settings
-- `wrangler.toml` - Cloudflare Wrangler configuration
-- `_headers` - Security and caching headers
-- `_redirects` - SPA routing fallback
-- `deploy.sh` - Manual deployment script
+### Component Architecture
+- **Header Component**: Client-side navigation with `usePathname` for active states
+- **Layout Components**: Wrap pages with consistent structure
+- **Responsive Patterns**: Mobile menu toggles, responsive classes
+
+### Asset Management
+- **Images**: Use Next.js `Image` component with `unoptimized: true`
+- **Static Files**: Place in `public/` directory
+- **Fonts**: Custom fonts loaded from `/fonts/` directory
+
+## Important Notes
+
+- **Static Export Only**: No server-side features (API routes, SSR)
+- **Chinese Locale**: Root layout uses `lang="zh-CN"`
+- **Build Output**: Always use `out/` directory for deployments
+- **Mobile-First**: Design and develop with mobile users as priority

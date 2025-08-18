@@ -129,7 +129,7 @@ export default function CardPage() {
                     <div className="container w-full max-w-[1700px] mx-auto">
                         <div className="flex flex-col flex-start items-center text-center">
                             {/* Navigation Pills */}
-                            <div
+                            {/* <div
                                 className={`w-full max-w-md sm:max-w-lg lg:max-w-none flex mb-4 lg:mb-6 xl:mb-8 2xl:mb-12 animate-on-scroll gap-2 sm:gap-3 lg:gap-6 xl:gap-8 justify-center mx-auto ${
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
@@ -185,7 +185,7 @@ export default function CardPage() {
                                         ></Image>
                                     </div>
                                 </Link>
-                            </div>
+                            </div> */}
 
                             {/* Main Title */}
                             <h1
@@ -204,8 +204,7 @@ export default function CardPage() {
                                     visibleSections.has('hero') ? 'animate-slide-up' : ''
                                 }`}
                             >
-                                Issue unlimited virtual cards, manage team spending, and streamline your global
-                                payments.
+                                Issue virtual cards, manage team spending, and streamline your global payments.
                             </p>
 
                             {/* Card Visual */}
@@ -465,6 +464,110 @@ export default function CardPage() {
                 </div>
             </section>
 
+            <section className="py-12 lg:py-20" data-section="designed-for-need">
+                <div className="container mx-auto px-8 max-w-[1700px]">
+                    <div
+                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${
+                            visibleSections.has('designed-for-need') ? 'animate-slide-up' : ''
+                        }`}
+                    >
+                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
+                            Designed for Your Every Need
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 pt-8 lg:pt-25 ">
+                        {/* Online Shopping */}
+                        <div
+                            className={`relative rounded-3xl p-6 lg:p-8 shadow-lg overflow-hidden animate-on-scroll animate-delay-1 min-h-[300px] lg:min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-left' : ''
+                            }`}
+                            style={{
+                                backgroundImage: 'url(/card/pic4.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center top',
+                                backgroundRepeat: 'no-repeat'
+                            }}
+                        >
+                            <div className="relative z-10 w-full pb-6 lg:pb-10">
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">
+                                    Corporate Procurement
+                                </h3>
+                                <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
+                                    {`Globally procure materials and services. Our virtual cards isolate your company's main account, making every purchase traceable and secure.`}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Subscriptions */}
+                        <div
+                            className={`relative rounded-3xl p-6 shadow-lg lg:p-8 overflow-hidden animate-on-scroll animate-delay-2 min-h-[300px] lg:min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-right' : ''
+                            }`}
+                            style={{
+                                backgroundImage: 'url(/card/pic5.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center top',
+                                backgroundRepeat: 'no-repeat'
+                            }}
+                        >
+                            <div className="relative z-10 w-full pb-2">
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">
+                                    SaaS & Software Subscriptions
+                                </h3>
+                                <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
+                                    {`Create dedicated cards for each enterprise subscription like Adobe for Teams, Microsoft 365, and other SaaS. Granularly manage expenses and cancel anytime to prevent unwanted renewals.`}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Ad Payments */}
+                        <div
+                            className={`relative rounded-3xl p-6 shadow-lg lg:p-8 overflow-hidden animate-on-scroll animate-delay-3 min-h-[300px] lg:min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-left' : ''
+                            }`}
+                            style={{
+                                backgroundImage: 'url(/card/pic6.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center top',
+                                backgroundRepeat: 'no-repeat'
+                            }}
+                        >
+                            <div className="relative z-10 w-full pb-6 lg:pb-10">
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">
+                                    Marketing Payments
+                                </h3>
+                                <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
+                                    {`Set up dedicated cards for Facebook, Google, and TikTok ad campaigns. Assign budgets to different teams or projects to avoid overspending and payment rejections.`}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Travel */}
+                        <div
+                            className={`relative rounded-3xl p-6 shadow-lg lg:p-8 overflow-hidden animate-on-scroll animate-delay-4 min-h-[300px] lg:min-h-[458px] flex items-end transition-transform duration-300 hover:scale-105 cursor-pointer ${
+                                visibleSections.has('designed-for-need') ? 'animate-slide-right' : ''
+                            }`}
+                            style={{
+                                backgroundImage: 'url(/card/pic7.png)',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center top',
+                                backgroundRepeat: 'no-repeat'
+                            }}
+                        >
+                            <div className="relative z-10 w-full pb-6 lg:pb-10">
+                                <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-4 text-center font-redotpaybold">
+                                    Employee Travel & Expenses
+                                </h3>
+                                <p className="text-sm sm:text-base lg:text-lg text-center leading-relaxed px-2 lg:px-0">
+                                    {`Equip your team with physical MPChat Cards for global business travel. Simplify expense reporting and monitor T&E spending in real-time.`}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Team Collaboration & Risk Control Section */}
             <section className="py-12 lg:py-20 bg-[#F7F7F2]" data-section="team-collaboration">
                 <div className="container mx-auto px-8 max-w-[1700px]">
@@ -498,11 +601,10 @@ export default function CardPage() {
                                 />
                             </div>
                             <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold text-gray-900 mb-3 lg:mb-4 font-redotpaybold">
-                                Bulk Card Issuing
+                                Instant Issuing
                             </h3>
                             <p className="text-gray-600 text-sm sm:text-base lg:text-[18px] leading-relaxed">
-                                Create dedicated virtual cards in bulk for each advertising account or marketing
-                                campaign to minimize risk and simplify tracking.
+                                Get your virtual card instantly and start spending right away. No waiting, no delays.
                             </p>
                         </div>
 
@@ -580,6 +682,166 @@ export default function CardPage() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <section className="py-12 lg:py-20" data-section="faq">
+                <div className="container mx-auto px-8 max-w-[1700px]">
+                    <div
+                        className={`text-center mb-8 lg:mb-16 animate-on-scroll ${
+                            visibleSections.has('faq') ? 'animate-slide-up' : ''
+                        }`}
+                    >
+                        <h2 className="text-2xl sm:text-3xl lg:text-[64px] font-bold text-gray-900 mb-4 lg:mb-8 font-redotpaybold">
+                            FAQ
+                        </h2>
+                    </div>
+
+                    <div className="space-y-6 lg:space-y-8">
+                        {/* FAQ Item 1 */}
+                        <div
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll ${
+                                visibleSections.has('faq') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
+                                Q1: How can our business benefit from using MPChat virtual cards?
+                            </h3>
+                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
+                                <p>
+                                    <strong>A:</strong> Your business can benefit in several key ways:
+                                </p>
+                                <p>
+                                    <strong>Enhanced Financial Security:</strong>{' '}
+                                    {`By creating separate virtual cards for different vendors or projects (e.g., software subscriptions, ad campaigns, procurement), you effectively isolate risk. Even if one card's details are compromised, your company's primary bank account remains completely secure.`}
+                                </p>
+                                <p>
+                                    <strong>Granular Budget Control:</strong> You can set unique spending limits,
+                                    expiration dates, and usage rules for each card. This allows for precise control
+                                    over project budgets and prevents overspending. For example, create a dedicated card
+                                    for a Facebook ad campaign with a fixed monthly budget.
+                                </p>
+                                <p>
+                                    <strong>Simplified Expense Management:</strong> Assigning dedicated virtual cards
+                                    for employee travel or specific procurement tasks ensures a clear and transparent
+                                    transaction record. Every payment is traceable, which significantly streamlines
+                                    traditional expense reporting and reconciliation processes.
+                                </p>
+                                <p>
+                                    <strong>Improved Operational Agility:</strong> Employees can instantly request and
+                                    receive approval for virtual cards for urgent purchases or online payments,
+                                    eliminating lengthy administrative delays and boosting team productivity.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* FAQ Item 2 */}
+                        <div
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-1 ${
+                                visibleSections.has('faq') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
+                                Q2: What specific corporate payment scenarios can MPChat virtual cards be used for?
+                            </h3>
+                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
+                                <p>
+                                    <strong>A:</strong> Our virtual cards are designed to cover nearly all online
+                                    corporate payment scenarios, including:
+                                </p>
+                                <p>
+                                    <strong>SaaS (Software as a Service) Subscriptions:</strong> Pay for Adobe Creative
+                                    Cloud for Teams, Microsoft 365, project management tools, and various cloud
+                                    services.
+                                </p>
+                                <p>
+                                    <strong>Online Advertising:</strong> Effortlessly pay for campaigns on major
+                                    platforms like Google Ads, Facebook/Instagram Ads, and TikTok Ads.
+                                </p>
+                                <p>
+                                    <strong>Corporate Procurement:</strong> Make online purchases from e-commerce
+                                    platforms and suppliers worldwide.
+                                </p>
+                                <p>
+                                    <strong>Travel Bookings:</strong> Employees can use their assigned virtual cards to
+                                    book flights, hotels, and other travel-related expenses.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* FAQ Item 3 */}
+                        <div
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-2 ${
+                                visibleSections.has('faq') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
+                                Q3: How do we fund our virtual cards?
+                            </h3>
+                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
+                                <p>
+                                    <strong>A:</strong> To ensure full compliance and clear accounting, our corporate
+                                    virtual cards support funding via Fiat currency ONLY. We offer a variety of
+                                    convenient fiat funding methods to support your global business needs, including:
+                                </p>
+                                <ul className="list-disc list-inside space-y-2 ml-4">
+                                    <li>Bank Wire Transfer</li>
+                                    <li>Credit/Debit Card Payments</li>
+                                    <li>Localized Electronic Payment Gateways (e.g., SEPA, ACH)</li>
+                                </ul>
+                                <p>
+                                    This approach ensures that every funding source is fully documented and easily
+                                    auditable for your finance department.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* FAQ Item 4 */}
+                        <div
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-3 ${
+                                visibleSections.has('faq') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
+                                Q4: What happens to a virtual card if an employee leaves the company or a project ends?
+                            </h3>
+                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
+                                <p>
+                                    <strong>A:</strong> Administrators can manage the status of all virtual cards from
+                                    the dashboard at any time. If an employee departs or a project is completed, you can
+                                    instantly freeze or delete the associated virtual card. Any remaining balance on the
+                                    card is automatically returned to your main corporate account, ensuring no funds are
+                                    lost or wasted. This flexible management prevents the risk of misuse associated with
+                                    lost or forgotten physical cards.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* FAQ Item 5 */}
+                        <div
+                            className={`bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-on-scroll animate-delay-4 ${
+                                visibleSections.has('faq') ? 'animate-slide-up' : ''
+                            }`}
+                        >
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6 font-redotpaybold">
+                                Q5: Are there extra transaction fees for using virtual cards?
+                            </h3>
+                            <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed space-y-4">
+                                <p>
+                                    <strong>A:</strong> We are committed to a transparent and competitive fee structure.
+                                    Typically, there is a fixed service fee for card creation and maintenance. For
+                                    transactions, we offer highly competitive foreign exchange rates, especially for
+                                    cross-border payments. Compared to the complex wire transfer fees and less favorable
+                                    exchange rates from traditional banks, using our virtual cards for global
+                                    procurement and payments can often result in significant cost savings. For a
+                                    detailed breakdown of our rates, please refer to our service agreement or contact
+                                    your account manager.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
             {/* <section className="py-20 bg-gradient-to-b from-[#E8F5E8] to-[#F7F7F2]" data-section="cta">
                 <div className="container mx-auto px-8 max-w-[1700px] text-center">
